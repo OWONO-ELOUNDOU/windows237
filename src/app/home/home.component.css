@@ -36,17 +36,17 @@
     margin-bottom: 20px;
 }
 .row .left-col .buttons {
-    margin-top: 20px;
+    margin: 10px 0;
 }
 .row .left-col .buttons a {
     text-decoration: none;
-    font-size: 15px;
+    font-size: 12px;
     margin-right: 15px;
 }
 .row .left-col .buttons .btn1 {
     color: #fff;
     background: #0404db;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     border-radius: 30px;
 }
 .row .left-col .buttons .btn2 {
