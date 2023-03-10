@@ -1,0 +1,60 @@
+<app-header></app-header>
+<div class="row row-1" style="padding: 0 5%;">
+    <div class="right-col">
+        <h3 style="text-align: center;">Un produit de Digital Direct Assistance (D.D.A)</h3>
+        <img src="../../assets/images/icon/bg1.png">
+    </div>
+    <div class="left-col">
+        <p style="font-size: 20px;">
+            Excellente application digitale
+            qui permet d'effectuer à distance et de n'importe quel coin du monde:
+            réservation, courses, opérations, suivi des dossiers professionnels et privés au Cameroun.
+        </p>
+        <div class="buttons">
+            <a href="#online-course" class="btn1">Commander</a>
+            <a href="#free-service" class="btn1">Services gratuits</a>
+        </div>
+    </div>
+</div>
+<div class="small-container">
+
+    <div class="activities">
+        <h1>Nos Activités</h1>
+        
+    </div>
+
+    <div class="online-course" id="online-course">
+        <div class="price-col">
+            <h1>Rubrique des Courses en lignes</h1>
+            <ul>
+                <li>Services auprès des administrations publiques / privées</li>
+                <li>Services marchands</li>
+                <li>Services messageries</li>
+            </ul>
+            <a class="button" [routerLink]="['/list']">Commander</a>
+        </div>
+    </div>
+
+    <div class="online-course" id="free-service">
+        <div class="price-col">
+            <h1>Services gratuits et informations pratiques</h1>
+            <h3>Cliquer sur le service solliciter</h3>
+            <ul>
+                <li>
+                    <a href="document">Téléchargement de formulaires administratifs usuels</a>
+                </li>
+                <li>
+                    <a href="link">Liens utiles</a>
+                </li>
+                <li>
+                    <a href="procedure">Procedures et Renseignements partiques</a>
+                </li>
+                <li>
+                    <a href="shop">Boutiques, vente et achats en ligne</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<app-footer></app-footer>

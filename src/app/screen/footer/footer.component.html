@@ -1,0 +1,41 @@
+<footer class="footer">
+    <div class="container-footer">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Digital Direct Assistance</h4>
+                <ul>
+                    <li><a [routerLink]="['/home']">Accueil</a></li>
+                    <li><a [routerLink]="['/']">Prestations</a></li>
+                    <li><a [routerLink]="['/']">Formulaires à télécharger</a></li>
+                    <li><a [routerLink]="['/']">Devenir Partenaire</a></li>
+                    <li><a [routerLink]="['/']">Contact</a></li>
+                    <li><a [routerLink]="['/']">À Propos de Nous</a></li>
+                    <li><a [routerLink]="['/signup']">Inscription</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Aide</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Programme Affiliation</a></li>
+                    <li><a href="#">Options de Paiement </a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Vente en Ligne</h4>
+                <ul>
+                    <li><a [routerLink]="['/']">Activités</a></li>
+                    <li><a [routerLink]="['/']">Service à la demande</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links" *ngFor="let link of links">
+                    <a [href]="link.url"><img [src]="link.image"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

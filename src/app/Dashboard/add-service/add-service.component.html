@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="form">
+        <h1 class="title">Enregistrement des services</h1>
+
+        <form #serviceForm="ngForm" >
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Nom</span>
+                    <input type="text" name="fname" ngModel>
+                </div>
+                <div class="input-box">
+                    <span class="details">prix</span>
+                    <input type="text" name="price" ngModel>
+                </div>
+                <div class="input-box">
+                    <span class="details">image</span>
+                    <input type="file" name="image" ngModel>
+                </div>
+                <div class="input-box">
+                    <span class="details">Description</span>
+                    <textarea rows="10" name="desc" placeholder="description du service" ngModel></textarea>
+                </div>
+            </div>
+
+            <div class="button">
+                <input type="submit" value="Enregistrer">
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="signup-box">
+        <div class="col-1">
+            <img [src]="logImg">
+        </div>
+        <div class="col-2">
+            <h2>Débutons Aujourd'hui</h2>
+            <span>Pas encore inscrit? <a [routerLink]="['/signup']">Inscription</a></span>
+
+            <form>
+
+                <div class="input-box">
+                    <label>Adresse Mail</label>
+                    <input type="email" name="email" placeholder="Adresse Mail" class="input-field">                  
+                </div>
+
+                <div class="input-box">
+                    <label>Mot de Passe</label>
+                    <input type="password" name="password" placeholder="Mot de Passe" class="input-field">
+                </div>
+
+                <div class="input-box">
+                    <label>Téléphone</label>
+                    <input type="text" name="phone" placeholder="Téléphone" class="input-field">
+                </div>
+
+                <div class="row">
+                    <input type="checkbox" checked>
+                    <span>I agree to the <a href="#">terms and conditions</a></span>
+                </div>
+                <button type="submit">Connexion</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,254 @@
+.row-1{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: #000;
+}
+.row .left-col{
+    text-align: left;
+    flex-basis: 45%;
+}
+.row .left-col img{
+    width: 100%;
+    max-width: 300px;
+}
+.row .right-col{
+    text-align: left;
+    flex-basis: 45%;
+}
+.row .right-col img{
+    width: 100%;
+    max-width: 500px;
+}
+.row .left-col h1{
+    font-size: 50px;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 55px;
+}
+.row .left-col p{
+    font-size: 15px;
+    color: #000;
+    margin-bottom: 20px;
+}
+.row .left-col .buttons {
+    margin-top: 20px;
+}
+.row .left-col .buttons a {
+    text-decoration: none;
+    font-size: 15px;
+    margin-right: 15px;
+}
+.row .left-col .buttons .btn1 {
+    color: #fff;
+    background: #0404db;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+}
+.row .left-col .buttons .btn2 {
+    color: orange;
+    padding-left: 2rem;
+    text-decoration: underline;
+}
+
+.container{
+    padding: 0 70px;
+}
+.small-container{
+    margin: 250px 0;
+}
+.presentation{
+    padding: 0 10%;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(transparent, #fff),url("../../assets/Images/backgrounds/doddle.jpeg");
+}
+.title{
+    font-size: 50px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+}
+.title::after{
+    content: '';
+    width: 300px;
+    height: 3px;
+    position: absolute;
+    background: #FFD700;
+    border-radius: 5px;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.presentation{
+    height: auto;
+}
+.presentation .row{
+    margin-top: 30px;
+    margin-left: 100px;
+    justify-content: center;
+}
+.row .info{
+    flex-basis: 40%;
+    align-items: flex-start;
+    background: #fff;
+    padding: 10px;
+}
+.row .img-box{
+    flex-basis: 55%;
+}
+.row .img-box img{
+    width: 100%;
+    max-width: 400px;
+}
+.info h2{
+    font-size: 40px;
+    font-weight: 600;
+    color: #0404db;
+    margin-bottom: 30px;
+}
+.info h2 span{
+    color: #f5ad05;
+}
+
+/* ========= DETAILS SECTION CSS ========= */
+
+
+/* ========== ACTIVITY SECTION CSS ========== */
+
+.activities {
+    width: 100%;
+    height: auto;
+    padding: 0 7%;
+    color: #fff;
+    background: linear-gradient(454deg, #4f4080, #9553ff);
+}
+.activities h1 {
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+/* ========== courses en ligne section css =========== */
+.online-course {
+    width: 100%;
+    height: 100vh;
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ========== prestations section css ========= */
+.prestations {
+    margin-top: 250px;
+}
+.prestations .title {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.price-row{
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 25px;
+}
+.price-col{
+    background: #1f283b;
+    padding: 10% 15%;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+}
+.price-col p{
+    font-size: 22px;
+}
+.price-col h3{
+    font-size: 20px;
+    margin: 20px 0 40px;
+    font-weight: 500;
+}
+.price-col ul{
+    text-align: left;
+    margin: 50px 0;
+    color: #ddd;
+    list-style: none;
+}
+.price-col ul li{
+    margin: 15px 0;
+}
+.price-col ul li a{
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+.price-col ul li a:hover{
+    color: #FFD700;
+}
+.price-col ul li::before{
+    content: '>';
+    color: #FFD700;
+    font-weight: bold;
+    margin-right: 8px;
+}
+.price-col .text-btn {
+    font-size: 12px;
+    margin-top: 10px;
+}
+.price-col .button{
+    text-decoration: none;
+    padding: 14px 40%;
+    margin-top: 50px;
+    background: transparent;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid #FFD700;
+    border-radius: 6px;
+    margin-top: 13px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+.price-col .button:hover{
+    background: #FFD700;
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .row .right-col img {
+        width: auto;
+    }
+    .row .left-col img {
+        width: auto;
+    }
+    .row .left-col .buttons {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .row .left-col .buttons .btn1{
+        margin-bottom: 20px;
+    }
+    .activities {
+        height: 500px;
+        overflow-y: auto;
+    }
+}
