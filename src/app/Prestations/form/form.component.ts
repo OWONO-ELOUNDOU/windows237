@@ -2,8 +2,10 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { CartService } from 'src/app/Cart/service/cart.service';
+import { PrestationService } from '../service/prestation.service';
 import { jsPDF } from 'jspdf';
 import { Activity, activities } from '../shared/model/activity';
+import { Demand } from '../shared/model/demand';
 
 @Component({
   selector: 'app-form',
@@ -19,6 +21,7 @@ export class FormComponent {
   @ViewChild('form', { static: false }) el!: ElementRef;
 
   constructor(
+    private prestation: PrestationService,
     private cartService: CartService,
     private route: ActivatedRoute
   ) {
@@ -46,6 +49,10 @@ export class FormComponent {
       } 
     })
   };
+
+  saveService(demande: Demand) {
+    this.prestation.createService(demande);
+  }
 
   addToCart(product: Activity) {
     this.cartService.addToCart(product);

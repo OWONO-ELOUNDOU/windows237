@@ -48,8 +48,8 @@
                 <td>
                     
                     <div id="myPaypalButtons"></div>
-                    <a href="https://buy.stripe.com/test_00g7wa5IU9s22qs9AC" class="payBtn" >Valider</a>
-                    <a (click)="dohonePay(paiement)" class="payBtn" >Payer</a>
+                    <a href="https://buy.stripe.com/test_00g7wa5IU9s22qs9AC" class="payBtn stripe" >Stripe</a>
+                    <a (click)="dohonePay(paiement)" class="payBtn dohone" >dohone</a>
                     <div id="stripe-script"></div>
                     <div *ngIf="total" style="margin-top: 20px;">
                         <img src="assets/Images/qr_test.png" />

@@ -3,7 +3,7 @@
     <h1 class="title">Fiche d'information du service sollicité</h1>
     <div class="form-box">
 
-        <form #form="ngForm" id="form">
+        <form #form="ngForm" id="form" (ngSubmit)="saveService(form.value)">
             <div class="logo">
                 <img [src]="logo"  style="width: 240px;">
             </div>

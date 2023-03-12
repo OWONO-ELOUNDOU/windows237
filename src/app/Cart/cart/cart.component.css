@@ -80,7 +80,18 @@ th:last-child {
     cursor: pointer;
     transition: all 0.5s ease;
 }
-.payBtn:hover {
-    background: #04c404;
+.payBtn.stripe {
+    background: #390571;
     color: #fff;
+    font-weight: 500;
+    font-style: italic;
+    border: none;
+    text-decoration: none;
+}
+.payBtn.dohone {
+    background: orange;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    text-decoration: none;
 }

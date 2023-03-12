@@ -47,7 +47,7 @@ export class CartService {
   }
 
   createPayment(data: any) {
-    this.http.get('https://www.my-dohone.com/dohone/pay', data).subscribe((res) => {
+    this.http.post('https://www.my-dohone.com/dohone/pay', data).subscribe((res) => {
       console.log(res);
       this.site = res;
       console.log(this.site);

@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div class="small-container">
+    <div class="container-form">
+        <div>
+            <h1 class="title">Boutiques et vente en Ligne</h1>
+            <div class="exclusives" *ngIf="shop && shop.length > 0">
+                <div *ngFor="let s of shop">
+                    <img [src]="s.image" [title]="s.fname"/>
+                    <span>
+                        <a href="{{ s.url }}">{{ s.fname }}</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

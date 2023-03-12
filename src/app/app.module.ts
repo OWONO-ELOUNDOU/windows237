@@ -22,6 +22,10 @@ import { AddDocumentComponent } from './Dashboard/add-document/add-document.comp
 import { CartComponent } from './Cart/cart/cart.component';
 import { ListComponent } from './Prestations/list/list.component';
 import { FormComponent } from './Prestations/form/form.component';
+import { DocumentsComponent } from './Free-services/documents/documents.component';
+import { LinksComponent } from './Free-services/links/links.component';
+import { InfoComponent } from './Free-services/info/info.component';
+import { ShopComponent } from './Free-services/shop/shop.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,11 @@ import { FormComponent } from './Prestations/form/form.component';
     AddDocumentComponent,
     CartComponent,
     ListComponent,
-    FormComponent
+    FormComponent,
+    DocumentsComponent,
+    LinksComponent,
+    InfoComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,

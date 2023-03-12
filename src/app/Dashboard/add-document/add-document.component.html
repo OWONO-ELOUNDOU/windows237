@@ -1,1 +1,26 @@
-<p>add-document works!</p>
+<div class="container">
+    <div class="form">
+        <h1 class="title">Enregistrement des liens</h1>
+
+        <form #fileForm="ngForm" (ngSubmit)="onSubmit(fileForm.value)">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Nom</span>
+                    <input type="text" name="nom" ngModel>
+                </div>
+                <div class="input-box">
+                    <span class="details">lien</span>
+                    <input type="text" name="adresse" ngModel>
+                </div>
+                <div class="input-box">
+                    <span class="details">image</span>
+                    <input type="file" name="image" ngModel>
+                </div>
+            </div>
+
+            <div class="button">
+                <input type="submit" value="Enregistrer">
+            </div>
+        </form>
+    </div>
+</div>

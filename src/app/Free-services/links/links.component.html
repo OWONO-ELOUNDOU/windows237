@@ -1,0 +1,44 @@
+<app-header></app-header>
+<div class="small-container">
+    <div class="container-form">
+        <div>
+            <h1 class="title">Liens Utiles</h1>
+            <div class="exclusives">
+                <div *ngFor="let link of allLinks">
+                    <img [src]="link.image">
+                    <span><a [href]="link.url">{{ link.fname | uppercase }}</a></span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h1 class="title">SANTÉ</h1>
+
+            <div class="cmr">
+                <div class="card">
+                    <div class="cmr-img">
+                        <img [src]="image" alt="pharmacies de garde et hôpitaux">
+                    </div>
+                    <div class="cmr-info">
+                        <h3>PHARMACIES DE GARDE ET HÔPITAUX</h3>
+                        <h4>Les cliniques, pharmacies et centres hospitaliers du Cameroun</h4>
+                        <h4>
+                            <strong>Yaoundé:</strong> 
+                            <ul>
+                                <li>Pharmacie Emmanuel :<strong> 222 20 02 44</strong></li>
+                                <li>Pharmacie les Hortensia :<strong> 243 60 79 84</strong></li>
+                                <li>Pharmacie du Bien-être :<strong> 222 20 25 19</strong></li>
+                            </ul>
+                            <p>
+                                Voir plus : <a href="../../../assets/files/LES PHARMACIES DE GARDE.pdf" style="margin-right: 25px;" download>Pharmacies de garde</a> <a href="../../../assets/files/HOPITAUX.pdf" download>Hôpitaux</a>
+                            </p>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+            <button (click)="fetchLink()">Afficher liens</button>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

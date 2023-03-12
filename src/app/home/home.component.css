@@ -30,13 +30,28 @@
     margin-bottom: 20px;
     margin-top: 55px;
 }
+.row .left-col ul{
+    margin: 15px;
+}
+.row .left-col ul li {
+    list-style: none;
+    margin-left: 15px;
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: lighter;
+}
+.row .left-col ul li::before {
+    content: '-';
+    margin-right: 10px;
+}
 .row .left-col p{
     font-size: 15px;
     color: #000;
     margin-bottom: 20px;
 }
 .row .left-col .buttons {
-    margin: 10px 0;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 .row .left-col .buttons a {
     text-decoration: none;
@@ -242,7 +257,6 @@
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        flex-direction: column;
     }
     .row .left-col .buttons .btn1{
         margin-bottom: 20px;

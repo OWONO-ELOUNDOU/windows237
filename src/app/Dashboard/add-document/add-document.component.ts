@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+import { File } from '../shared/model/file';
+import { DashboardService } from '../service/dashboard.service';
+
 @Component({
   selector: 'app-add-document',
   templateUrl: './add-document.component.html',
@@ -7,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class AddDocumentComponent {
 
+  constructor(
+    private dashService: DashboardService
+  ) { }
+
+  onSubmit(file: File) {
+    this.dashService.addFile(file);
+  }
 }
