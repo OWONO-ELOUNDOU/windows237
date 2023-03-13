@@ -2,7 +2,7 @@
     <div class="form">
         <h1 class="title">Enregistrement des services</h1>
 
-        <form #serviceForm="ngForm" >
+        <form #serviceForm="ngForm" (ngSubmit)="onSubmit(serviceForm.value)">
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">Nom</span>

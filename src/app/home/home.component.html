@@ -21,8 +21,19 @@
 <div class="small-container">
 
     <div class="activities">
-        <h1>Nos Activités</h1>
+        <div class="Act-box">
+            <h1>Nos Activités</h1>
         
+            <div class="exclusives">
+                <div *ngFor="let service of services">
+                    <img [src]="service.image">
+                    <span>
+                        <h3>{{ service.name }}</h3>
+                        <p>Start @ {{ service.price ? service.price : 'sur devis' }} €</p>
+                    </span>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="online-course" id="online-course">

@@ -19,7 +19,7 @@ export class AddServiceComponent {
   }
 
   onSubmit(service: Service) {
-    
+    this.dashService.addService(service);
   }
 
 }

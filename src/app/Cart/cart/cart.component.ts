@@ -12,7 +12,7 @@ export class CartComponent {
 
   items = this.cartService.getItems();
   price = localStorage.getItem('amount');
-  total: number | undefined;
+  total =  this.getTotal(this.items);
   number = this.cartService.itemsCount();
   handler: any = null;
   paiement: Payment = {
@@ -70,6 +70,7 @@ export class CartComponent {
       this.total = subs;
       localStorage.setItem('amount', JSON.stringify(this.total))
     }
+    return subs;
   };
 
   pay(amount: any) {    

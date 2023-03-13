@@ -144,8 +144,10 @@
 /* ========== ACTIVITY SECTION CSS ========== */
 
 .activities {
-    width: 100%;
-    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
     padding: 0 7%;
     color: #fff;
     background: linear-gradient(454deg, #4f4080, #9553ff);
@@ -153,6 +155,22 @@
 .activities h1 {
     margin-bottom: 30px;
     font-size: 50px;
+}
+.exclusives {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin: 0 70px;
+}
+.exclusives div img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.exclusives div span {
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
 }
 
 /* ========== courses en ligne section css =========== */
@@ -261,8 +279,7 @@
     .row .left-col .buttons .btn1{
         margin-bottom: 20px;
     }
-    .activities {
-        height: 500px;
-        overflow-y: auto;
+    .activities h1 {
+        font-size: 30px;
     }
 }

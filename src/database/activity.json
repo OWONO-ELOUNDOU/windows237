@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Recherche, vérification ou suivi d’information ou de dossier administratif, professionnel ou privé",
+        "price": 20,
+        "image": "assets/images/activity_images/suivi et verification.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "Retrait / dépôt de document auprès de toute administration publique ou privée",
+        "price": 20,
+        "image": "assets/images/activity_images/retrait et depot de document.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "Représentation administrative, professionnelles et privées diverses",
+        "price": 20,
+        "image": "assets/images/activity_images/rendez-vous.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "Accomplissement de toute autre course, acte, mission personnelle ou privée à la demande",
+        "price": 20,
+        "image": "assets/images/activity_images/representation et rendez-vous.jpeg"
+    }
+]

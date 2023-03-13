@@ -17,7 +17,7 @@ export class DashboardService {
   };
 
   addService( data: any ) {
-    this.http.post('https://windows-237-default-rtdb.europe-west1.firebasedatabase.app/service.json', data).subscribe((res) => {
+    this.http.post('https://windows-237-default-rtdb.europe-west1.firebasedatabase.app/Transaction.json', data).subscribe((res) => {
       console.log(res)
     })
   };
