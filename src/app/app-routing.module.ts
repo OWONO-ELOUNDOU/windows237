@@ -19,6 +19,7 @@ import { DocumentsComponent } from './Free-services/documents/documents.componen
 import { LinksComponent } from './Free-services/links/links.component';
 import { InfoComponent } from './Free-services/info/info.component';
 import { ShopComponent } from './Free-services/shop/shop.component';
+import { DohoneComponent } from './dohone/dohone.component';
 
 import { AuthService } from './services/Auth/auth.service';
 
@@ -41,6 +42,7 @@ const routes: Routes = [
   { path: 'links', component: LinksComponent },
   { path: 'info', component: InfoComponent },
   { path: 'shop', component: ShopComponent },
+  { path: 'pay', component: DohoneComponent },
   { path: 'form/:id/:Id', component: FormComponent },
   { path: '**', component: HomeComponent }
 ];

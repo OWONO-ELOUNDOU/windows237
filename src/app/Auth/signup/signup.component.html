@@ -15,42 +15,42 @@
             </div>
         </div>
 
-        <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">Nom</span>
-                    <input type="text" name="fname" ngModel>
+                    <input type="text" name="fname" formControlName="fname" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Prénom</span>
-                    <input type="text" name="lname" ngModel>
+                    <input type="text" name="lname"  formControlName="lname" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Adresse mail</span>
-                    <input type="email" name="email" ngModel>
+                    <input type="email" name="email"  formControlName="email" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Téléphone</span>
-                    <input type="number" name="phone" ngModel>
+                    <input type="number" name="phone"  formControlName="phone" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Mot de Passe</span>
-                    <input type="password" name="password" ngModel>
+                    <input type="password" name="password"  formControlName="password" required>
                 </div>
             </div>
 
             <div class="location-details">
                 <div class="input-box">
                     <span class="details">Quartier ou Rue</span>
-                    <input type="text" name="street" ngModel>
+                    <input type="text" name="street"  formControlName="street" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Ville</span>
-                    <input type="text" name="town" ngModel>
+                    <input type="text" name="town"  formControlName="town" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Pays</span>
-                    <input type="text" name="country" ngModel>
+                    <input type="text" name="country"  formControlName="country" required>
                 </div>
             </div>
 

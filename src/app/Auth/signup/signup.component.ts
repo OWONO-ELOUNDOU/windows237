@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 
 import { User } from '../shared/model/user';
 import { AuthService } from 'src/app/services/Auth/auth.service';
@@ -15,15 +15,27 @@ export class SignupComponent {
   public successmsg = '';
 
   constructor(
-    private authService: AuthService
+    private authService: AuthService,
+    private formBuilder: FormBuilder
   ) { }
 
   ngOnInit(): void{
     
   }
 
-  onSubmit(user: User) {
-    this.authService.addUser(user)
+  userForm = this.formBuilder.group({
+    fname: '',
+    lname: '',
+    email: '',
+    phone: '',
+    password: '',
+    street: '',
+    town: '',
+    country: ''
+  });
+
+  onSubmit() {
+    this.authService.addUser(this.userForm.value);
   }
 
 }

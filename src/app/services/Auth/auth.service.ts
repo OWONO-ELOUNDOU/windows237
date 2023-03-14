@@ -15,7 +15,7 @@ export class AuthService {
   };
 
   addUser(data: any){
-    this.http.post('https://windows-237-default-rtdb.europe-west1.firebasedatabase.app/user.json', data, {
+    this.http.post('https://windows-237-default-rtdb.europe-west1.firebasedatabase.app/users.json', data, {
       headers: {
         "content-type": "application/json"
       }
