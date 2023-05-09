@@ -10,6 +10,9 @@ import { HomeService } from '../services/Home/home.service';
 })
 export class HomeComponent {
 
+  logo = 'assets/images/icon/favicon.png';
+  image = 'assets/images/icon/bg1.png';
+  site = 'https://windows237.net/home';
   services = [
     {
       id: 1,

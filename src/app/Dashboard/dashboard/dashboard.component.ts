@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
 
+  logo = 'assets/images/icon/favicon.png';
+  logoName = 'Windows237';
+
+  constructor() { }
+
+  NgOnInit(): void{
+    
+  }
+
 }

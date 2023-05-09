@@ -29,21 +29,37 @@
 }
 
 .button {
-    margin-top: 20px;
-    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
-.button input{
+.button button{
     color: #57cc99;
     background-color: #fff;
-    margin-top: 20px;
     padding: 10px 30px;
     border: 1px solid #57cc99;
     transition: all 0.5s ease;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
-.button input:hover {
+.button a{
+    text-decoration: none;
+    color: orange;
+    border: 1px solid orange;
+    padding: 10px 30px;
+    transition: all 0.3s ease;
+}
+.button button:hover {
     border-radius: 30px;
     background: #57cc99;
+    color: #fff;
+}
+.button a:hover {
+    border-radius: 30px;
+    background: orange;
     color: #fff;
 }
 

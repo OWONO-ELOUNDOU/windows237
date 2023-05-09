@@ -47,22 +47,48 @@
     font-weight: 600;
     margin-bottom: 8px;
 }
-.service ul {
-    list-style: none;
-    padding: 5px 15px;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+.service .tasks {
+    display: flex;
+    align-items: center;
 }
-.service:hover {
-    transform: scale(1.05);
-}
-.service ul li {
-    text-align: center;
-    margin-bottom: 10px;
-    transition: all 0.5s ease;
-}
+/*
 .service:hover ul {
     opacity: 1;
+}
+*/
+.service .tasks .task {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #ddd;
+    transition: all 0.5s ease;
+}
+.service .tasks .task .task-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.service .tasks .task .task-info .btn {
+    margin-top: 30px;
+    width: 300px;
+}
+.service .tasks .task .task-info .btn button {
+    border: none;
+    outline: none;
+    background: #303ef7;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    width: 100%;
+}
+.service .tasks .task:hover {
+    transform: scale(1.05);
+}
+.service .tasks .task .task-img img {
+    width: 300px;
 }
 .service:hover ul li:hover {
     color: #303ef7;

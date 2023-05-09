@@ -49,7 +49,7 @@
 
                 <tr>
                     <td>
-                        <textarea rows="5" name="description" ngModel required></textarea>
+                        <textarea rows="5" name="description" ngModel></textarea>
                     </td>
                 </tr>
             </table>
@@ -63,14 +63,15 @@
 
                 <tr>
                     <td>
-                        <input type="text" name="coordonnees" placeholder="coordonnées" ngModell required/>
+                        <input type="text" name="coordonnees" placeholder="coordonnées" ngModel/>
                     </td>
                 </tr>
             </table>
 
-            <div class="button" >
+            <div class="button">
                 <!--<input type="submit" [routerLink]="['/cart']" (click)="addToCart(product1)"  value="Ajouter au Panier">-->
-                <button type="submit" [routerLink]="['/cart']" (click)="addToCart(product1)">Ajouter au Panier</button>
+                <a *ngIf="isRegister" [routerLink]="['/cart']" (click)="addToCart(product1)">Ajouter au Panier</a>
+                <button type="submit">Enregistrer le service</button>
             </div>
         </form>
 

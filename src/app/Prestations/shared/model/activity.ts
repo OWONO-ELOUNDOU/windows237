@@ -52,6 +52,7 @@ export const activities = [
                 }
             ]
         },
+        /*
         {
             Id: 2,
             name: "Services Marchands professionnels / Privés et domestiques",
@@ -81,6 +82,7 @@ export const activities = [
                 }
             ]
         },
+        
         {
             Id: 3,
             name: "Services Messageries professionnels et privés",
@@ -99,4 +101,5 @@ export const activities = [
                 }
             ]
         },
+        */
 ];

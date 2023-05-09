@@ -4,8 +4,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(45deg, transparent, #009688);
-    padding: 5%;
 }
 .signup-box{
     display: flex;
@@ -27,14 +25,17 @@
     padding: 40px 8%;
     color: #333;
     min-width: 250px;
+    border: 1px solid #ef005d;
+    border-radius: 10px;
 }
 .col-2 h2{
     font-weight: 600;
 }
 .col-2 span{
-    font-size: 12px;
+    font-size: 10px;
 }
 .col-2 span a{
+    font-size: 10px;
     text-decoration: none;
     color: #ef005d;
     font-weight: 500;

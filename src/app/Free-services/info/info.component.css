@@ -63,6 +63,7 @@
     border-radius: 30px;
     padding: 20px 0;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    z-index: -1;
 }
 .card .cmr-img img {
     width: 100%;
@@ -217,6 +218,15 @@
 }
 
 @media screen and (max-width: 930px){
+    .title {
+        font-size: 30px;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .sub-title {
+        font-size: 20px;
+        text-align: center;
+    }
     .cmr .card {
         border-radius: 0;
         box-shadow: none;

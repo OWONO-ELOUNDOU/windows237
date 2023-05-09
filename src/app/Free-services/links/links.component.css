@@ -59,6 +59,9 @@
     width: 100%;
     max-width: 300px;
 }
+.card {
+    z-index: -1;
+}
 .card .cmr-info h3 {
     font-size: 25px;
     font-weight: lighter;
@@ -82,6 +85,9 @@
 }
 
 @media screen and (max-width: 900px) {
+    .small-container .container-form .title {
+        font-size: 30px;
+    }
     .card {
         width: 100%;
     }

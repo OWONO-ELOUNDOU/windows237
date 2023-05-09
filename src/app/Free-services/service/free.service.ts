@@ -16,7 +16,8 @@ export class FreeService {
   private readonly apiUrl = 'database/procedure.json';
   private readonly fileUrl = 'database/file.json';
   private readonly policeUrl = 'database/police.json';
-  private readonly shopUrl = 'database/shop.json'
+  private readonly shopUrl = 'database/shop.json';
+  private readonly endPoint = 'https://windows-237-default-rtdb.europe-west1.firebasedatabase.app/';
   allLinks: Link[] = [];
 
   constructor(
@@ -24,7 +25,7 @@ export class FreeService {
   ) { }
 
   getAllDocuments() {
-    this.http.get('https://windows-237-default-rtdb.europe-west1.firebasedatabase.app/document.json')
+    this.http.get(this.endPoint + 'document.json')
     .subscribe((res) => {
       console.log(res)
     })
@@ -46,7 +47,7 @@ export class FreeService {
     return this.http.get<Link[]>(this.shopUrl);
   }
 
-  getFileData():Observable<File[]>{
-    return this.http.get<File[]>(this.fileUrl);
+  getFileData() {
+    return this.http.get<{[key : string]: File}>('https://windows-237-default-rtdb.europe-west1.firebasedatabase.app/document.json');
   }
 }

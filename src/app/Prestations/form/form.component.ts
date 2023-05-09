@@ -17,6 +17,7 @@ export class FormComponent {
   logo= "assets/images/icon/logo.png";
   product: Activity | any;
   product1: any;
+  isRegister = false;
 
   @ViewChild('form', { static: false }) el!: ElementRef;
 
@@ -51,7 +52,14 @@ export class FormComponent {
   };
 
   saveService(demande: Demand) {
-    this.prestation.createService(demande);
+    this.prestation.createService(demande).subscribe((res) => {
+      console.log(res)
+      alert('Votre service a bien été pris en compte. Merci!');
+      this.isRegister = !this.isRegister;
+    }, (error) => {
+      console.log(error);
+      alert('une erreur est survenue, veuillez vérifier votre connexion et réessayer');
+    });
   }
 
   addToCart(product: Activity) {

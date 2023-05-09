@@ -13,22 +13,10 @@ export class CartComponent {
   items = this.cartService.getItems();
   price = localStorage.getItem('amount');
   total =  this.getTotal(this.items);
+  convert = 650;
+  cmPrice: number | undefined;
   number = this.cartService.itemsCount();
   handler: any = null;
-  paiement: Payment = {
-    cmd: 'start',
-    rN: 'PAUL TESTEUR',
-    rT: '696042700',
-    rE: 'user01@gmail.com',
-    rH: 'DF216B76193067807036203',
-    rMt: '1000',
-    rDvs: 'XAF',
-    rMo: '1=MTN, 2=Orange, 3=Express Union, 5=Visa via UBA, 10=Dohone, 14= Visa via Wari, 15=Wari card, 16=Visa/MasterCard',
-    source: 'DIGITAL DIRECT ASSISTANCE',
-    endPage: 'https://windows237.net/home',
-    cancelPage: 'https://windows237.net/cart',
-    logo: 'assets/Images/icon/logo.png',
- }
 
   constructor(
     private cartService: CartService
@@ -59,6 +47,7 @@ export class CartComponent {
     this.items[i].quantity = qty;
 
     this.getTotal(this.items);
+    this.getCmrPrice(this.items);
   };
 
   getTotal(data: any) {
@@ -72,6 +61,21 @@ export class CartComponent {
     }
     return subs;
   };
+
+  getCmrPrice(data: any) {
+    let subs = 0;
+    let cmrPrice = 0;
+
+    for(const item of data) {
+      subs += item.price * item.quantity;
+
+      cmrPrice = subs * this.convert;
+      this.cmPrice = cmrPrice;
+      localStorage.setItem('cmrprice', JSON.stringify(cmrPrice))
+    }
+
+    return cmrPrice;
+  }
 
   pay(amount: any) {    
  

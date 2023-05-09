@@ -13,7 +13,8 @@ import { CartService } from '../Cart/service/cart.service';
 export class DohoneComponent implements OnInit {
 
   items = this.cartService.getItems();
-  price = this.getTotal(this.items);
+  price = localStorage.getItem('amount');
+  cmprice = localStorage.getItem('cmrprice');
   dohone_rH = "DF216B76193067807036203";
   dohone_endPoint = "https://my-dohone.com/dohone/pay"
 
@@ -54,14 +55,17 @@ export class DohoneComponent implements OnInit {
   });
 
   onSubmit() {
-    this.httpClient.post('https://www.my-dohone.com/dohone/pay', this.checkoutForm.value, {
-      headers: {
-        'Access-Control-Allow-Headers' : "origin, x-requested-with, content-type",
-        'Access-Control-Allow-Origin' : "http://localhost:4200",
-        "Content-Type": "application/json"
-      }
-    }).subscribe((res) => {
-        console.log(res)
+    this.httpClient.post('https://windows-237-default-rtdb.europe-west1.firebasedatabase.app/Transaction.json', this.checkoutForm.value).subscribe((res) => {
+      const transaction = JSON.parse(JSON.stringify(res));
+
+      this.checkoutForm.patchValue({
+        rI: transaction.name,
+      });
+      const params = new URLSearchParams(this.checkoutForm.value);
+      const formValue = this.checkoutForm.value;
+      window.location.href = this.dohone_endPoint+'?'+params.toString();
     });
+
+    
   }
 }

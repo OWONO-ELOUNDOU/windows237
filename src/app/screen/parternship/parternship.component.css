@@ -1,5 +1,5 @@
 .small-container {
-    
+    z-index: -1;
 }
 .header {
     width: 100%;
