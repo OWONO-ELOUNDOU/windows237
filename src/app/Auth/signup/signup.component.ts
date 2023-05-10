@@ -57,7 +57,7 @@ export class SignupComponent {
       this.isLoading = false;
       this.errormsg = errorMessage;
     })
-    this.authService.createUser(this.userForm.value);
+    this.authService.createUser(userForm);
     
   }
 

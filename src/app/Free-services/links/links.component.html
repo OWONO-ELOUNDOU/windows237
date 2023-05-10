@@ -2,11 +2,47 @@
 <div class="small-container">
     <div class="container-form">
         <div>
-            <h1 class="title">Liens Utiles</h1>
+            <h1 class="title">Services Publiques</h1>
             <div class="exclusives">
-                <div *ngFor="let link of allLinks">
-                    <img [src]="link.image">
-                    <span><a [href]="link.url">{{ link.fname | uppercase }}</a></span>
+                <div *ngFor="let public of publics">
+                    <img [src]="public.image">
+                    <span><a [href]="public.url">{{ public.name | uppercase }}</a></span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1 class="title">Ambassades et consulats</h1>
+            <div class="exclusives">
+                <div *ngFor="let embassy of embassies">
+                    <img [src]="embassy.image">
+                    <span><a [href]="embassy.url">{{ embassy.name | uppercase }}</a></span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1 class="title">Banques et Assurances</h1>
+            <div class="exclusives">
+                <div *ngFor="let finance of finances">
+                    <img [src]="finance.image">
+                    <span><a [href]="finance.url">{{ finance.name | uppercase }}</a></span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1 class="title">Éducation</h1>
+            <div class="exclusives">
+                <div *ngFor="let school of schools">
+                    <img [src]="school.image">
+                    <span><a [href]="school.url">{{ school.name | uppercase }}</a></span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1 class="title">Tourisme</h1>
+            <div class="exclusives">
+                <div *ngFor="let hotel of hotels">
+                    <img [src]="hotel.image">
+                    <span><a [href]="hotel.url">{{ hotel.name | uppercase }}</a></span>
                 </div>
             </div>
         </div>

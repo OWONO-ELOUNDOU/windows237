@@ -1,6 +1,7 @@
 export interface Link {
-    fname: string;
-    categorie: string;
+    id: string;
+    name: string;
+    type: string;
     image: string;
     url: string;
 }
