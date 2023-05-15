@@ -35,6 +35,8 @@ import { InfoComponent } from './Free-services/info/info.component';
 import { ShopComponent } from './Free-services/shop/shop.component';
 import { DohoneComponent } from './dohone/dohone.component';
 import { LoadingSpinnerComponent } from './screen/loading-spinner/loading-spinner.component';
+import { CvComponent } from './screen/cv/cv.component';
+import { Cv2Component } from './screen/cv2/cv2.component';
 
 
 @NgModule({
@@ -58,6 +60,8 @@ import { LoadingSpinnerComponent } from './screen/loading-spinner/loading-spinne
     ShopComponent,
     DohoneComponent,
     LoadingSpinnerComponent,
+    CvComponent,
+    Cv2Component,
   ],
   imports: [
     BrowserModule,

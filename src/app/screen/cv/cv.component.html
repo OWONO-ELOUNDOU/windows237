@@ -1,0 +1,178 @@
+<div class="container">
+    <div class="presentation">
+        <img [src]="logo">
+        <h1>Devenez Partenaire<br>avec Windows237</h1>
+        <h3>Remplissez le formulaire du CV ci-après</h3>
+    </div>
+    <div class="cv-form">
+        <form class="form">
+    
+            <div class="flex">
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>first name</span>
+                </label>
+        
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>last name</span>
+                </label>
+            </div>  
+
+            <div class="flex">
+                <label>
+                    <input required="" placeholder="" type="date" class="input">
+                </label>
+        
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>lieu de naissance</span>
+                </label>
+            </div>
+
+            <div class="flex">
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>sexe</span>
+                </label>
+        
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>nationalité</span>
+                </label>
+            </div>
+                    
+            <label>
+                <input required="" placeholder="" type="email" class="input">
+                <span>email</span>
+            </label> 
+                
+            <label>
+                <input required="" type="tel" placeholder="" class="input">
+                <span>contact number</span>
+            </label>
+            <label>
+                <input required="" type="tel" placeholder="" class="input">
+                <span>titre du profil</span>
+            </label>
+            <label>
+                <input required="" type="tel" placeholder="" class="input">
+                <span>lieu de résidence</span>
+            </label>
+
+            <div class="flex">
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>Code postal</span>
+                </label>
+        
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>Ville</span>
+                </label>
+            </div>
+
+            <label>
+                <input required="" placeholder="" type="text" class="input">
+                <span>profil</span>
+            </label> 
+                
+            <label>
+                <input required="" type="text" placeholder="" class="input">
+                <span>formation et diplômes obtenus</span>
+            </label>
+            <label>
+                <input required="" type="text" placeholder="" class="input">
+                <span>expérience professionnelle</span>
+            </label>
+            <label>
+                <input required="" type="text" placeholder="" class="input">
+                <span>compétences</span>
+            </label>
+            <label>
+                <input required="" type="text" placeholder="" class="input">
+                <span>langue(s)</span>
+            </label>
+
+            <div class="extra">
+                <p>Vous êtes :</p>
+                <ul>
+                    <li><a (click)="showFact1()"><p>Fonctionnaire ou contractuel</p> <i class='bx bx-plus-circle'></i></a></li>
+                    <li><a (click)="showFact2()"><p>Salarié du secteur privé </p> <i class='bx bx-plus-circle'></i></a></li>
+                    <li><a (click)="showFact3()"><p>Travailleur indépendant</p> <i class='bx bx-plus-circle'></i></a></li>
+                </ul>
+            </div>
+            <div class="fact fact1" *ngIf="isFact1">
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>Nom de l'organisation ou administration</span>
+                </label> 
+                    
+                <label>
+                    <input required="" type="text" placeholder="" class="input">
+                    <span>Fonction</span>
+                </label>
+                <label>
+                    <input required="" type="text" placeholder="" class="input">
+                    <span>ville</span>
+                </label>
+                <label>
+                    <input required="" type="text" placeholder="" class="input">
+                    <span>région</span>
+                </label>
+                <label>
+                    <input required="" type="text" placeholder="" class="input">
+                    <span>casier judiciaire</span>
+                </label>
+            </div>
+            <div class="fact fact1" *ngIf="isFact2">
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>Nom de la structure</span>
+                </label> 
+                    
+                <label>
+                    <input required="" type="text" placeholder="" class="input">
+                    <span>Fonction</span>
+                </label>
+                <label>
+                    <input required="" type="text" placeholder="" class="input">
+                    <span>ville</span>
+                </label>
+                <label>
+                    <input required="" type="text" placeholder="" class="input">
+                    <span>région</span>
+                </label>
+                <label>
+                    <input required="" type="text" placeholder="" class="input">
+                    <span>casier judiciaire</span>
+                </label>
+            </div>
+            <div class="fact fact1" *ngIf="isFact3">
+                <label>
+                    <input required="" type="text" placeholder="" class="input">
+                    <span>Activités</span>
+                </label>
+                <label>
+                    <input required="" type="text" placeholder="" class="input">
+                    <span>ville</span>
+                </label>
+                <label>
+                    <input required="" type="text" placeholder="" class="input">
+                    <span>région</span>
+                </label>
+                <label>
+                    <input required="" type="text" placeholder="" class="input">
+                    <span>casier judiciaire</span>
+                </label>
+            </div>
+            
+            <button type="submit" class="fancy">
+              <span class="top-key"></span>
+              <span class="text">Envoyer</span>
+              <span class="bottom-key-1"></span>
+              <span class="bottom-key-2"></span>
+            </button>
+        </form>
+    </div>
+</div>

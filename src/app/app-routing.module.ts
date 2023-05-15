@@ -16,6 +16,8 @@ import { LinksComponent } from './Free-services/links/links.component';
 import { InfoComponent } from './Free-services/info/info.component';
 import { ShopComponent } from './Free-services/shop/shop.component';
 import { DohoneComponent } from './dohone/dohone.component';
+import { CvComponent } from './screen/cv/cv.component';
+import { Cv2Component } from './screen/cv2/cv2.component';
 import { AuthGuard } from './services/Guard/auth.guard';
 
 /* import { AuthService } from './services/Auth/auth.service'; */
@@ -28,6 +30,8 @@ const routes: Routes = [
   { path: 'forgotpassword', component: ForgotPasswordComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'cv', component: CvComponent },
+  { path: 'cv2', component: Cv2Component },
   { path: 'parternship', component: ParternshipComponent, canActivate: [AuthGuard] },
   { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
   { path: 'list', component: ListComponent, canActivate: [AuthGuard] },

@@ -2,8 +2,8 @@
 <div class="small-container">
     <div class="container-form">
         <div>
-            <h1 class="title">Services Publiques</h1>
-            <div class="exclusives">
+            <h1 class="title" (click)="displayPublic()">Services Publiques <i class='bx bxs-plus-circle'></i></h1>
+            <div class="exclusives" *ngIf="showPublic">
                 <div *ngFor="let public of publics">
                     <img [src]="public.image">
                     <span><a [href]="public.url">{{ public.name | uppercase }}</a></span>
@@ -11,8 +11,8 @@
             </div>
         </div>
         <div>
-            <h1 class="title">Ambassades et consulats</h1>
-            <div class="exclusives">
+            <h1 class="title" (click)="displayEmbassy()">Ambassades et services consulaires <i class='bx bxs-plus-circle'></i></h1>
+            <div class="exclusives" *ngIf="showEmbassy">
                 <div *ngFor="let embassy of embassies">
                     <img [src]="embassy.image">
                     <span><a [href]="embassy.url">{{ embassy.name | uppercase }}</a></span>
@@ -20,8 +20,11 @@
             </div>
         </div>
         <div>
-            <h1 class="title">Banques et Assurances</h1>
-            <div class="exclusives">
+            <h1 class="title">Organismes internationaux</h1>
+        </div>
+        <div>
+            <h1 class="title" (click)="displayFinance()">Banques et Assurances <i class='bx bxs-plus-circle'></i></h1>
+            <div class="exclusives"  *ngIf="showFinance">
                 <div *ngFor="let finance of finances">
                     <img [src]="finance.image">
                     <span><a [href]="finance.url">{{ finance.name | uppercase }}</a></span>
@@ -29,8 +32,8 @@
             </div>
         </div>
         <div>
-            <h1 class="title">Éducation</h1>
-            <div class="exclusives">
+            <h1 class="title" (click)="displaySchool()">Enseignement Supérieur <i class='bx bxs-plus-circle'></i></h1>
+            <div class="exclusives"  *ngIf="showSchool">
                 <div *ngFor="let school of schools">
                     <img [src]="school.image">
                     <span><a [href]="school.url">{{ school.name | uppercase }}</a></span>
@@ -38,13 +41,31 @@
             </div>
         </div>
         <div>
-            <h1 class="title">Tourisme</h1>
-            <div class="exclusives">
+            <h1 class="title">Commerces et divers</h1>
+        </div>
+        <div>
+            <h1 class="title" (click)="displayHotel()">Compagnies Arériennes <i class='bx bxs-plus-circle'></i></h1>
+            <div class="exclusives"  *ngIf="showHotel">
                 <div *ngFor="let hotel of hotels">
                     <img [src]="hotel.image">
                     <span><a [href]="hotel.url">{{ hotel.name | uppercase }}</a></span>
                 </div>
             </div>
+        </div>
+        <div>
+            <h1 class="title">Sociétés de transport interburbain</h1>
+        </div>
+        <div>
+            <h1 class="title">transports urbains</h1>
+        </div>
+        <div>
+            <h1 class="title">Compagnie ferroviaires</h1>
+        </div>
+        <div>
+            <h1 class="title">hotels et restaurants</h1>
+        </div>
+        <div>
+            <h1 class="title">Divertissement</h1>
         </div>
 
         <div>
