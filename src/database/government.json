@@ -81,7 +81,7 @@
         "name": "Pre- enregistrement passeport",
         "image": "assets/images/cameroon/cameroun.png",
         "type": "Administration Camerounaise",
-        "url": " https://portal.passcam.cm/"
+        "url": "https://www.passcam.cm"
     },
     {
         "id": 13,
@@ -159,5 +159,12 @@
         "image": "assets/images/cameroon/ECAM.jpeg",
         "type": "Administration Camerounaise",
         "url": "http://patronat-ecam.cm"
+    },
+    {
+        "id": 23,
+        "name": "Obtenir visa Electronique d’entrée au Cameroun : E.visa Cameroun ",
+        "image": "assets/images/cameroon/cameroun.png",
+        "type": "Administration Camerounaise",
+        "url": "https://www.action-visas.com/visa/Cameroun"
     }
 ]

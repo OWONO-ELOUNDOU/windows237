@@ -1,0 +1,86 @@
+[
+    {
+        "id": "1",
+        "name": "Campus France",
+        "image": "assets/images/school-pics/CAMPUS-FRANCE.png",
+        "type": "outside-school",
+        "url": "https://www.campusfrance.org/fr/candidature-procedure-etudes-en-france"
+    },
+    {
+        "id": "2",
+        "name": "Parcoursup France",
+        "image": "assets/images/school-pics/parcoursup.png",
+        "type": "outside-school",
+        "url": "https://www.parcoursup.fr/"
+    },
+    {
+        "id": "3",
+        "name": "Poursuivre ses études au Canada",
+        "image": "assets/images/links/Canada.jpeg",
+        "type": "outside-school",
+        "url": ""
+    },
+    {
+        "id": "4",
+        "name": "Poursuivre ses études au USA",
+        "image": "assets/images/links/USA.jpeg",
+        "type": "outside-school",
+        "url": "https://www.rdcetudes.com/guides/usa/#:~:text=Que%20faut%2Dil%20pour%20%C3%A9tudier,majeure%20partie%20des%20universit%C3%A9s%20am%C3%A9ricaines."
+    },
+    {
+        "id": "5",
+        "name": "Poursuivre études en Angleterre",
+        "image": "assets/images/school-pics/drapeau-anglais.png",
+        "type": "outside-school",
+        "url": "https://aljawaz.com/fr/etudier-en-angleterre-guide-complet/#:~:text=Tous%20les%20%C3%A9tudiants%20%C3%A9trangers%20qui,un%20dipl%C3%B4me%20universitaire%20en%20Angleterre."
+    },
+    {
+        "id": "6",
+        "name": "Poursuivre ses études en Belgique",
+        "image": "assets/images/links/Belgique.png",
+        "type": "outside-school",
+        "url": "https://www.rdcetudes.com/guides/belgique/#:~:text=Pour%20%C3%A9tudier%20en%20Belgique%2C%20il,aupr%C3%A8s%20d'une%20universit%C3%A9%20belge."
+    },
+    {
+        "id": "7",
+        "name": "Poursuivre ses études en Suisse",
+        "image": "assets/images/school-pics/drapeau-suisse.jpg",
+        "type": "outside-school",
+        "url": ""
+    },
+    {
+        "id": "8",
+        "name": "Poursuivre études en Allemagne",
+        "image": "assets/images/links/Allemagne.png",
+        "type": "outside-school",
+        "url": ""
+    },
+    {
+        "id": "9",
+        "name": "Poursuivre ses études en Russie",
+        "image": "assets/images/links/russie.png",
+        "type": "outside-school",
+        "url": "https://studyinrussia.ru/fr/study-in-russia/cost-of-education-in-russia/#:~:text=Apr%C3%A8s%20les%20examens%2C%20les%20%C3%A9tudiants,(12.570%20dollars)%20par%20an."
+    },
+    {
+        "id": "10",
+        "name": "Poursuivre ses études en Chine",
+        "image": "assets/images/links/Chine.png",
+        "type": "outside-school",
+        "url": "https://etudes-superieures.ooreka.fr/astuce/voir/304909/etudier-en-chine"
+    },
+    {
+        "id": "11",
+        "name": "Poursuivre études en Inde",
+        "image": "assets/images/links/Inde.png",
+        "type": "outside-school",
+        "url": "https://www.etudionsaletranger.fr/etudier-en-inde/les-avantages-et-inconvenients-a-faire-ses-etudes-en-inde#:~:text=D'une%20mani%C3%A8re%20globale%2C%20si,votre%20dipl%C3%B4me%20sera%20reconnu%20internationalement."
+    },
+    {
+        "id": "12",
+        "name": "Poursuivre ses études en Afrique du Sud",
+        "image": "assets/images/links/South-Africa.png",
+        "type": "outside-school",
+        "url": "https://www.studentum.fr/study-guides/africa/study-in-south-africa/entry-requirements-13724"
+    }
+]

@@ -47,5 +47,159 @@
         "image": "assets/images/links/USA.jpeg",
         "type": "Ambassade",
         "url": "www.cm.usembassy.gov"
+    },
+    {
+        "id": 8,
+        "name": "Service consulaire Français",
+        "image": "assets/images/links/France.jpeg",
+        "type": "service consulaire",
+        "url": "https://yaounde.consulfrance.org/"
+    },
+    {
+        "id": 9,
+        "name": "Service consulaire Belgique",
+        "image": "assets/images/links/Belgique.png",
+        "type": "service consulaire",
+        "url": "https://www.cameroun-plus.com/index.php?p_nid=69476"
+    },
+    {
+        "id": 10,
+        "name": "Service consulaire Italie",
+        "image": "assets/images/links/Italie.jpeg",
+        "type": "service consulaire",
+        "url": "https://ambyaounde.esteri.it/ambasciata_yaounde/fr/"
+    },
+    {
+        "id": 11,
+        "name": "Service consulaire Allemagne",
+        "image": "assets/images/links/Allemagne.png",
+        "type": "service consulaire",
+        "url": "https://jaunde.diplo.de/cm-fr/l-ambassade/-/1523034"
+    },
+    {
+        "id": 12,
+        "name": "Grande Bretagne / centre de visa",
+        "image": "assets/images/links/UK.jpeg",
+        "type": "service consulaire",
+        "url": "https://pos.tlscontact.com/yao_fr/"
+    },
+    {
+        "id": 13,
+        "name": "Service consulaire Pays Bas",
+        "image": "assets/images/links/Pays-Bas.png",
+        "type": "service consulaire",
+        "url": "https://www.paysbasetvous.nl/votre-pays-et-les-pays-bas/cameroun/qui-sommes-nous/consulat-honoraire-du-royaume-des-pays-bas-a-yaounde"
+    },
+    {
+        "id": 14,
+        "name": "Service consulaire Espagne",
+        "image": "assets/images/links/Espagne.jpeg",
+        "type": "service consulaire",
+        "url": "https://www.exteriores.gob.es/Embajadas/yaunde/fr/ServiciosConsulares/Paginas/Consular/instructions-visa.aspx"
+    },
+    {
+        "id": 15,
+        "name": "Service consulaire Portugal",
+        "image": "assets/images/links/Portugal.png",
+        "type": "service consulaire",
+        "url": "https://www.consulby.fr/ambassade-portugal-cameroun/yaounde/"
+    },
+    {
+        "id": 16,
+        "name": "Service consulaire Russie",
+        "image": "assets/images/links/russie.png",
+        "type": "service consulaire",
+        "url": "https://www.visahouse.com/fr/information/russianconsulate/cameroon/"
+    },
+    {
+        "id": 14,
+        "name": "Service consulaire Afrique du Sud",
+        "image": "assets/images/links/South-Africa.jpg",
+        "type": "service consulaire",
+        "url": "https://www.ambassades.net/Ambassade/1589/Afrique-du-Sud-a-Yaounde"
+    },
+    {
+        "id": 15,
+        "name": "Service consulaire Turquie",
+        "image": "assets/images/links/Turquie.png",
+        "type": "service consulaire",
+        "url": "https://www.ambassades.net/Ambassade/25234/Turquie-a-Yaounde"
+    },
+    {
+        "id": 16,
+        "name": "Service consulaire Chine",
+        "image": "assets/images/links/Chine.png",
+        "type": "service consulaire",
+        "url": "http://cm.china-embassy.gov.cn/fra/"
+    },
+    {
+        "id": 17,
+        "name": "Service consulaire Canada",
+        "image": "assets/images/links/Canada.jpeg",
+        "type": "service consulaire",
+        "url": "https://planet-visa.com/visas/ave-eta-canada/#:~:text=Faire%20une%20demande%20de%20visa,voyager%20%C3%A0%20destination%20du%20Canada."
+    },
+    {
+        "id": 18,
+        "name": "Service consulaire USA",
+        "image": "assets/images/links/USA.jpeg",
+        "type": "service consulaire",
+        "url": "https://yaounde.consulfrance.org/Visas-pour-les-USA"
+    },
+    {
+        "id": 19,
+        "name": "Service consulaire Inde",
+        "image": "assets/images/links/Inde.png",
+        "type": "service consulaire",
+        "url": "https://hciyaounde.gov.in/"
+    },
+    {
+        "id": 20,
+        "name": "Service consulaire Brésil",
+        "image": "assets/images/links/Brésil.png",
+        "type": "service consulaire",
+        "url": "https://haiti.iom.int/fr/la-prise-de-rendez-vous#:~:text=La%20prise%20de%20rendez%2Dvous%20en%20ligne%20est%20gratuite.,directement%20%C3%A0%20l'OIM%20CAVB."
+    },
+    {
+        "id": 21,
+        "name": "Service consulaire Cote d'Ivoire",
+        "image": "assets/images/links/Cote-Ivoire.Jpeg",
+        "type": "service consulaire",
+        "url": "https://www.action-visas.com/informations-cameroun#:~:text=Depuis%20le%2003%20mai%202023,sera%20accol%C3%A9e%20dans%20votre%20passeport."
+    },
+    {
+        "id": 22,
+        "name": "Service consulaire Sénégal",
+        "image": "assets/images/links/Sénégal.png",
+        "type": "service consulaire",
+        "url": "https://www.au-senegal.com/ambassade-du-senegal-au-cameroun,5263.html"
+    },
+    {
+        "id": 23,
+        "name": "Service consulaire Éthiopie",
+        "image": "assets/images/links/Ethiopie.png",
+        "type": "service consulaire",
+        "url": "https://www.agencevisa.com/visa-ethiopie/"
+    },
+    {
+        "id": 24,
+        "name": "Service consulaire Ghana",
+        "image": "assets/images/links/Ghana.png",
+        "type": "service consulaire",
+        "url": "https://www.agencevisa.com/visa-ghana/"
+    },
+    {
+        "id": 25,
+        "name": "Service consulaire Maroc",
+        "image": "assets/images/links/Maroc.jpeg",
+        "type": "service consulaire",
+        "url": "https://consulat.ma/fr"
+    },
+    {
+        "id": 26,
+        "name": "Service consulaire Tunisie",
+        "image": "assets/images/links/Tunisie.png",
+        "type": "service consulaire",
+        "url": "https://www.visa-connect.fr/visa/visa-tunisie/"
     }
 ]

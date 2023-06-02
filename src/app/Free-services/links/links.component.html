@@ -2,11 +2,77 @@
 <div class="small-container">
     <div class="container-form">
         <div>
-            <h1 class="title" (click)="displayPublic()">Services Publiques <i class='bx bxs-plus-circle'></i></h1>
-            <div class="exclusives" *ngIf="showPublic">
-                <div *ngFor="let public of publics">
-                    <img [src]="public.image">
-                    <span><a [href]="public.url">{{ public.name | uppercase }}</a></span>
+            <h1 class="title" (click)="displayInstitution()">Institutions Nationales <i class='bx bxs-plus-circle'></i></h1>
+            <div class="services-1" *ngIf="institution">
+                <div class="box">
+                    <div class="box-header">
+                        <img [src]="logo" [title]="name">
+                    </div>
+                    <div class="box-info">
+                        <h3>PRÉSIDENCE DE LA RÉPUBLIQUE</h3>
+                        <h4><strong>Président de la République : </strong> S.E. Paul BIYA</h4>
+                        <h4>
+                            <strong>LE SECRETARIAT GENERAL : </strong> 
+                            <ul>
+                                <li><strong>Ministre d’Etat, Secrétaire Général de la Présidence de la République :</strong> <br>M. Ferdinand NGOH NGOH</li>
+                                <li><strong>Ministre Secrétaire Général Adjoint de la Présidence de la République :</strong> <br>M. ELUNG Paul CHE</li>
+                                <li><strong>Ministre Secrétaire Général Adjoint de la Présidence de la République :</strong> <br>M. MOHAMADOU MOUSTAPHA</li>
+                            </ul>
+                            <a href="../../../../assets/files/PRESIDENCE DE LA REPUBLIQUE.pdf" download>Voir Plus</a>
+                        </h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-header">
+                        <img [src]="logo" [title]="name">
+                    </div>
+                    <div class="box-info">
+                        <h3>SÉNAT</h3>
+                        <h4><strong>Président du Sénat : </strong> </h4>                        
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-header">
+                        <img [src]="logo" [title]="name">
+                    </div>
+                    <div class="box-info">
+                        <h3>ASSEMBLÉE NATIONALE</h3>
+                        <h4><strong>Président : </strong>Le Très Honorable CAVAYE YEGUIE DJIBRIL</h4>
+                        <h4><strong>1er Vice - Président : </strong> ETONG NDZOK Hilarion</h4>
+                        <h4>
+                            <strong>Autres vice-présidents :</strong>
+                            <ul>
+                                <li>- Hon. BAORO Théophile</li>
+                                <li>- Hon. Mary MUYALI BOYA Epse MEBOKA</li>
+                                <li>- Hon. KOMBO GBERI</li>
+                                <li>- Hon. DATOUO Théodore</li>
+                                <li>- Hon. ABBA ALIM</li>
+                            </ul>
+                            <a href="../../../../assets/files/ASSEMBLEE NATIONALE.pdf" download>Voir Plus</a>
+                        </h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-header">
+                        <img [src]="logo" [title]="name">
+                    </div>
+                    <div class="box-info">
+                        <h3>PREMIER MINISTÈRE</h3>
+                        <h4><strong>Premier Ministre, Chef du Gouvernement:</strong> M. JOSEPH John Nguté</h4>
+                        <h4 style="margin-top: 20px;">
+                            <a href="../../../../assets/files/COMPOSITION DU GOUVERNEMENT DE LA RÉPUBLIQUE DU CAMEROUN.pdf" download>Voir Plus</a>
+                            <a href="https://www.spm.gov.cm/" target="blank">Visiter le site</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h1 class="title" (click)="displayPublic()">Organisations publiques et parapubliques <i class='bx bxs-plus-circle'></i></h1>
+                <div class="exclusives" *ngIf="showPublic">
+                    <div *ngFor="let public of publics">
+                        <img [src]="public.image">
+                        <span><a [href]="public.url">{{ public.name | uppercase }}</a></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -41,10 +107,19 @@
             </div>
         </div>
         <div>
+            <h1 class="title" (click)="displayEtranger()">Poursuivre ses études à l'étranger <i class='bx bxs-plus-circle'></i></h1>
+            <div class="exclusives"  *ngIf="showEtranger">
+                <div *ngFor="let etranger of etrangers">
+                    <img [src]="etranger.image">
+                    <span><a [href]="etranger.url">{{ etranger.name | uppercase }}</a></span>
+                </div>
+            </div>
+        </div>
+        <div>
             <h1 class="title">Commerces et divers</h1>
         </div>
         <div>
-            <h1 class="title" (click)="displayHotel()">Compagnies Arériennes <i class='bx bxs-plus-circle'></i></h1>
+            <h1 class="title" (click)="displayHotel()">Transport <i class='bx bxs-plus-circle'></i></h1>
             <div class="exclusives"  *ngIf="showHotel">
                 <div *ngFor="let hotel of hotels">
                     <img [src]="hotel.image">
@@ -53,19 +128,7 @@
             </div>
         </div>
         <div>
-            <h1 class="title">Sociétés de transport interburbain</h1>
-        </div>
-        <div>
-            <h1 class="title">transports urbains</h1>
-        </div>
-        <div>
-            <h1 class="title">Compagnie ferroviaires</h1>
-        </div>
-        <div>
-            <h1 class="title">hotels et restaurants</h1>
-        </div>
-        <div>
-            <h1 class="title">Divertissement</h1>
+            <h1 class="title">hotels et Divertissement</h1>
         </div>
 
         <div>

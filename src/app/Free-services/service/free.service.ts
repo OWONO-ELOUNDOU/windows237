@@ -22,6 +22,7 @@ export class FreeService {
   private readonly schoolUrl = 'database/school.json';
   private readonly hotelUrl = 'database/hotel.json';
   private readonly publicServiceUrl = 'database/government.json';
+  private readonly etrangerUrl = 'database/etranger.json';
   private readonly endPoint = 'https://windows-237-default-rtdb.europe-west1.firebasedatabase.app/';
   allLinks: Link[] = [];
 
@@ -70,6 +71,10 @@ export class FreeService {
 
   getHotels():Observable<Link[]>{
     return this.http.get<Link[]>(this.hotelUrl);
+  }
+
+  getEtranger():Observable<Link[]>{
+    return this.http.get<Link[]>(this.etrangerUrl);
   }
 
   getFileData() {

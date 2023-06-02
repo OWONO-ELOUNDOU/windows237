@@ -63,15 +63,16 @@
 }
   
 .card-header {
-  position: relative;
   background-clip: border-box;
   margin-top: 1.5rem;
   margin-left: 1rem;
   margin-right: 1rem;
   border-radius: 0.75rem;
-  background-color: rgb(33 150 243);
-  box-shadow: 0 10px 15px -3px rgba(33,150,243,.4),0 4px 6px -4px rgba(33,150,243,.4);
   height: 14rem;
+  width: 350px;
+}
+.card-header img {
+  width: 100%;
 }
   
 .info {
@@ -94,7 +95,7 @@
   border: 1px solid rgb(236 239 241);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: rgba(0, 140, 255, 0.082);
 }
   
@@ -115,8 +116,9 @@
   text-transform: uppercase;
   font-weight: 700;
   font-size: .75rem;
+  width: 100%;
   padding: 0.75rem 1.5rem;
-  background-color: rgb(33 150 243);
+  background-color: #2196f3;
   border-radius: 0.5rem;
   cursor: pointer;
 }

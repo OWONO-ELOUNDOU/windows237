@@ -1,3 +1,6 @@
+ul {
+    list-style: none;
+}
 .row{
     display: flex;
     align-items: center;
@@ -49,27 +52,39 @@
     font-weight: 500;
     color: #0404db;
 }
+.details .image {
+    width: 500px;
+}
 .details .image img {
     width: 100%;
-    max-width: 500px;
 }
 
 .plus-info {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px;
+    flex-direction: column;
     width: 100%;
     height: 100vh;
     padding: 10px 10%;
     color: #fff;
     background: linear-gradient(454deg, #9594ff, #ff5352);
 }
+.plus-info h1 {
+    font-size: 50px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.plus-info ul {
+    display: flex;
+    justify-content: center;
+}
 .plus-info ul li {
+    text-align: center;
     font-size: 15px;
     color: #000;
     margin-bottom: 15px;
+    margin-right: 10px;
     padding: 10px;
     border-radius: 10px;
     background: #fff;
@@ -77,25 +92,19 @@
 }
 
 .presentation{
-    height: 100vh;
     width: 100%;
+    height: 100vh;
+    padding: 0 5%;
+    background: rgb(248, 248, 248);
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.presentation .row{
-    margin-top: 30px;
-    margin-left: 100px;
-    justify-content: center;
-}
 .row .info{
-    flex-basis: 40%;
     align-items: flex-start;
     background: #fff;
     padding: 10px;
-}
-.row .img-box{
-    flex-basis: 55%;
+    width: 500px;
 }
 .row .img-box img{
     width: 100%;
@@ -109,12 +118,6 @@
 }
 .info h2 span{
     color: #f5ad05;
-}
-.presentation{
-    padding: 0 10%;
-    width: 100%;
-    height: 100vh;
-    /*background: radial-gradient(transparent, #fff),url("../../assets/Images/backgrounds/doddle.jpeg");*/
 }
 .title{
     font-size: 50px;
@@ -133,4 +136,35 @@
     bottom: -5px;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+
+
+@media screen and (max-width: 900px) {
+    .presentation {
+        background: #f6f6f6;
+    }
+    .details .image,
+    .row .img-box,
+    .row .info {
+        width: auto;
+    }
+    .row .info{
+        padding: 5px;
+        border-radius: 0 50% 50% 0;
+    }
+    .row .info p {
+        font-size: 13px;
+    }
+    .info h2{
+        font-size: 30px;
+        font-weight: 600;
+        color: #0404db;
+        margin-bottom: 30px;
+    }
+    .details{
+        border-radius: 30px 30px 0 0;
+    }
+    .plus-info ul {
+        flex-direction: column;
+    }
 }

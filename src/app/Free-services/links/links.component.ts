@@ -18,12 +18,17 @@ export class LinksComponent {
   publics: Link[] = [];
   schools: Link[] = [];
   hotels: Link[] = [];
+  etrangers: Link[] = [];
+  logo = "assets/images/cameroon/cameroun.png";
+  name = "CAMEROUN";
 
   showEmbassy = false;
   showFinance = false;
   showPublic = false;
   showSchool = false;
   showHotel = false;
+  showEtranger = false;
+  institution = false;
 
   constructor(
     private freeService: FreeService
@@ -65,6 +70,10 @@ export class LinksComponent {
     this.freeService.getHotels().subscribe({
       next: hotels => this.hotels = hotels
     })
+    
+    this.freeService.getEtranger().subscribe({
+      next: etrangers => this.etrangers = etrangers
+    })
   }
 
   fetchLink() {
@@ -85,5 +94,11 @@ export class LinksComponent {
   }
   displaySchool() {
     this.showSchool = !this.showSchool;
+  }
+  displayEtranger() {
+    this.showEtranger = !this.showEtranger;
+  }
+  displayInstitution() {
+    this.institution = !this.institution;
   }
 }
