@@ -12,8 +12,13 @@ a:hover {
 }
 
 header {
-    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
     padding: 0.5rem 2rem;
+    z-index: 10;
+    background: #fff;
 }
 .navbar {
     width: 100%;

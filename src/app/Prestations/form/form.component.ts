@@ -16,7 +16,7 @@ export class FormComponent {
 
   logo= "assets/images/icon/logo.png";
   product: Activity | any;
-  product1: any;
+  productId: any;
   isRegister = false;
 
   @ViewChild('form', { static: false }) el!: ElementRef;
@@ -37,8 +37,8 @@ export class FormComponent {
     console.log(activityIdFromRoute);
     console.log(serviceIdFromRoute);
     this.product = activities.find(activity => activity.Id === activityIdFromRoute);
-    this.product1 = this.product.activity.find((activity: { id: number; }) => activity.id === serviceIdFromRoute);
-    console.log(this.product1);
+    this.productId = this.product.activity.find((activity: { id: number; }) => activity.id === serviceIdFromRoute);
+    console.log(this.productId);
   }
 
   makePdf() {

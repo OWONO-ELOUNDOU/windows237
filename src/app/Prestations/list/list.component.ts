@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { PrestationService } from '../service/prestation.service';
-import { Activity, activities } from '../shared/model/activity';
+import { Activity, serviceAdmin, serviceMarch, serviceProf,  } from '../shared/model/activity';
 
 @Component({
   selector: 'app-list',
@@ -10,7 +10,10 @@ import { Activity, activities } from '../shared/model/activity';
 })
 export class ListComponent {
 
-  prestation = activities;
+  //prestation = activities;
+  administrative = serviceAdmin;
+  professional = serviceProf;
+  commercial = serviceMarch;
   price: number | undefined;
   convert = 650;
 

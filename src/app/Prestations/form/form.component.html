@@ -35,7 +35,7 @@
                         <input type="number" name="rubrique" value="{{ product.Id }}" style="width: 60px;" ngModel/>
                     </td>
                     <td>
-                        <input type="text" name="service" value="{{ product1.name }}" ngModel>
+                        <input type="text" name="service" value="{{ productId.name }}" ngModel>
                     </td>
                 </tr>
             </table>
@@ -68,9 +68,23 @@
                 </tr>
             </table>
 
+            <table>
+                <tr>
+                    <th>
+                        Veuillez préciser tout autre document numérique susceptible de nous aider
+                    </th>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="file" name="file" placeholder="document" ngModel/>
+                    </td>
+                </tr>
+            </table>
+
             <div class="button">
                 <!--<input type="submit" [routerLink]="['/cart']" (click)="addToCart(product1)"  value="Ajouter au Panier">-->
-                <a *ngIf="isRegister" [routerLink]="['/cart']" (click)="addToCart(product1)">Ajouter au Panier</a>
+                <a *ngIf="isRegister" [routerLink]="['/cart']" (click)="addToCart(productId)">Ajouter au Panier</a>
                 <button type="submit">Enregistrer le service</button>
             </div>
         </form>

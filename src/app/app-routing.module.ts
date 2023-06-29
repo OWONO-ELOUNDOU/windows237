@@ -34,7 +34,7 @@ const routes: Routes = [
   { path: 'cv2', component: Cv2Component },
   { path: 'parternship', component: ParternshipComponent, canActivate: [AuthGuard] },
   { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
-  { path: 'list', component: ListComponent, canActivate: [AuthGuard] },
+  { path: 'list', component: ListComponent, /*canActivate: [AuthGuard]*/ },
   { path: 'docs', component: DocumentsComponent, canActivate: [AuthGuard] },
   { path: 'links', component: LinksComponent, canActivate: [AuthGuard] },
   { path: 'info', component: InfoComponent, canActivate: [AuthGuard] },

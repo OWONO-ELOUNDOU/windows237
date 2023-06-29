@@ -18,9 +18,6 @@
                 <br>professionnelles, administratives, fiscales et diverses au Cameroun et en France
             </p>
 
-            <span>Télécharger l'application</span>
-            <br><em>{{ site }}</em>
-
             <div class="links">
                 <ul>
                     <li>
@@ -50,36 +47,67 @@
         </div>
 
         <div class="buttons">
-            <a href="#online-course" class="btn1">services payants</a>
-            <a href="#free-service" class="btn1">services gratuits</a>
+            <a href="#activities" class="btn1">services payants</a>
         </div>
     </div>
 </div>
 <div class="small-container">
 
-    <div class="activities">
-        <div class="Act-box">
-            <h1>Nos Activités</h1>
-        
-            <div class="exclusives">
-                <div *ngFor="let service of services">
-                    <img [src]="service.image">
-                    <span>
-                        <h3>{{ service.name }}</h3>
-                        <p>Start @ {{ service.price ? service.price : 'sur devis' }} €</p>
-                    </span>
+    <div class="activities" id="activities">
+        <h2 class="title">Nos Activités</h2>
+        <div class="exclusives">
+            <div class="card">
+                <div class="card-img">
+                    <img src="assets/images/activity_images/administration.jpeg">
+                </div>
+                <div class="card-details">
+                    <div class="details-header">
+                        <p><span>Cameroun</span> <span>France</span></p>
+                    </div>
+                    <h3>Services auprès des<br>administrations publiques<br>et privées</h3>
+                    <ul>
+                        <li>-> Légalisation - Authentification - duplicata de document</li>
+                        <li>-> Recherche - Vérification - suivi d'information ou dossier administratif</li>
+                        <li>-> Retrait - Dépôt de document auprès d'une administration</li>
+                    </ul>
+                    <p>Nos services sont valables autant pour le Cameroun que pour la France</p>
+                    <a [href]="adminLink" class="cta-btn">Commander Maintenant</a>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <div class="online-course" id="online-course">
-        <div class="price-col">
-            <h1>Rubrique des Courses en lignes</h1>
-            <ul>
-                <li>Services auprès des administrations publiques / privées au Cameroun et en France</li>
-            </ul>
-            <a class="button" [routerLink]="['/list']">Commander</a>
+            <div class="card">
+                <div class="card-img">
+                    <img src="assets/images/activity_images/professionnel.jpeg">
+                </div>
+                <div class="card-details">
+                    <div class="details-header">
+                        <p><span>Cameroun</span> <span>France</span></p>
+                    </div>
+                    <h3>Services Professionnels</h3>
+                    <ul>
+                        <li>-> Représentation administrative ou professionnelle</li>
+                        <li>-> Domiciliation commerciale et administrative</li>
+                    </ul>
+                    <p>Nos services sont valables autant pour le Cameroun que pour la France</p>
+                    <a [href]="professionalLink" class="cta-btn">Commander Maintenant</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="assets/images/activity_images/marchand.jpeg">
+                </div>
+                <div class="card-details">
+                    <div class="details-header">
+                        <p><span>Cameroun</span> <span>France</span></p>
+                    </div>
+                    <h3>Services Marchands</h3>
+                    <ul>
+                        <li>-> Achat divers - Récupération - Expédition de divers colis</li>
+                        <li>-> Accomplissement de toute autre course, acte, mission personnelle ou privée à la demande</li>
+                    </ul>
+                    <p>Nos services sont valables autant pour le Cameroun que pour la France</p>
+                    <a [href]="marchandLink" class="cta-btn">Commander Maintenant</a>
+                </div>
+            </div>
         </div>
     </div>
 

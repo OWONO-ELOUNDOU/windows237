@@ -3,13 +3,13 @@
     <div>
         <h1>Courses en Ligne</h1>
         <div class="row">
-            <div class="service" *ngFor="let p of prestation">
-                <img [src]="p.image"  width="50px" height="50px">
-                <p>{{ p.Id }}</p>
-                <h2>{{ p.name }}</h2>
-                <p>{{ p.info }}</p>
+            <div class="service" id="admin" *ngFor="let ad of administrative">
+                <img [src]="ad.image"  width="50px" height="50px">
+                <p>{{ ad.Id }}</p>
+                <h2>{{ ad.name }}</h2>
+                <p>{{ ad.info }}</p>
                 <strong>Selectionner le service souhaité</strong>
-                <div class="tasks" *ngFor="let a of p.activity">
+                <div class="tasks" *ngFor="let a of ad.activity">
                     <div class="task">
                         <div class="task-img">
                             <img [src]="a.image" [alt]="a.name">
@@ -18,17 +18,72 @@
                             <div>
                                 {{ a.id }} {{ a.name }}
                                 <div class="price" id="price">
-                                    {{ a.price | currency : 'EUR' : 'symbol' : '1.2-2' }}
+                                    au Cameroun : ({{ a.price | currency : 'EUR' : 'symbol' : '1.2-2' }} / {{ a.price ? a.price * convert : "sur devis" }} {{ a.price ? "FCFA" : "" }})
+                                    <br>en France : ({{ a.price ? (a.price * 2 | currency : 'EUR' : 'symbol' : '1.2-2') : "sur devis" }})
                                 </div>
-                                ({{ a.price ? a.price * convert : "sur devis" }} {{ a.price ? "FCFA" : "" }})
                             </div>
                             <div class="btn">
-                                <button [routerLink]="['/form', p.Id, a.id]">Commander</button>
+                                <button [routerLink]="['/form', ad.Id, a.id]">Commander</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="service" id="professional" *ngFor="let P of professional">
+                <img [src]="P.image"  width="50px" height="50px">
+                <p>{{ P.Id }}</p>
+                <h2>{{ P.name }}</h2>
+                <p>{{ P.info }}</p>
+                <strong>Selectionner le service souhaité</strong>
+                <div class="tasks" *ngFor="let a of P.activity">
+                    <div class="task">
+                        <div class="task-img">
+                            <img [src]="a.image" [alt]="a.name">
+                        </div>
+                        <div class="task-info">
+                            <div>
+                                {{ a.id }} {{ a.name }}
+                                <div class="price" id="price">
+                                    au Cameroun : ({{ a.price | currency : 'EUR' : 'symbol' : '1.2-2' }} / {{ a.price ? a.price * convert : "sur devis" }} {{ a.price ? "FCFA" : "" }})
+                                    <br>en France : ({{ a.price ? (a.price * 2 | currency : 'EUR' : 'symbol' : '1.2-2') : "sur devis" }})
+                                </div>
+                            </div>
+                            <div class="btn">
+                                <button [routerLink]="['/form', P.Id, a.id]">Commander</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service" id="marchand" *ngFor="let M of commercial">
+                <img [src]="M.image"  width="50px" height="50px">
+                <p>{{ M.Id }}</p>
+                <h2>{{ M.name }}</h2>
+                <p>{{ M.info }}</p>
+                <strong>Selectionner le service souhaité</strong>
+                <div class="tasks" *ngFor="let a of M.activity">
+                    <div class="task">
+                        <div class="task-img">
+                            <img [src]="a.image" [alt]="a.name">
+                        </div>
+                        <div class="task-info">
+                            <div>
+                                {{ a.id }} {{ a.name }}
+                                <div class="price" id="price">
+                                    au Cameroun : ({{ a.price | currency : 'EUR' : 'symbol' : '1.2-2' }} / {{ a.price ? a.price * convert : "sur devis" }} {{ a.price ? "FCFA" : "" }})
+                                    <br>en France : ({{ a.price ? (a.price * 2 | currency : 'EUR' : 'symbol' : '1.2-2') : "sur devis" }})
+                                </div>
+                            </div>
+                            <div class="btn">
+                                <button [routerLink]="['/form', M.Id, a.id]">Commander</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

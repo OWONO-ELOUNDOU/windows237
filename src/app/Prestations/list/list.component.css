@@ -1,8 +1,11 @@
 .small-container {
+    width: 100%;
     padding: 0 70px;
+    margin-top: 7%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #efefef;
 }
 .small-container div h1{
     text-align: center;
@@ -25,13 +28,18 @@
     transform: translateX(-50%);
 }
 .row{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 100px;
+    flex-direction: column;
 }
 .service{
+    width: 100%;
+    height: 100vh;
     text-align: center;
     padding: 25px 10px;
+    margin: 100px 0;
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
@@ -50,6 +58,8 @@
 .service .tasks {
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-top: 30px;
 }
 /*
 .service:hover ul {
@@ -57,18 +67,17 @@
 }
 */
 .service .tasks .task {
-    margin: 20px 0;
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    border-bottom: 2px solid #ddd;
-    transition: all 0.5s ease;
+    gap: 20px;
+    margin: 20px 0;
+    max-width: 300px;
 }
 .service .tasks .task .task-info {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
 }
 .service .tasks .task .task-info .btn {

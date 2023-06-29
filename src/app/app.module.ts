@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 // Firebase services + environment module
 import { AngularFireModule } from '@angular/fire/compat';
@@ -71,7 +72,8 @@ import { Cv2Component } from './screen/cv2/cv2.component';
     HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
-    provideDatabase(() => getDatabase())
+    provideDatabase(() => getDatabase()),
+    IvyCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

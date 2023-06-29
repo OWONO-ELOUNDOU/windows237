@@ -13,6 +13,93 @@ export interface ServerResponse {
     products: Activity[];
 }
 
+export const serviceAdmin = [
+    {
+        Id: 1,
+        name: "services auprès des administrations publiques / privées / domestiques",
+        info: "Effectuez vos courses, formalités, démarches auprès des administrations publiques et privées  sans vous déplacer",
+        image: "../../../assets/images/icon/users.svg",
+        activity: [
+            {
+                id: 1,
+                image: "assets/images/activity_images/recherche ou verification.jpeg",
+                name: "Recherche, vérification ou suivi d’information ou de dossier administratif, professionnel ou privé",
+                price: 20,
+                info: "",
+                quantity: 1
+            },
+            {
+                id: 2,
+                image: "assets/images/activity_images/legalisation.jpeg",
+                name: "Legalisation - Authentification - Duplicata des divers documents administratifs",
+                price: 7.65,
+                info: "",
+                quantity: 1
+            },
+            {
+                id: 3,
+                image: "assets/images/activity_images/document.jpeg",
+                name: "Retrait / dépôt de document auprès de toute administration publique ou privée",
+                price: 7.65,
+                info: "",
+                quantity: 1
+            }
+        ]
+    }
+]
+
+export const serviceProf = [
+    {
+        Id: 2,
+        name: "Services professionnels",
+        info: "Faites effectuer vos courses professionnels et/ou privés sans vous déplacer au Cameroun comme en France",
+        image: "../../../assets/images/icon/shopify.svg",
+        activity: [
+            {
+                id: 1,
+                image: "assets/images/activity_images/représentation.jpeg",
+                name: "Représentation administrative, professionnelles et privées diverses(réunion, séminaire, conseil d'administration, etc.)",
+                info: "",
+                quantity: 1
+            },
+            {
+                id: 2,
+                image: "assets/images/activity_images/domiciliation.jpeg",
+                name: "Domiciliation commerciale et administrative",
+                price: 25,
+                info: "mensuel",
+                quantity: 1
+            },
+        ]
+    }
+]
+
+export const serviceMarch = [
+    {
+        Id: 3,
+        name: "Services Marchands",
+        info: "Expédiez et Revecez vos colis sans plus vous déplacer au Cameroun comme en France",
+        image: "../../../assets/images/icon/plus-circle.svg",
+        activity: [
+            {
+                id: 1,
+                image: "assets/images/activity_images/autres.jpeg",
+                name: "Accomplissement de toute autre course, acte, mission personnelle ou privée à la demande",
+                price: null,
+                info: "sur devis",
+                quantity: 1
+            },
+            {
+                id: 2,
+                image: "assets/images/activity_images/achat.jpeg",
+                name: "Achat divers - Récupération - Expédition de diervs colis",
+                info: "sur devis",
+                quantity: 1
+            }
+        ]
+    }
+]
+
 export const activities = [
         {
             Id: 1,
@@ -25,81 +112,63 @@ export const activities = [
                     image: "assets/images/activity_images/recherche ou verification.jpeg",
                     name: "Recherche, vérification ou suivi d’information ou de dossier administratif, professionnel ou privé",
                     price: 20,
-                    info: "sur devis",
+                    info: "",
                     quantity: 1
                 },
                 {
                     id: 2,
-                    image: "assets/images/activity_images/retrait et depot de document.jpeg",
-                    name: "Retrait / dépôt de document auprès de toute administration publique ou privée",
-                    price: 7.50,
-                    info: "sur devis",
+                    image: "assets/images/activity_images/legalisation.jpeg",
+                    name: "Legalisation - Authentification - Duplicata des divers documents administratifs",
+                    price: 7.65,
+                    info: "",
                     quantity: 1
                 },
                 {
                     id: 3,
-                    image: "assets/images/activity_images/representation et rendez-vous.jpeg",
-                    name: "Représentation administrative, professionnelles et privées diverses(réunion, séminaire, conseil d'administration, etc.)",
-                    info: "sur devis",
-                    quantity: 1
-                },
-                {
-                    id: 4,
-                    image: "assets/images/activity_images/representation et rendez-vous.jpeg",
-                    name: "Accomplissement de toute autre course, acte, mission personnelle ou privée à la demande",
-                    info: "sur devis",
+                    image: "assets/images/activity_images/document.jpeg",
+                    name: "Retrait / dépôt de document auprès de toute administration publique ou privée",
+                    price: 7.65,
+                    info: "",
                     quantity: 1
                 }
             ]
         },
-        /*
         {
             Id: 2,
-            name: "Services Marchands professionnels / Privés et domestiques",
-            info: "Effectuer vos achats professionnels et privés dans plusieurs villes au Cameroun et ailleurs sans vous déplacer",
+            name: "Services professionnels",
+            info: "Faites effectuer vos courses professionnels et/ou privés sans vous déplacer au Cameroun comme en France",
             image: "../../../assets/images/icon/shopify.svg",
             activity: [
                 {
                     id: 1,
-                    image: "assets/images/activity_images/aliments.jpeg",
-                    name: "Achat de produits alimentaires ou autres ",
-                    price: 7.50,
+                    image: "assets/images/activity_images/représentation.jpeg",
+                    name: "Représentation administrative, professionnelles et privées diverses(réunion, séminaire, conseil d'administration, etc.)",
+                    info: "",
                     quantity: 1
                 },
                 {
                     id: 2,
-                    image: "assets/images/activity_images/achat et expedition de petites courses locales.jpeg",
-                    name: "Retrait de produits alimentaires ou autres ",
-                    price: 7.50,
+                    image: "assets/images/activity_images/domiciliation.jpeg",
+                    name: "Domiciliation commerciale et administrative",
+                    price: 25,
+                    info: "mensuel",
                     quantity: 1
                 },
-                {
-                    id: 3,
-                    image: "assets/images/activity_images/autres formalités.jpeg",
-                    name: "Expédition de produits alimentaires ou autres ",
-                    price: 7.50,
-                    quantity: 1
-                }
             ]
         },
-        
         {
             Id: 3,
-            name: "Services Messageries professionnels et privés",
-            info: "Expédiez et Revecez vos documents et colis sans plus vous déplacer",
+            name: "Services Marchands",
+            info: "Expédiez et Revecez vos colis sans plus vous déplacer au Cameroun comme en France",
             image: "../../../assets/images/icon/plus-circle.svg",
             activity: [
                 {
                     id: 1,
-                    //image: "assets/Images/activity_images/achat et expedition de petites courses locales.jpeg",
-                    name: "Dépôt de colis",
-                    price: 7.50,
-                },
-                {
-                    id: 2,
-                    name: "Retrait de colis",
+                    image: "assets/images/activity_images/autres.jpeg",
+                    name: "Accomplissement de toute autre course, acte, mission personnelle ou privée à la demande",
+                    info: "",
+                    quantity: 1
                 }
             ]
         },
-        */
 ];
