@@ -1,90 +1,88 @@
 <app-header></app-header>
 <div class="small-container">
-    <div>
-        <h1>Courses en Ligne</h1>
-        <div class="row">
-            <div class="service" id="admin" *ngFor="let ad of administrative">
-                <img [src]="ad.image"  width="50px" height="50px">
-                <p>{{ ad.Id }}</p>
-                <h2>{{ ad.name }}</h2>
-                <p>{{ ad.info }}</p>
-                <strong>Selectionner le service souhaité</strong>
-                <div class="tasks" *ngFor="let a of ad.activity">
-                    <div class="task">
-                        <div class="task-img">
-                            <img [src]="a.image" [alt]="a.name">
+    <div class="container-form">
+ 
+        <div class="service" *ngIf="administrative && administrative.length > 0">
+            <div *ngFor="let admin of administrative">
+                <div class="service_info">
+                    <img class="service_logo" [src]="admin.image">
+                    <h1 class="title">{{ admin.name }}</h1>
+                    <h2 class="sub-title">{{ admin.info }}</h2>
+                </div>
+                <div class="exclusives" *ngIf="admin.activity && admin.activity.length > 0">
+                    <div class="card" *ngFor="let activity of admin.activity">
+                        <div class="card-img">
+                            <img [src]="activity.image">
                         </div>
-                        <div class="task-info">
-                            <div>
-                                {{ a.id }} {{ a.name }}
-                                <div class="price" id="price">
-                                    au Cameroun : ({{ a.price | currency : 'EUR' : 'symbol' : '1.2-2' }} / {{ a.price ? a.price * convert : "sur devis" }} {{ a.price ? "FCFA" : "" }})
-                                    <br>en France : ({{ a.price ? (a.price * 2 | currency : 'EUR' : 'symbol' : '1.2-2') : "sur devis" }})
-                                </div>
-                            </div>
-                            <div class="btn">
-                                <button [routerLink]="['/form', ad.Id, a.id]">Commander</button>
+                        <div class="card-body">
+                            <h4>{{ activity.name }}</h4>
+                            <ul>
+                                <li>- Cameroun : {{ activity.price * 650 }} {{activity.price ? "FCFA" : "sur devis"}} </li>
+                                <li>- France : {{ activity.price }} {{activity.price ? "€" : "sur devis"}} </li>
+                            </ul>
+                            <div class="button">
+                                <a [routerLink]="['/form',admin.Id,activity.id]">Commander</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="service" id="professional" *ngFor="let P of professional">
-                <img [src]="P.image"  width="50px" height="50px">
-                <p>{{ P.Id }}</p>
-                <h2>{{ P.name }}</h2>
-                <p>{{ P.info }}</p>
-                <strong>Selectionner le service souhaité</strong>
-                <div class="tasks" *ngFor="let a of P.activity">
-                    <div class="task">
-                        <div class="task-img">
-                            <img [src]="a.image" [alt]="a.name">
-                        </div>
-                        <div class="task-info">
-                            <div>
-                                {{ a.id }} {{ a.name }}
-                                <div class="price" id="price">
-                                    au Cameroun : ({{ a.price | currency : 'EUR' : 'symbol' : '1.2-2' }} / {{ a.price ? a.price * convert : "sur devis" }} {{ a.price ? "FCFA" : "" }})
-                                    <br>en France : ({{ a.price ? (a.price * 2 | currency : 'EUR' : 'symbol' : '1.2-2') : "sur devis" }})
-                                </div>
-                            </div>
-                            <div class="btn">
-                                <button [routerLink]="['/form', P.Id, a.id]">Commander</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="service" id="marchand" *ngFor="let M of commercial">
-                <img [src]="M.image"  width="50px" height="50px">
-                <p>{{ M.Id }}</p>
-                <h2>{{ M.name }}</h2>
-                <p>{{ M.info }}</p>
-                <strong>Selectionner le service souhaité</strong>
-                <div class="tasks" *ngFor="let a of M.activity">
-                    <div class="task">
-                        <div class="task-img">
-                            <img [src]="a.image" [alt]="a.name">
-                        </div>
-                        <div class="task-info">
-                            <div>
-                                {{ a.id }} {{ a.name }}
-                                <div class="price" id="price">
-                                    au Cameroun : ({{ a.price | currency : 'EUR' : 'symbol' : '1.2-2' }} / {{ a.price ? a.price * convert : "sur devis" }} {{ a.price ? "FCFA" : "" }})
-                                    <br>en France : ({{ a.price ? (a.price * 2 | currency : 'EUR' : 'symbol' : '1.2-2') : "sur devis" }})
-                                </div>
-                            </div>
-                            <div class="btn">
-                                <button [routerLink]="['/form', M.Id, a.id]">Commander</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
+
+        <div class="service" *ngIf="professional && professional.length > 0">
+            <div *ngFor="let pro of professional">
+                <div class="service_info">
+                    <img class="service_logo" [src]="pro.image">
+                    <h1 class="title">{{ pro.name }}</h1>
+                    <h2 class="sub-title">{{ pro.info }}</h2>
+                </div>
+                <div class="exclusives" *ngIf="pro.activity && pro.activity.length > 0">
+                    <div class="card" *ngFor="let activity of pro.activity">
+                        <div class="card-img">
+                            <img [src]="activity.image">
+                        </div>
+                        <div class="card-body">
+                            <h4>{{ activity.name }}</h4>
+                            <ul>
+                                <li>- Cameroun : {{ activity.price * 650 }} {{activity.price ? "FCFA" : "sur devis"}} </li>
+                                <li>- France : {{ activity.price }} {{activity.price ? "€" : "sur devis"}} </li>
+                            </ul>
+                            <div class="button">
+                                <a [routerLink]="['/form',pro.Id,activity.id]">Commander</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="service" *ngIf="commercial && commercial.length > 0">
+            <div *ngFor="let com of commercial">
+                <div class="service_info">
+                    <img class="service_logo" [src]="com.image">
+                    <h1 class="title">{{ com.name }}</h1>
+                    <h2 class="sub-title">{{ com.info }}</h2>
+                </div>
+                <div class="exclusives" *ngIf="com.activity && com.activity.length > 0">
+                    <div class="card" *ngFor="let activity of com.activity">
+                        <div class="card-img">
+                            <img [src]="activity.image">
+                        </div>
+                        <div class="card-body">
+                            <h4>{{ activity.name }}</h4>
+                            <ul>
+                                <li>- Cameroun : {{ activity.price * 650 }} {{activity.price ? "FCFA" : "sur devis"}} </li>
+                                <li>- France : {{ activity.price }} {{activity.price ? "€" : "sur devis"}} </li>
+                            </ul>
+                            <div class="button">
+                                <a [routerLink]="['/form',com.Id,activity.id]">Commander</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 <app-footer></app-footer>

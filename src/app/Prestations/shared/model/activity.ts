@@ -93,6 +93,7 @@ export const serviceMarch = [
                 id: 2,
                 image: "assets/images/activity_images/achat.jpeg",
                 name: "Achat divers - Récupération - Expédition de diervs colis",
+                price: null,
                 info: "sur devis",
                 quantity: 1
             }
@@ -167,6 +168,13 @@ export const activities = [
                     image: "assets/images/activity_images/autres.jpeg",
                     name: "Accomplissement de toute autre course, acte, mission personnelle ou privée à la demande",
                     info: "",
+                    quantity: 1
+                },
+                {
+                    id: 2,
+                    image: "assets/images/activity_images/achat.jpeg",
+                    name: "Achat divers - Récupération - Expédition de diervs colis",
+                    info: "sur devis",
                     quantity: 1
                 }
             ]
