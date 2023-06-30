@@ -70,6 +70,14 @@ export const serviceProf = [
                 info: "mensuel",
                 quantity: 1
             },
+            {
+                id: 3,
+                image: "assets/images/activity_images/RDV.jpeg",
+                name: "pour toutes vos demandes de RDV professionnels, médicales et autres",
+                price: null,
+                info: "",
+                quantity: 1
+            }
         ]
     }
 ]
@@ -155,6 +163,14 @@ export const activities = [
                     info: "mensuel",
                     quantity: 1
                 },
+                {
+                    id: 3,
+                    image: "assets/images/activity_images/RDV.jpeg",
+                    name: "pour toutes vos demandes de RDV professionnels, médicales et autres",
+                    price: null,
+                    info: "",
+                    quantity: 1
+                }
             ]
         },
         {
