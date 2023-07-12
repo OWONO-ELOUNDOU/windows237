@@ -74,7 +74,7 @@ export const serviceProf = [
                 id: 3,
                 image: "assets/images/activity_images/RDV.jpeg",
                 name: "pour toutes vos demandes de RDV professionnels, médicales et autres",
-                price: null,
+                price: 7.65,
                 info: "",
                 quantity: 1
             }
@@ -106,6 +106,33 @@ export const serviceMarch = [
                 quantity: 1
             }
         ]
+    }
+]
+
+export const houseService = [
+    {
+        id: 1,
+        image: 'assets/images/house_img/opportunité.jpg',
+        name: 'Recherches opportunités d\'affaires',
+        price: null,
+        info: '',
+        quantity: 1,
+    },
+    {
+        id: 2,
+        image: 'assets/images/house_img/construction.jpg',
+        name: 'Construction, réhabilitation et innovation immobilière',
+        price: null,
+        info: '',
+        quantity: 1,
+    },
+    {
+        id: 3,
+        image: 'assets/images/house_img/terrains_actifs.jpeg',
+        name: 'Recherche de terrains et autres actifs immobiliers',
+        price: null,
+        info: '',
+        quantity: 1,
     }
 ]
 
@@ -167,7 +194,7 @@ export const activities = [
                     id: 3,
                     image: "assets/images/activity_images/RDV.jpeg",
                     name: "pour toutes vos demandes de RDV professionnels, médicales et autres",
-                    price: null,
+                    price: 7.65,
                     info: "",
                     quantity: 1
                 }
@@ -195,4 +222,43 @@ export const activities = [
                 }
             ]
         },
+        {
+            Id: 4,
+            image: '',
+            name: 'Investissements immobiliers',
+            info:'',
+            activity: [
+                {
+                    id: 1,
+                    image: 'assets/images/house_img/opportunité.jpg',
+                    name: 'Recherches opportunités d\'affaires',
+                    price: null,
+                    info: '',
+                    quantity: 1,
+                },
+                {
+                    id: 2,
+                    image: 'assets/images/house_img/construction.jpg',
+                    name: 'Construction, réhabilitation et innovation immobilière',
+                    price: null,
+                    info: '',
+                    quantity: 1,
+                },
+                {
+                    id: 3,
+                    image: 'assets/images/house_img/terrains_actifs.jpeg',
+                    name: 'Recherche de terrains et autres actifs immobiliers',
+                    price: null,
+                    info: '',
+                    quantity: 1,
+                }
+            ]
+        },
+        {
+            Id: 5,
+            image: 'https://via.placeholder.com/80x80?text=office',
+            name: 'Offres foncières disponibles',
+            info: '',
+            activity: []
+        }
 ];

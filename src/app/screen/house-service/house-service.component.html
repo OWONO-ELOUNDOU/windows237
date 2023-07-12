@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="small-container">
+    <h1 class="title">Services Immobiliers</h1>
+    <div class="loader" *ngIf="isLoading">
+        <app-content-loader></app-content-loader>
+    </div>
+    <div class="exclusives" *ngIf="exclusives && exclusives.length > 0">
+        <div class="card" *ngFor="let exclus of exclusives">
+            <div class="header">
+                <img [src]="exclus.image">
+            </div>
+            <div class="info">
+              <p class="title">{{ exclus.name }}</p>
+              <p>{{ exclus.info }}</p>
+            </div>
+            <div class="footer">
+              <p class="tag">price </p>
+              <button type="button" class="action" [routerLink]="['/form', '4', exclus.id]"> Commander </button>
+            </div>
+        </div>
+    </div>
+</div>

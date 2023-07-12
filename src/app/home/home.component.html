@@ -86,6 +86,7 @@
                     <ul>
                         <li>-> Représentation administrative ou professionnelle</li>
                         <li>-> Domiciliation commerciale et administrative</li>
+                        <li>-> pour toutes vos demandes de RDV professionnels, médicales et autres</li>
                     </ul>
                     <p>Nos services sont valables autant pour le Cameroun que pour la France</p>
                     <a [href]="professionalLink" class="cta-btn">Commander Maintenant</a>
@@ -129,6 +130,25 @@
                     <a [routerLink]="['/shop']">Boutiques, vente et achats en ligne</a>
                 </li>
             </ul>
+        </div>
+    </div>
+
+    <!--
+    <div class="offre">
+        <h1>Offres foncières disponibles</h1>
+    </div>
+    -->
+
+    <div class="house-service" id="house_service">
+        <h2 class="title">Services Immobiliers</h2>
+        <div class="row" *ngIf="houseServices && houseServices.length > 0">
+            <div class="card" *ngFor="let house of houseServices">
+                <div class="card-image">
+                    <img [src]="house.image" [title]="house.name">
+                </div>
+                <div class="heading">{{ house.name }}</div>
+                <div class="category"> <button type="button" [routerLink]="['/house']" class="action">Démarrer </button> </div>
+            </div>
         </div>
     </div>
 
