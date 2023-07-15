@@ -1,4 +1,35 @@
 <div class="container">
+    <div class="form-box" data-aos="fade-up">
+        <div class="row">
+            <div>
+                <div role="alert">
+                    {{ errorMsg }}
+                    <button type="button" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+
+                <div role="alert">
+                    {{ successMsg }}
+                    <button type="button" data-bs-dismiss="alert" aria-label="close"></button>
+                </div>
+            </div>
+        </div>
+        <h1 class="title">Cameroun Directe</h1>
+        <form  #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+            <input type="email" name="email" placeholder="Adresse mail" ngModel>
+            <input type="password" name="password" placeholder="mot de passe" ngModel>
+            <button type="submit">Connexion</button>
+            <div class="text">
+                <p>pas encore inscrit ? <a [routerLink]="['/signup']">Inscription</a></p>
+            </div>
+        </form>
+        <div *ngIf="isLoading">
+            <app-loading-spinner></app-loading-spinner>
+        </div>
+        <p>forgot your password</p>
+    </div>
+</div>
+
+<!-- <div class="container">
     <div class="signup-box">
         <div class="col-1">
             <img [src]="logImg">
@@ -44,4 +75,4 @@
             </form>
         </div>
     </div>
-</div>
+</div> -->
