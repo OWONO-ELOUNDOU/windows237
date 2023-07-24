@@ -77,6 +77,14 @@ export const serviceProf = [
                 price: 7.65,
                 info: "",
                 quantity: 1
+            },
+            {
+                id: 4,
+                image: "assets/images/activity_images/RDV.jpeg",
+                name: "Négociations et Intermédiations",
+                price: 7.65,
+                info: "",
+                quantity: 1
             }
         ]
     }
@@ -194,6 +202,14 @@ export const activities = [
                     id: 3,
                     image: "assets/images/activity_images/RDV.jpeg",
                     name: "pour toutes vos demandes de RDV professionnels, médicales et autres",
+                    price: 7.65,
+                    info: "",
+                    quantity: 1
+                },
+                {
+                    id: 4,
+                    image: "assets/images/activity_images/RDV.jpeg",
+                    name: "Négociations et Intermédiations",
                     price: 7.65,
                     info: "",
                     quantity: 1
