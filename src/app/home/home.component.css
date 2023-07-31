@@ -363,11 +363,11 @@
         color: brown;
     }
     .header .right-col .texte {
-        position: relative;
+        /* position: relative; */
         text-align: center;
         font-size: 10px;
     }
-    .header .right-col .texte::after {
+    /* .header .right-col .texte::after {
         content: '';
         width: 110%;
         height: 10px;
@@ -375,7 +375,7 @@
         position: absolute;
         left: -5%;
         bottom: -20px;
-    }
+    } */
     .header .right-col .buttons {
         display: flex;
         align-items: center;
