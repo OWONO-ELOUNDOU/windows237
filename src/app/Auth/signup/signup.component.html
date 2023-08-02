@@ -1,4 +1,40 @@
 <div class="container">
+        <div class="form_box">
+            <div class="form_box_header">
+                <h3 class="subtitle">START FOR FREE</h3>
+                <h1 class="title">Create new account<span>.</span></h1>
+                <p>Déja membre ? <a [routerLink]="['/login']">Connexion</a></p>
+            </div>
+            <form action="" class="signup-form">
+                <div class="box">
+                    <h3 class="subtitle">Personal Informations</h3>
+                    <div class="input-box">
+                        <input type="text" name="name" id="name" placeholder="first name">
+                        <input type="text" name="surname" id="surname" placeholder="last name">
+                    </div>
+                </div>
+                <div class="box">
+                    <h3 class="subtitle">Contact Informations</h3>
+                    <div class="input-box">
+                        <input type="email" name="email" id="email" placeholder="Email Address">
+                        <input type="password" name="password" id="password" placeholder="Password">
+                        <input type="tel" name="phone" id="phone" placeholder="Phone Number">
+                    </div>
+                </div>
+                <div class="box">
+                    <h3 class="subtitle">Location Informations</h3>
+                    <div class="input-box">
+                        <input type="text" name="street" id="street" placeholder="Street">
+                        <input type="text" name="twon" id="twon" placeholder="Twon">
+                        <input type="text" name="country" id="country" placeholder="Country">
+                    </div>
+                </div>
+                <button type="submit">Inscription</button>
+            </form>
+        </div>
+    </div>
+
+<!-- <div class="container">
     <div class="form">
         <h1 class="title">Inscription</h1>
         <div class="row">
@@ -64,4 +100,4 @@
             <p>Already have an account ? <a [routerLink]="['/login']">Log In</a></p>
         </form>
     </div>
-</div>
+</div> -->
