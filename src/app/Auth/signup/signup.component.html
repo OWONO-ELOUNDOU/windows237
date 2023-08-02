@@ -1,4 +1,50 @@
 <div class="container">
+        <div class="form_box">
+            <div class="form_box_header">
+                <h3 class="subtitle">START FOR FREE</h3>
+                <h1 class="title">Create new account<span>.</span></h1>
+                <p>Déja membre ? <a [routerLink]="['/login']">Connexion</a></p>
+                <div>
+                    <div *ngIf="errormsg" role="alert">
+                        {{ errormsg }}
+                        <button type="button" data-bs-dismiss="alert" aria-label="close"></button>
+                    </div>
+    
+                    <div *ngIf="successmsg" role="alert">
+                        {{ successmsg }}
+                        <button type="button" data-bs-dismiss="alert" aria-label="close"></button>
+                    </div>
+                </div>
+            </div>
+            <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)" class="signup-form">
+                <div class="box">
+                    <h3 class="subtitle">Informations Personnelles</h3>
+                    <div class="input-box">
+                        <input type="text" name="fname" id="fname" placeholder="Nom" ngModel>
+                        <input type="text" name="lname" id="lname" placeholder="Prénom" ngModel>
+                    </div>
+                </div>
+                <div class="box">
+                    <h3 class="subtitle">Informations de Contacte</h3>
+                    <div class="input-box">
+                        <input type="email" name="email" id="email" placeholder="Adresse mail" ngModel>
+                        <input type="password" name="password" id="password" placeholder="mot de passe" ngModel>
+                        <input type="tel" name="phone" id="phone" placeholder="numéro téléhphone" ngModel>
+                    </div>
+                </div>
+                <div class="box">
+                    <h3 class="subtitle">Informations de localisation</h3>
+                    <div class="input-box">
+                        <input type="text" name="street" id="street" placeholder="Street" ngModel>
+                        <input type="text" name="town" id="town" placeholder="Twon" ngModel>
+                        <input type="text" name="country" id="country" placeholder="Country" ngModel>
+                    </div>
+                </div>
+                <button type="submit">Inscription</button>
+            </form>
+        </div>
+    </div>
+
     <div class="form">
         <h1 class="title">Inscription</h1>
         <div class="row">
@@ -64,4 +110,4 @@
             <p>Already have an account ? <a [routerLink]="['/login']">Log In</a></p>
         </form>
     </div>
-</div>
+</div> -->
