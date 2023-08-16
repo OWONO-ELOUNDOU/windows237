@@ -1,0 +1,67 @@
+<app-header></app-header>
+<main>
+    
+    <div class="row-1">
+        <h1 class="title">Veuillez remplir les informations sur votre offre</h1>
+    </div>
+    <div class="row-2">
+        <div class="left-col">
+            <form #form="ngForm" id="form" (ngSubmit)="saveService(form.value)">
+                <div class="input-box username">
+                    <div class="field">
+                        <label for="username">Caractéristiques de l'immeuble / du site</label>
+                        <input type="text" name="caracteristique" id="caracteristique" ngModel>
+                    </div>
+                    <div class="field">
+                        <label for="username">Lieu</label>
+                        <input type="text" name="lieu" id="lieu" ngModel>
+                    </div>
+                </div>
+
+                <div class="input-box username">
+                    <div class="field">
+                        <label>Type: terrain/ villa / immeuble</label>
+                        <div class="date">
+                            <input type="text" name="type" placeholder="" ngModel>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="username">Superficie / plan maison - année de construction / travaux à faire</label>
+                        <input type="text" name="superficie" placeholder="" ngModel>
+                    </div>
+                </div>
+
+                <div class="input-box localisation">
+                    <div class="field">
+                        <div class="box">
+                            <label for="coordonnees">Propriétaire: vente aux enchères, administrations, société, familiale, personne individuelle</label>
+                            <input type="text" name="proprietaire" id="proprietaire" placeholder="" ngModel>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="box">
+                            <label for="description">Immeuble faisant l'objet d'un T.F (oui / non / en cours)</label>
+                            <input type="text" name="description" id="description" placeholder="" ngModel>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="box">
+                            <label for="price">Prix</label>
+                            <input type="text" name="price" id="price" placeholder="" ngModel>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button type="submit" class="btn-next">Enregistrer le service</button>
+                    <!-- <button type="submit" class="btn-next" *ngIf="isRegister" [routerLink]="['/cart']" (click)="addToCart(productId)">Ajouter au panier</button> -->
+                </div>
+            </form>
+        </div>
+        
+        <div class="right-col">
+            <button class="back-btn" [routerLink]="['/house']">back</button>
+        </div>
+    </div>
+</main>
+<app-footer></app-footer>

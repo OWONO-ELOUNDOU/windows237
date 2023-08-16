@@ -38,8 +38,9 @@ import { DohoneComponent } from './dohone/dohone.component';
 import { LoadingSpinnerComponent } from './screen/loading-spinner/loading-spinner.component';
 import { CvComponent } from './screen/cv/cv.component';
 import { Cv2Component } from './screen/cv2/cv2.component';
-import { HouseServiceComponent } from './screen/house-service/house-service.component';
 import { ContentLoaderComponent } from './screen/content-loader/content-loader.component';
+import { HouseComponent } from './Houses/house/house.component';
+import { HouseFormComponent } from './Houses/house-form/house-form.component';
 
 
 @NgModule({
@@ -65,8 +66,9 @@ import { ContentLoaderComponent } from './screen/content-loader/content-loader.c
     LoadingSpinnerComponent,
     CvComponent,
     Cv2Component,
-    HouseServiceComponent,
     ContentLoaderComponent,
+    HouseComponent,
+    HouseFormComponent,
   ],
   imports: [
     BrowserModule,

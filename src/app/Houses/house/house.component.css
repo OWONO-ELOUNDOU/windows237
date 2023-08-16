@@ -1,0 +1,131 @@
+main {
+    width: 100%;
+    padding: 10% 5%;
+}
+.header {
+    display: grid;
+    place-items: center;
+    background: linear-gradient(to bottom, #afafaf, transparent), url(../../../assets/images/house_img/construction.jpg) center no-repeat;
+    background-size: cover;
+    aspect-ratio: 16/6;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    margin-bottom: 60px;
+}
+.header .title {
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.services {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.services .left-col {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.services .left-col .card {
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 5px rgba(0,0,0,0.15);
+}
+.services .left-col .card .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 25px;
+}
+.services .left-col .card .card-header img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.services .left-col .card .card-body .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.services .left-col .card .card-body .info .col p {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.services .left-col .card .card-body .info .col span {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 5px;
+}
+.services .left-col .card .card-body .button button {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 0;
+    color: #fff;
+    background: #4949ec;
+    cursor: pointer;
+}
+.services .right-col {
+    width: 100%;
+}
+.services .right-col .card .card-body {
+    width: 100%;
+    padding: 25px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 5px rgba(0,0,0,0.15);
+}
+.services .right-col .card .card-body .info .col {
+    text-align: center;
+}
+.services .right-col .card .card-body .info .col span {
+    font-size: 13px;
+    color: #777;
+}
+.services .right-col .card .card-body .button button {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 45px;
+    color: #fff;
+    background: #4949ec;
+    cursor: pointer;
+}
+
+/* ============ Responsive design css =========== */
+@media screen and (max-width: 900px) {
+    .header {
+        margin-top: 25%;
+        padding: 10px;
+        width: auto;
+        aspect-ratio: 1/1;
+    }
+    .header .title {
+        font-size: 30px;
+    }
+    .services {
+        align-items: center;
+    }
+    .services .left-col .card {
+        width: auto;
+    }
+}

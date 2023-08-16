@@ -15,10 +15,11 @@ import { DocumentsComponent } from './Free-services/documents/documents.componen
 import { LinksComponent } from './Free-services/links/links.component';
 import { InfoComponent } from './Free-services/info/info.component';
 import { ShopComponent } from './Free-services/shop/shop.component';
+import { HouseComponent } from './Houses/house/house.component';
+import { HouseFormComponent } from './Houses/house-form/house-form.component';
 import { DohoneComponent } from './dohone/dohone.component';
 import { CvComponent } from './screen/cv/cv.component';
 import { Cv2Component } from './screen/cv2/cv2.component';
-import { HouseServiceComponent } from './screen/house-service/house-service.component';
 import { AuthGuard } from './services/Guard/auth.guard';
 
 /* import { AuthService } from './services/Auth/auth.service'; */
@@ -40,7 +41,8 @@ const routes: Routes = [
   { path: 'links', component: LinksComponent, canActivate: [AuthGuard] },
   { path: 'info', component: InfoComponent, canActivate: [AuthGuard] },
   { path: 'shop', component: ShopComponent, canActivate: [AuthGuard] },
-  { path: 'house', component: HouseServiceComponent, canActivate: [AuthGuard] },
+  { path: 'house', component: HouseComponent, canActivate: [AuthGuard] },
+  { path: 'house/form/:id', component: HouseFormComponent, canActivate: [AuthGuard] },
   { path: 'pay/with/dohone', component: DohoneComponent },
   { path: 'form/:id/:Id', component: FormComponent },
   { path: '**', component: HomeComponent }

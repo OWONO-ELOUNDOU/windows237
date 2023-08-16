@@ -1,0 +1,53 @@
+<app-header></app-header>
+<main>
+    <div class="header">
+        <h1 class="title">Services Immobiliers</h1>      
+    </div>
+    <div class="services">
+        <div class="left-col" *ngIf="houses && houses.length > 0">
+            <div class="card" *ngFor="let house of houses">
+                <div class="card-header">
+                    <img [src]="house.image">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <h4>{{ house.name }}</h4>
+                    </div>
+                    <div class="info">
+                        <div class="col">
+                            <p>Cameroun</p>
+                            <span>{{house.price ? "FCFA" : "sur devis"}}</span>
+                        </div>
+                        <div class="col">
+                            <p>France</p>
+                            <span>{{ house.price }} {{house.price ? "€" : "sur devis"}}</span>
+                        </div>
+                        <div class="col">
+                            <p>Auteur</p>
+                            <span>windows237</span>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <button type="button" [routerLink]="['/house/form',house.id]">Commander</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-col">
+            <div class="card">
+                <div class="card-body">
+                    <div class="info">
+                        <div class="col">
+                            <p>Vous souhaitez poster une offre immobilière</p>
+                            <span>Créer votre poste ici</span>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <button type="button" (click)="show()">Poster une offre +</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<app-footer></app-footer>
