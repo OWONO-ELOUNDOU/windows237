@@ -1,106 +1,74 @@
 <app-header></app-header>
-<div class="small-container">
-    <h1 class="title">Fiche d'information du service sollicité</h1>
-    <div class="form-box">
-
-        <form #form="ngForm" id="form" (ngSubmit)="saveService(form.value)">
-            <div class="logo">
-                <img [src]="logo"  style="width: 240px;">
-            </div>
-            <table>
-                <tr>
-                    <th>Nom</th>
-                    <th>Prénom</th>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="text" name="nom" placeholder="Nom" ngModel>
-                    </td>
-                    <td>
-                        <input type="text" name="prenom" placeholder="Prénom" ngModel>
-                    </td>
-                </tr>
-            </table>
-
-            <table>
-                <tr>
-                    <th class="rubrique">Numéro Rubrique (1, 2, 3)</th>
-                    <th>
-                        Service Sélectionné
-                    </th>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="number" name="rubrique" value="{{ product.Id }}" style="width: 60px;" ngModel/>
-                    </td>
-                    <td>
-                        <input type="text" name="service" value="{{ productId.name }}" ngModel>
-                    </td>
-                </tr>
-            </table>
-
-            <table>
-                <tr>
-                    <th>
-                        Description détaillée du service sollicité
-                    </th>
-                </tr>
-
-                <tr>
-                    <td>
-                        <textarea rows="5" name="description" ngModel></textarea>
-                    </td>
-                </tr>
-            </table>
-
-            <table>
-                <tr>
-                    <th>
-                        Coordonnées précise de l'administration, du service, du responsable à contacter
-                    </th>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="text" name="coordonnees" placeholder="coordonnées" ngModel/>
-                    </td>
-                </tr>
-            </table>
-
-            <table>
-                <tr>
-                    <th>
-                        Veuillez préciser tout autre document numérique susceptible de nous aider
-                    </th>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="file" name="file" placeholder="document" ngModel/>
-                    </td>
-                </tr>
-            </table>
-
-            <div class="button">
-                <!--<input type="submit" [routerLink]="['/cart']" (click)="addToCart(product1)"  value="Ajouter au Panier">-->
-                <a *ngIf="isRegister" [routerLink]="['/cart']" (click)="addToCart(productId)">Ajouter au Panier</a>
-                <button type="submit">Enregistrer le service</button>
-            </div>
-        </form>
-
+<main>
+    <div class="row-1">
+        <h1 class="title">Veuillez remplir vos informations</h1>
     </div>
+    <div class="row-2">
+        <div class="left-col">
+            <form #form="ngForm" id="form" (ngSubmit)="saveService(form.value)">
+                <div class="input-box username">
+                    <div class="field">
+                        <label for="username">Nom</label>
+                        <input type="text" name="nom" id="username" ngModel>
+                    </div>
+                    <div class="field">
+                        <label for="username">Prénom</label>
+                        <input type="text" name="prenom" id="username" ngModel>
+                    </div>
+                </div>
+                <div class="input-box username">
+                    <div class="field">
+                        <label>Numéro et type de service</label>
+                        <div class="date">
+                            <input type="text" name="rubriqueId" placeholder="{{ product.Id }}" ngModel>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="username">Service Sélectionné</label>
+                        <input type="text" name="service" placeholder="{{ productId.name }}" ngModel>
+                    </div>
+                </div>
+                <div class="input-box localisation">
+                    <div class="field">
+                        <div class="box">
+                            <label for="coordonnees">Coordonnées précise de l'administration, du service, du responsable à contacter</label>
+                            <input type="text" name="coordonnees" id="coordonnees" placeholder="coordonnées" ngModel>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="box">
+                            <label for="description">Description détaillée du service sollicité</label>
+                            <textarea rows="5" name="description" id="description" ngModel></textarea>
+                        </div>
+                    </div>
+                    <!-- <div class="field">
+                        <div class="box">
+                            <label for="description">Veuillez préciser tout autre document numérique susceptible de nous aider</label>
+                            <input type="file" name="file" placeholder="document" ngModel/>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="btn-next">Enregistrer le service</button>
+                    <button type="submit" class="btn-next" *ngIf="isRegister" [routerLink]="['/cart']" (click)="addToCart(productId)">Ajouter au panier</button>
+                </div>
+            </form>
+        </div>
 
-    <div class="note">
-        <h4>N.B:</h4>
-        <ul>
-            <li>- Nous pouvons vous contacter  pour toutes informations et
-                <br>précisions complémentaires et nécessaires pour la réalisation de votre demande.
-            </li>
-            <li>- Expédition des plis et colis à vos frais : service de transport Yango,
-                <br>agence de transport inter-urbain, DHL, EMS, UPS, autres à préciser
-            </li>
-        </ul>
+        <div class="right-col">
+            <button class="back-btn" [routerLink]="['/list']">back</button>
+            <div class="note">
+                <h4>N.B:</h4>
+                <ul>
+                    <li>- Nous pouvons vous contacter  pour toutes informations et
+                        <br>précisions complémentaires et nécessaires pour la réalisation de votre demande.
+                    </li>
+                    <li>- Expédition des plis et colis à vos frais : service de transport Yango,
+                        <br>agence de transport inter-urbain, DHL, EMS, UPS, autres à préciser
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-</div>
+</main>
 <app-footer></app-footer>

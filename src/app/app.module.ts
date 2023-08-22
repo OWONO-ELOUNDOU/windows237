@@ -41,6 +41,7 @@ import { Cv2Component } from './screen/cv2/cv2.component';
 import { ContentLoaderComponent } from './screen/content-loader/content-loader.component';
 import { HouseComponent } from './Houses/house/house.component';
 import { HouseFormComponent } from './Houses/house-form/house-form.component';
+import { BlogComponent } from './screen/blog/blog.component';
 
 
 @NgModule({
@@ -69,6 +70,7 @@ import { HouseFormComponent } from './Houses/house-form/house-form.component';
     ContentLoaderComponent,
     HouseComponent,
     HouseFormComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,

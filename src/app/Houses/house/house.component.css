@@ -5,7 +5,7 @@ main {
 .header {
     display: grid;
     place-items: center;
-    background: linear-gradient(to bottom, #afafaf, transparent), url(../../../assets/images/house_img/construction.jpg) center no-repeat;
+    background: linear-gradient(to bottom, #afafaf, transparent), url(../../../assets/images/house_img/service_immobilier.jpg) center no-repeat;
     background-size: cover;
     aspect-ratio: 16/6;
     width: 100%;

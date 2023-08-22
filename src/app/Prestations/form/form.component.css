@@ -1,132 +1,99 @@
-.small-container {
-    margin-top: 5%;
-    padding: 0 70px;
+ul {
+    list-style: none;
 }
-.small-container h1{
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+ul li {
+    font-size: 13px;
     color: #777;
-    margin-bottom: 60px;
-    font-weight: lighter;
-    position: relative;
 }
-.small-container h1::after{
-    content: '';
-    background: #303ef7;
-    width: 100px;
-    height: 5px;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
+main {
+    margin-top: 10%;
+    padding: 0 7%;
 }
-.form-box {
+main .row-1 {
+    margin-bottom: 40px;
+}
+main .row-1 .title {
+    color: #777;
+}
+
+main .row-2 {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.row-2 .right-col {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 10px;
+    width: 250px;
 }
-
-.button {
-    margin: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-.button button{
-    color: #57cc99;
-    background-color: #fff;
-    padding: 10px 30px;
-    border: 1px solid #57cc99;
-    transition: all 0.5s ease;
+.row-2 .left-col form .buttons button,
+.row-2 .right-col button {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
-.button a{
-    text-decoration: none;
-    color: orange;
-    border: 1px solid orange;
-    padding: 10px 30px;
-    transition: all 0.3s ease;
-}
-.button button:hover {
-    border-radius: 30px;
-    background: #57cc99;
+.row-2 .left-col form .buttons .btn-next{
+    background: #4210b8;
     color: #fff;
 }
-.button a:hover {
-    border-radius: 30px;
-    background: orange;
-    color: #fff;
+.row-2 .right-col .back-btn{
+    background: #fff;
+    color: #777;
+    border: 1px solid #777;
 }
 
-@media screen and (max-width: 700px) {
-    .form-box form {
-        flex-direction: column;
-    }
+.row-2 .left-col {
+    width: 800px;
 }
-
-
-table {
-    width: 100%;
-    max-width: 500px;
-    margin-top: 5%;
-    border-collapse: all;
+.row-2 .left-col form .input-box {
+    background: #efefef;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
-
-th {
-    text-align: center;
-    padding: 8px;
-    background: #26242b;
-    color: #fff;
-    font-weight: normal;
-}
-th.rubrique {
-    width: 20px;
-}
-td {
-    padding: 10px 5px;
-}
-td input {
-    padding: 10px;
-    margin-top: 10px;
-    width: 100%;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid #777;
-}
-td select {
-    padding: 10px 30px;
-    width: 100%;
-    margin-top: 10px;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid #777;
-}
-td textarea {
-    width: 100%;
-    margin-top: 10px;
-    resize: none;
-}
-td a {
-    color: #ff5361;
-    font-size: 12px;
-}
-td img {
-    width: 80px;
-    height: 80px;
-    margin-right: 10px;
-}
-
-.total-price {
+.row-2 .left-col form .input-box .field {
     display: flex;
-    justify-content: flex-end;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
 }
-.total-price table {
-    border-top: 3px solid #ff5361;
+.row-2 .left-col form .input-box .field label {
+    font-size: 15px;
+}
+.row-2 .left-col form .input-box .field input[type="text"]{
+    border: none;
+    outline: none;
     width: 100%;
-    max-width: 400px;
+    height: 30px;
+    background: #fffdfd;
+    padding-left: 10px;
+}
+.row-2 .left-col form .input-box.service .field .date input{
+    width: 300px;
+    height: 30px;
+    padding-left: 10px;
+    margin-right: 25px;
+    border: none;
+    outline: none;
+}
+.row-2 .left-col form .input-box .field .box label {
+    margin-bottom: 20px;
+}
+.row-2 .left-col form .input-box .field .box textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #fffdfd;
+    padding-left: 10px;
 }

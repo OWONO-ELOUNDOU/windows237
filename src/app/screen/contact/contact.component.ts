@@ -19,10 +19,11 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(contactForm: {
-    username: string,
+    fname: string,
+    lname: string,
     email: string,
-    phone: string,
-    message: string
+    subject: string,
+    description: string
   }) {
     this.isLoading = true;
     this.contactService.sendMessage(contactForm).subscribe((res) => {

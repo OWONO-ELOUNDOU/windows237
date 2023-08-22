@@ -1,5 +1,83 @@
 <app-header></app-header>
-<div class="contact-page">
+<div class="container">
+    <div class="contact_box">
+        <div class="left-col">
+            <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm.value)">
+                <div class="input-box username">
+                    <div class="field">
+                        <label for="fname">Nom<span>*</span></label>
+                        <input type="text" name="fname" id="fname" placeholder="Nom" ngModel>
+                    </div>
+                    <div class="field">
+                        <label for="lname">Prénom<span>*</span></label>
+                        <input type="text" name="lname" id="lname" placeholder="Prénom" ngModel>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label for="email">Email <span>*</span></label>
+                    <input type="email" name="email" id="email" placeholder="email" ngModel>
+                </div>
+                <div class="input-box">
+                    <label for="subject">Sujet <span>*</span></label>
+                    <input type="text" name="subject" id="subject" placeholder="sujet" ngModel>
+                </div>
+                <div class="input-box">
+                    <label for="description">Que pouvons nous faire pour vous ?</label>
+                    <textarea name="description" id="description" rows="10" placeholder="Message" required ngModel></textarea>
+                </div>
+                <div class="button">
+                    <button type="submit">Envoyer</button>
+                </div>
+                <div *ngIf="isLoading">
+                    <app-loading-spinner></app-loading-spinner>
+                </div>
+            </form>
+            <div class="details">
+                <div class="text">
+                    <h3 class="subtitle">contactez nous</h3>
+                    <h2>Comment pouvons nous vous aider ?</h2>
+                    <p>
+                        Apprenez en d'avantage sur les services digitaux de CamerounDirect, veuillez remplir
+                        le formulaire ci-contre et un membre de notre équipe vous répondra dans les plus brefs délais.
+                    </p>
+                </div>
+    
+                <ul>
+                    <li>Services administratifs (publiques / privées)</li>
+                    <li>Services professionnels</li>
+                    <li>Services Marchands</li>
+                    <li>Services Immobiliers</li>
+                    <li>Services Gratuits</li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-col">
+            <div class="link">
+                <div class="link-icon"><i class='bx bxs-map'></i></div>
+                <div class="link-text">
+                    <h5>Siège social</h5>
+                    <span>Yaoundé. CMR</span>
+                </div>
+            </div>
+            <div class="link">
+                <div class="link-icon"><i class='bx bxl-gmail'></i></div>
+                <div class="link-text">
+                    <h5>Email</h5>
+                    <span>windows.237.01@gmail.com</span>
+                </div>
+            </div>
+            <div class="link">
+                <div class="link-icon"><i class='bx bxl-whatsapp'></i></div>
+                <div class="link-text">
+                    <h5>Téléphone</h5>
+                    <span>(237)691-943-330</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+<!-- <div class="contact-page">
     <div class="container">
         <div class="row">
             <div class="col-2">
@@ -37,5 +115,4 @@
             </div>
         </div>
     </div>
-</div>
-<app-footer></app-footer>
+</div> -->
