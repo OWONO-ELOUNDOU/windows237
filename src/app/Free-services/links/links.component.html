@@ -1,164 +1,204 @@
 <app-header></app-header>
 <div class="small-container">
-    <div class="container-form">
-        <div>
-            <h1 class="title" (click)="displayInstitution()">Institutions Nationales <i class='bx bxs-plus-circle'></i></h1>
-            <div class="services-1" *ngIf="institution">
-                <div class="box">
-                    <div class="box-header">
-                        <img [src]="logo" [title]="name">
-                    </div>
-                    <div class="box-info">
-                        <h3>PRÉSIDENCE DE LA RÉPUBLIQUE</h3>
-                        <h4><strong>Président de la République : </strong> S.E. Paul BIYA</h4>
-                        <h4>
-                            <strong>LE SECRETARIAT GENERAL : </strong> 
-                            <ul>
-                                <li><strong>Ministre d’Etat, Secrétaire Général de la Présidence de la République :</strong> <br>M. Ferdinand NGOH NGOH</li>
-                                <li><strong>Ministre Secrétaire Général Adjoint de la Présidence de la République :</strong> <br>M. ELUNG Paul CHE</li>
-                                <li><strong>Ministre Secrétaire Général Adjoint de la Présidence de la République :</strong> <br>M. MOHAMADOU MOUSTAPHA</li>
-                            </ul>
-                            <a href="../../../../assets/files/PRESIDENCE DE LA REPUBLIQUE.pdf" download>Voir Plus</a>
-                        </h4>
-                    </div>
+    <!-- <div class="section">
+        <h1 class="title" (click)="displayInstitution()">Institutions Nationales <i class='bx bxs-plus-circle'></i></h1>
+        <div class="services-1" *ngIf="institution">
+            <div class="box">
+                <div class="box-header">
+                    <img [src]="logo" [title]="name">
                 </div>
-                <div class="box">
-                    <div class="box-header">
-                        <img [src]="logo" [title]="name">
-                    </div>
-                    <div class="box-info">
-                        <h3>SÉNAT</h3>
-                        <h4><strong>Président du Sénat : </strong> </h4>                        
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box-header">
-                        <img [src]="logo" [title]="name">
-                    </div>
-                    <div class="box-info">
-                        <h3>ASSEMBLÉE NATIONALE</h3>
-                        <h4><strong>Président : </strong>Le Très Honorable CAVAYE YEGUIE DJIBRIL</h4>
-                        <h4><strong>1er Vice - Président : </strong> ETONG NDZOK Hilarion</h4>
-                        <h4>
-                            <strong>Autres vice-présidents :</strong>
-                            <ul>
-                                <li>- Hon. BAORO Théophile</li>
-                                <li>- Hon. Mary MUYALI BOYA Epse MEBOKA</li>
-                                <li>- Hon. KOMBO GBERI</li>
-                                <li>- Hon. DATOUO Théodore</li>
-                                <li>- Hon. ABBA ALIM</li>
-                            </ul>
-                            <a href="../../../../assets/files/ASSEMBLEE NATIONALE.pdf" download>Voir Plus</a>
-                        </h4>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box-header">
-                        <img [src]="logo" [title]="name">
-                    </div>
-                    <div class="box-info">
-                        <h3>PREMIER MINISTÈRE</h3>
-                        <h4><strong>Premier Ministre, Chef du Gouvernement:</strong> M. JOSEPH John Nguté</h4>
-                        <h4 style="margin-top: 20px;">
-                            <a href="../../../../assets/files/COMPOSITION DU GOUVERNEMENT DE LA RÉPUBLIQUE DU CAMEROUN.pdf" download>Voir Plus</a>
-                            <a href="https://www.spm.gov.cm/" target="blank">Visiter le site</a>
-                        </h4>
-                    </div>
+                <div class="box-info">
+                    <h3>PRÉSIDENCE DE LA RÉPUBLIQUE</h3>
+                    <h4><strong>Président de la République : </strong> S.E. Paul BIYA</h4>
+                    <h4>
+                        <strong>LE SECRETARIAT GENERAL : </strong> 
+                        <ul>
+                            <li><strong>Ministre d’Etat, Secrétaire Général de la Présidence de la République :</strong> <br>M. Ferdinand NGOH NGOH</li>
+                            <li><strong>Ministre Secrétaire Général Adjoint de la Présidence de la République :</strong> <br>M. ELUNG Paul CHE</li>
+                            <li><strong>Ministre Secrétaire Général Adjoint de la Présidence de la République :</strong> <br>M. MOHAMADOU MOUSTAPHA</li>
+                        </ul>
+                        <a href="../../../../assets/files/PRESIDENCE DE LA REPUBLIQUE.pdf" download>Voir Plus</a>
+                    </h4>
                 </div>
             </div>
-            <div>
-                <h1 class="title" (click)="displayPublic()">Organisations publiques et parapubliques <i class='bx bxs-plus-circle'></i></h1>
-                <div class="exclusives" *ngIf="showPublic">
-                    <div *ngFor="let public of publics">
-                        <img [src]="public.image">
-                        <span><a [href]="public.url">{{ public.name | uppercase }}</a></span>
-                    </div>
+            <div class="box">
+                <div class="box-header">
+                    <img [src]="logo" [title]="name">
+                </div>
+                <div class="box-info">
+                    <h3>SÉNAT</h3>
+                    <h4><strong>Président du Sénat : </strong> </h4>                        
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-header">
+                    <img [src]="logo" [title]="name">
+                </div>
+                <div class="box-info">
+                    <h3>ASSEMBLÉE NATIONALE</h3>
+                    <h4><strong>Président : </strong>Le Très Honorable CAVAYE YEGUIE DJIBRIL</h4>
+                    <h4><strong>1er Vice - Président : </strong> ETONG NDZOK Hilarion</h4>
+                    <h4>
+                        <strong>Autres vice-présidents :</strong>
+                        <ul>
+                            <li>- Hon. BAORO Théophile</li>
+                            <li>- Hon. Mary MUYALI BOYA Epse MEBOKA</li>
+                            <li>- Hon. KOMBO GBERI</li>
+                            <li>- Hon. DATOUO Théodore</li>
+                            <li>- Hon. ABBA ALIM</li>
+                        </ul>
+                        <a href="../../../../assets/files/ASSEMBLEE NATIONALE.pdf" download>Voir Plus</a>
+                    </h4>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-header">
+                    <img [src]="logo" [title]="name">
+                </div>
+                <div class="box-info">
+                    <h3>PREMIER MINISTÈRE</h3>
+                    <h4><strong>Premier Ministre, Chef du Gouvernement:</strong> M. JOSEPH John Nguté</h4>
+                    <h4 style="margin-top: 20px;">
+                        <a href="../../../../assets/files/COMPOSITION DU GOUVERNEMENT DE LA RÉPUBLIQUE DU CAMEROUN.pdf" download>Voir Plus</a>
+                        <a href="https://www.spm.gov.cm/" target="blank">Visiter le site</a>
+                    </h4>
                 </div>
             </div>
         </div>
-        <div>
-            <h1 class="title" (click)="displayEmbassy()">Ambassades et services consulaires <i class='bx bxs-plus-circle'></i></h1>
-            <div class="exclusives" *ngIf="showEmbassy">
-                <div *ngFor="let embassy of embassies">
-                    <img [src]="embassy.image">
-                    <span><a [href]="embassy.url">{{ embassy.name | uppercase }}</a></span>
-                </div>
-            </div>
-        </div>
-        <div>
-            <h1 class="title">Organismes internationaux</h1>
-        </div>
-        <div>
-            <h1 class="title" (click)="displayFinance()">Banques et Assurances <i class='bx bxs-plus-circle'></i></h1>
-            <div class="exclusives"  *ngIf="showFinance">
-                <div *ngFor="let finance of finances">
-                    <img [src]="finance.image">
-                    <span><a [href]="finance.url">{{ finance.name | uppercase }}</a></span>
-                </div>
-            </div>
-        </div>
-        <div>
-            <h1 class="title" (click)="displaySchool()">Enseignement Supérieur <i class='bx bxs-plus-circle'></i></h1>
-            <div class="exclusives"  *ngIf="showSchool">
-                <div *ngFor="let school of schools">
-                    <img [src]="school.image">
-                    <span><a [href]="school.url">{{ school.name | uppercase }}</a></span>
-                </div>
-            </div>
-        </div>
-        <div>
-            <h1 class="title" (click)="displayEtranger()">Poursuivre ses études à l'étranger <i class='bx bxs-plus-circle'></i></h1>
-            <div class="exclusives"  *ngIf="showEtranger">
-                <div *ngFor="let etranger of etrangers">
-                    <img [src]="etranger.image">
-                    <span><a [href]="etranger.url">{{ etranger.name | uppercase }}</a></span>
-                </div>
-            </div>
-        </div>
-        <div>
-            <h1 class="title">Commerces et divers</h1>
-        </div>
-        <div>
-            <h1 class="title" (click)="displayHotel()">Transport <i class='bx bxs-plus-circle'></i></h1>
-            <div class="exclusives"  *ngIf="showHotel">
-                <div *ngFor="let hotel of hotels">
-                    <img [src]="hotel.image">
-                    <span><a [href]="hotel.url">{{ hotel.name | uppercase }}</a></span>
-                </div>
-            </div>
-        </div>
-        <div>
-            <h1 class="title">hotels et Divertissement</h1>
-        </div>
-
-        <div>
-            <h1 class="title">SANTÉ</h1>
-
-            <div class="cmr">
-                <div class="card">
-                    <div class="cmr-img">
-                        <img [src]="image" alt="pharmacies de garde et hôpitaux">
-                    </div>
-                    <div class="cmr-info">
-                        <h3>PHARMACIES DE GARDE ET HÔPITAUX</h3>
-                        <h4>Les cliniques, pharmacies et centres hospitaliers du Cameroun</h4>
-                        <h4>
-                            <strong>Yaoundé:</strong> 
-                            <ul>
-                                <li>Pharmacie Emmanuel :<strong> 222 20 02 44</strong></li>
-                                <li>Pharmacie les Hortensia :<strong> 243 60 79 84</strong></li>
-                                <li>Pharmacie du Bien-être :<strong> 222 20 25 19</strong></li>
-                            </ul>
-                            <p>
-                                Voir plus : <a href="../../../assets/files/LES PHARMACIES DE GARDE.pdf" style="margin-right: 25px;" download>Pharmacies de garde</a> <a href="../../../assets/files/HOPITAUX.pdf" download>Hôpitaux</a>
-                            </p>
-                        </h4>
+    </div> -->
+    <div class="section">
+        <h1 class="title" (click)="displayPublic()">Organisations publiques et parapubliques <i class='bx bxs-plus-circle'></i></h1>
+        <div class="exclusives" *ngIf="showPublic">
+            <div class="card" *ngFor="let public of publics">
+                <div class="card-header">
+                    <img [src]="public.image">
+                    <div class="text">
+                        <p>{{ public.name }}</p>
                     </div>
                 </div>
+                <div class="card-body">
+                    <button (click)="onSubmit(public.url)">visiter le site</button>
+                </div>
             </div>
-
-            <!--<button (click)="fetchLink()">Afficher liens</button>-->
         </div>
     </div>
+    <div class="section">
+        <h1 class="title" (click)="displayEmbassy()">Ambassades et services consulaires <i class='bx bxs-plus-circle'></i></h1>
+        <div class="exclusives" *ngIf="showEmbassy">
+            <div class="card" *ngFor="let embassy of embassies">
+                <div class="card-header">
+                    <img [src]="embassy.image">
+                    <div class="text">
+                        <p>{{ embassy.name }}</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <button (click)="onSubmit(embassy.url)">visiter le site</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h1 class="title">Organismes internationaux</h1>
+    </div>
+    <div class="section">
+        <h1 class="title" (click)="displayFinance()">Banques et Assurances <i class='bx bxs-plus-circle'></i></h1>
+        <div class="exclusives"  *ngIf="showFinance">
+            <div class="card" *ngFor="let finance of finances">
+                <div class="card-header">
+                    <img [src]="finance.image">
+                    <div class="text">
+                        <p>{{ finance.name }}</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <button (click)="onSubmit(finance.url)">visiter le site</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h1 class="title" (click)="displaySchool()">Enseignement Supérieur <i class='bx bxs-plus-circle'></i></h1>
+        <div class="exclusives"  *ngIf="showSchool">
+            <div class="card" *ngFor="let school of schools">
+                <div class="card-header">
+                    <img [src]="school.image">
+                    <div class="text">
+                        <p>{{ school.name }}</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <button (click)="onSubmit(school.url)">visiter le site</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h1 class="title" (click)="displayEtranger()">Poursuivre ses études à l'étranger <i class='bx bxs-plus-circle'></i></h1>
+        <div class="exclusives"  *ngIf="showEtranger">
+            <div class="card" *ngFor="let etranger of etrangers">
+                <div class="card-header">
+                    <img [src]="etranger.image">
+                    <div class="text">
+                        <p>{{ etranger.name }}</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <button (click)="onSubmit(etranger.url)">visiter le site</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h1 class="title">Commerces et divers</h1>
+    </div>
+    <div class="section">
+        <h1 class="title" (click)="displayHotel()">Transport <i class='bx bxs-plus-circle'></i></h1>
+        <div class="exclusives"  *ngIf="showHotel">
+            <div class="card" *ngFor="let hotel of hotels">
+                <div class="card-header">
+                    <img [src]="hotel.image">
+                    <div class="text">
+                        <p>{{ hotel.name }}</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <button (click)="onSubmit(hotel.url)">visiter le site</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h1 class="title">hotels et Divertissement</h1>
+    </div>
+
+    <!-- <div>
+        <h1 class="title">SANTÉ</h1>
+
+        <div class="cmr">
+            <div class="card">
+                <div class="cmr-img">
+                    <img [src]="image" alt="pharmacies de garde et hôpitaux">
+                </div>
+                <div class="cmr-info">
+                    <h3>PHARMACIES DE GARDE ET HÔPITAUX</h3>
+                    <h4>Les cliniques, pharmacies et centres hospitaliers du Cameroun</h4>
+                    <h4>
+                        <strong>Yaoundé:</strong> 
+                        <ul>
+                            <li>Pharmacie Emmanuel :<strong> 222 20 02 44</strong></li>
+                            <li>Pharmacie les Hortensia :<strong> 243 60 79 84</strong></li>
+                            <li>Pharmacie du Bien-être :<strong> 222 20 25 19</strong></li>
+                        </ul>
+                        <p>
+                            Voir plus : <a href="../../../assets/files/LES PHARMACIES DE GARDE.pdf" style="margin-right: 25px;" download>Pharmacies de garde</a> <a href="../../../assets/files/HOPITAUX.pdf" download>Hôpitaux</a>
+                        </p>
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+        <button (click)="fetchLink()">Afficher liens</button>
+    </div> -->
 </div>
 <app-footer></app-footer>

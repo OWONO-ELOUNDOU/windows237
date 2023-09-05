@@ -101,4 +101,8 @@ export class LinksComponent {
   displayInstitution() {
     this.institution = !this.institution;
   }
+
+  onSubmit(url: string) {
+    window.location.href = url;
+  }
 }

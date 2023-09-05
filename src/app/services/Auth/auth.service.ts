@@ -10,6 +10,8 @@ import { User } from 'src/app/Auth/shared/model/user';
 export class AuthService {
   isLogging = false;
   userSub = new BehaviorSubject<User>(null);
+  private readonly apiEndPoint = 'http://localhost:6969/user';
+  private readonly firebaseEndPoint = 'https://windows-237-default-rtdb.europe-west1.firebasedatabase.app/users.json';
 
   constructor(
     private http: HttpClient
@@ -80,7 +82,7 @@ export class AuthService {
 
   // Register User function
   createUser(data: any){
-    this.http.post('https://windows-237-default-rtdb.europe-west1.firebasedatabase.app/users.json', data, {
+    this.http.post(this.firebaseEndPoint, data, {
       headers: {
         "content-type": "application/json"
       }

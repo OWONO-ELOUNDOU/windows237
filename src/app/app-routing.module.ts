@@ -18,8 +18,8 @@ import { ShopComponent } from './Free-services/shop/shop.component';
 import { HouseComponent } from './Houses/house/house.component';
 import { HouseFormComponent } from './Houses/house-form/house-form.component';
 import { DohoneComponent } from './dohone/dohone.component';
-import { CvComponent } from './screen/cv/cv.component';
-import { Cv2Component } from './screen/cv2/cv2.component';
+import { CvComponent } from './screen/progress/cv/cv.component';
+import { Cv2Component } from './screen/progress/cv2/cv2.component';
 import { AuthGuard } from './services/Guard/auth.guard';
 
 /* import { AuthService } from './services/Auth/auth.service'; */
@@ -32,13 +32,13 @@ const routes: Routes = [
   { path: 'forgotpassword', component: ForgotPasswordComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'cv', component: CvComponent , canActivate: [AuthGuard] },
-  { path: 'cv2', component: Cv2Component , canActivate: [AuthGuard] },
-  { path: 'parternship', component: ParternshipComponent, canActivate: [AuthGuard] },
+  { path: 'cv', component: CvComponent , /* canActivate: [AuthGuard] */ },
+  { path: 'cv2', component: Cv2Component , /* canActivate: [AuthGuard] */ },
+  { path: 'parternship', component: ParternshipComponent, /* canActivate: [AuthGuard] */ },
   { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
   { path: 'list', component: ListComponent, canActivate: [AuthGuard] },
   { path: 'docs', component: DocumentsComponent, canActivate: [AuthGuard] },
-  { path: 'links', component: LinksComponent, canActivate: [AuthGuard] },
+  { path: 'links', component: LinksComponent, /* canActivate: [AuthGuard] */ },
   { path: 'info', component: InfoComponent, canActivate: [AuthGuard] },
   { path: 'shop', component: ShopComponent, canActivate: [AuthGuard] },
   { path: 'house', component: HouseComponent, canActivate: [AuthGuard] },

@@ -36,12 +36,15 @@ import { InfoComponent } from './Free-services/info/info.component';
 import { ShopComponent } from './Free-services/shop/shop.component';
 import { DohoneComponent } from './dohone/dohone.component';
 import { LoadingSpinnerComponent } from './screen/loading-spinner/loading-spinner.component';
-import { CvComponent } from './screen/cv/cv.component';
-import { Cv2Component } from './screen/cv2/cv2.component';
+import { CvComponent } from './screen/progress/cv/cv.component';
+import { Cv2Component } from './screen/progress/cv2/cv2.component';
 import { ContentLoaderComponent } from './screen/content-loader/content-loader.component';
 import { HouseComponent } from './Houses/house/house.component';
 import { HouseFormComponent } from './Houses/house-form/house-form.component';
 import { BlogComponent } from './screen/blog/blog.component';
+import { ProgressStepComponent } from './screen/progress/progress-step/progress-step.component';
+import { ProgressStepDirective } from './screen/progress/directive/progress-step.directive';
+import { ProgressComponent } from './screen/progress/progress/progress.component';
 
 
 @NgModule({
@@ -71,6 +74,9 @@ import { BlogComponent } from './screen/blog/blog.component';
     HouseComponent,
     HouseFormComponent,
     BlogComponent,
+    ProgressStepComponent,
+    ProgressStepDirective,
+    ProgressComponent,
   ],
   imports: [
     BrowserModule,

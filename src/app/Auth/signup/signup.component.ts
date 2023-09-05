@@ -20,7 +20,7 @@ export class SignupComponent {
   constructor(
     private authService: AuthService,
     private formBuilder: FormBuilder,
-    private route: Router
+    private route: Router,
   ) { }
 
   ngOnInit(): void{
@@ -56,7 +56,7 @@ export class SignupComponent {
       console.log(errorMessage);
       this.isLoading = false;
       this.errormsg = errorMessage;
-    })
+    });
     this.authService.createUser(userForm);
     
   }
