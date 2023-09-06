@@ -9,20 +9,14 @@ export interface House {
 export const houses = [
     {
         id: 1,
-        name: "Terrains contructibles",
-        image: "assets/images/house_img/terrain_constructible.jpg",
+        name: "Terrains à vendre",
+        image: "assets/images/house_img/terrain.jpeg",
         price: ""
     },
     {
         id: 2,
-        name: "Terrains agricoles",
-        image: "assets/images/house_img/terrain_agricole.jpg",
-        price: ""
-    },
-    {
-        id: 3,
         name: "Maisons à vendre",
-        image: "assets/images/house_img/maison.jpg",
+        image: "assets/images/house_img/maison.jpeg",
         price: ""
-    },
+    }
 ]

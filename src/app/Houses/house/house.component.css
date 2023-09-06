@@ -5,7 +5,7 @@ main {
 .header {
     display: grid;
     place-items: center;
-    background: linear-gradient(to bottom, #afafaf, transparent), url(../../../assets/images/house_img/service_immobilier.jpg) center no-repeat;
+    background: linear-gradient(to bottom, #afafaf, transparent), url(../../../assets/images/house_img/immobilier.jpeg) center no-repeat;
     background-size: cover;
     aspect-ratio: 16/6;
     width: 100%;
@@ -30,15 +30,16 @@ main {
 .services .left-col {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 .services .left-col .card {
-    width: 400px;
+    width: 100%;
+    max-width: 300px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 5px 5px rgba(0,0,0,0.15);
+    box-shadow: 0 0px 10px rgba(0,0,0,0.15);
 }
 .services .left-col .card .card-header {
     display: flex;
@@ -51,6 +52,7 @@ main {
 }
 .services .left-col .card .card-header img {
     width: 100%;
+    max-width: 300px;
     border-radius: 10px;
 }
 
@@ -99,6 +101,13 @@ main {
 .services .right-col .card .card-body .info .col span {
     font-size: 13px;
     color: #777;
+}
+.services .right-col .card .card-body .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 .services .right-col .card .card-body .button button {
     width: 100%;
