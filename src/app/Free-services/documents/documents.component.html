@@ -1,16 +1,27 @@
 <app-header></app-header>
 <div class="small-container">
-    <div class="container-form">
-        <h1 class="title">Documents Administratifs et Usuels</h1>
-        <div class="exclusives">
-            <div *ngFor="let file of allFiles">
-                <img [src]="file.image">
-                <span>
-                    <h4>{{ file.nom }}</h4>
-                </span>
-                <div class="download-btn">
-                    <a [href]="file.adresse" download>Télécharger</a>
+    <h1 class="title">Documents Administratifs et Usuels</h1>
+    <!-- <div class="documents">
+        <div class="card" *ngFor="let file of allFiles">
+            <div class="card-header">
+                <img src="">
+                <div class="card-name">
+                    <p></p>
                 </div>
+            </div>
+            <div class="card-body">
+                <a href="" download>Télécharger</a>
+            </div>
+        </div>
+    </div> -->
+    <div class="exclusives">
+        <div *ngFor="let file of allFiles">
+            <img [src]="file.image">
+            <span>
+                <h4>{{ file.nom }}</h4>
+            </span>
+            <div class="download-btn">
+                <a [href]="file.adresse" download>Télécharger</a>
             </div>
         </div>
     </div>

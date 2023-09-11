@@ -30,7 +30,7 @@ export class DocumentsComponent {
     .subscribe((files) => {
       console.log(files);
       this.allFiles = files; 
-    })
+    });
     console.log(this.allFiles);
   }
 

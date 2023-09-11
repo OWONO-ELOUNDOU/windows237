@@ -31,10 +31,7 @@ export class FreeService {
   ) { }
 
   getAllDocuments() {
-    this.http.get(this.endPoint + 'document.json')
-    .subscribe((res) => {
-      console.log(res)
-    })
+    return this.http.get<File[]>(this.fileUrl);
   }
 
   getAllLinks() {

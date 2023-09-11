@@ -37,7 +37,7 @@ const routes: Routes = [
   { path: 'parternship', component: ParternshipComponent, canActivate: [AuthGuard] },
   { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
   { path: 'list', component: ListComponent, canActivate: [AuthGuard] },
-  { path: 'docs', component: DocumentsComponent, canActivate: [AuthGuard] },
+  { path: 'docs', component: DocumentsComponent, /* canActivate: [AuthGuard] */ },
   { path: 'links', component: LinksComponent, canActivate: [AuthGuard] },
   { path: 'info', component: InfoComponent, canActivate: [AuthGuard] },
   { path: 'shop', component: ShopComponent, canActivate: [AuthGuard] },
