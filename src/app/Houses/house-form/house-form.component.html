@@ -6,7 +6,7 @@
     </div>
     <div class="row-2">
         <div class="left-col">
-            <form #form="ngForm" id="form" (ngSubmit)="saveService(form.value)">
+            <form #form="ngForm" id="form" (ngSubmit)="houseService(form.value)">
                 <div class="input-box username">
                     <div class="field">
                         <label for="username">Caractéristiques de l'immeuble / du site</label>
@@ -53,7 +53,7 @@
                 </div>
 
                 <div class="buttons">
-                    <button type="submit" class="btn-next">Enregistrer le service</button>
+                    <button type="submit" class="btn-next">Poster l'annonce</button>
                     <!-- <button type="submit" class="btn-next" *ngIf="isRegister" [routerLink]="['/cart']" (click)="addToCart(productId)">Ajouter au panier</button> -->
                 </div>
             </form>

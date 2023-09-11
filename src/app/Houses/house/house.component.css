@@ -93,7 +93,7 @@ main {
     flex-direction: column;
     gap: 30px;
     border-radius: 10px;
-    box-shadow: 0 5px 5px 5px rgba(0,0,0,0.15);
+    box-shadow: 0 0px 10px rgba(0,0,0,0.15);
 }
 .services .right-col .card .card-body .info .col {
     text-align: center;

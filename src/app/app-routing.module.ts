@@ -42,7 +42,7 @@ const routes: Routes = [
   { path: 'info', component: InfoComponent, canActivate: [AuthGuard] },
   { path: 'shop', component: ShopComponent, canActivate: [AuthGuard] },
   { path: 'house', component: HouseComponent, canActivate: [AuthGuard] },
-  { path: 'house/form/:id', component: HouseFormComponent, canActivate: [AuthGuard] },
+  { path: 'house/form', component: HouseFormComponent, canActivate: [AuthGuard] },
   { path: 'pay/with/dohone', component: DohoneComponent },
   { path: 'form/:id/:Id', component: FormComponent },
   { path: '**', component: HomeComponent }

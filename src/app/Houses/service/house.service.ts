@@ -9,6 +9,7 @@ import { House } from '../shared/model/house';
 export class HouseService {
 
   private readonly houseUrl = 'database/house.json';
+  private readonly firebaseEndpoint = '';
 
   constructor(
     private http: HttpClient
@@ -16,5 +17,9 @@ export class HouseService {
 
   getHouses(): Observable<House[]> {
     return this.http.get<House[]>(this.houseUrl);
+  }
+
+  createOffer(data: any) {
+    this.http.post(this.firebaseEndpoint, data);
   }
 }

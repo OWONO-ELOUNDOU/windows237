@@ -28,7 +28,7 @@
                         </div>
                     </div>
                     <div class="button">
-                        <button type="button" [routerLink]="['/house/form',house.id]">Commander</button>
+                        <button type="button" (click)="show()" >Voir</button>
                     </div>
                 </div>
             </div>
@@ -43,8 +43,8 @@
                         </div>
                     </div>
                     <div class="button">
-                        <button type="button" (click)="show()">Poster un terrain</button>
-                        <button type="button" (click)="show()">Poster une maison</button>
+                        <button type="button" [routerLink]="['/house/form']">Poster un terrain</button>
+                        <button type="button" [routerLink]="['/house/form']">Poster une maison</button>
                     </div>
                 </div>
             </div>

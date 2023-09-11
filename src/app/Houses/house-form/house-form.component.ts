@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HouseService } from '../service/house.service';
 
 @Component({
   selector: 'app-house-form',
@@ -7,14 +8,16 @@ import { Component } from '@angular/core';
 })
 export class HouseFormComponent {
 
-  constructor() { }
+  constructor(
+    private service: HouseService
+  ) { }
 
   ngOnInit(): void{
 
   }
 
-  saveService(demande: any) {
-    
+  houseService(demande: any) {
+    this.service.createOffer(demande);
   }
 
 }
