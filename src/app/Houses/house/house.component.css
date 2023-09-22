@@ -1,140 +1,156 @@
 main {
     width: 100%;
-    padding: 10% 5%;
+    margin-top: 10%;
+    padding: 0 15%;
 }
-.header {
-    display: grid;
-    place-items: center;
-    background: linear-gradient(to bottom, #afafaf, transparent), url(../../../assets/images/house_img/immobilier.jpeg) center no-repeat;
-    background-size: cover;
-    aspect-ratio: 16/6;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    margin-bottom: 60px;
-}
-.header .title {
-    color: #fff;
-    font-size: 50px;
-    font-weight: bold;
-}
-
-.services {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    gap: 60px;
-}
-
-.services .left-col {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-.services .left-col .card {
-    width: 100%;
-    max-width: 300px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0px 10px rgba(0,0,0,0.15);
-}
-.services .left-col .card .card-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
+.title {
+    font-size: 25px;
     margin-bottom: 25px;
 }
-.services .left-col .card .card-header img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
+.counter {
+    color: #777;
+    margin-bottom: 30px;
 }
 
-.services .left-col .card .card-body .info {
+.row {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.row .col-1 {
+    width: 100%;
+    min-width: 300px;
+    max-width: 700px;
+} 
+.row .col-1 .houses {
+    margin-bottom: 50px;
+} 
+.row .col-1 .section {
+    border: 1px solid #efefef;
+    padding: 20px;
+    aspect-ratio: 16/6;
+    margin-bottom: 25px;
+}
+.row .col-1 .section.house {
+    background: linear-gradient(to bottom, #848383, transparent), url(../../../assets/images/house_img/maison.jpeg) center no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+.row .col-1 .section.land {
+    background: linear-gradient(to bottom, #848383, transparent), url(../../../assets/images/house_img/terrain.jpeg) center no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+.row .col-1 .section.house span,
+.row .col-1 .section.land span {
+    font-size: 25px;
+    color: #fff;
+}
+.row .col-1 .card {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #efefef;
+}
+.row .col-1 .card .card-img{
+    width: 300px;
+    border-radius: 10px;
+}
+.row .col-1 .card .card-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+.row .col-1 .card .card-info p {
+    margin-bottom: 10px;
+}
+.row .col-1 .card .card-info {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 15px;
+}
+.row .col-1 .card .card-info .product-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+.row .col-1 .card .card-info .product-details {
+    font-size: 13px;
+    color: #777;
+}
+.row .col-1 .card .card-info .time {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 25px;
 }
-.services .left-col .card .card-body .info .col p {
-    font-size: 15px;
-    margin-bottom: 5px;
-}
-.services .left-col .card .card-body .info .col span {
+.row .col-1 .card .card-info .time .day {
     font-size: 13px;
-    color: #777;
-    margin-bottom: 5px;
+    color: #848383;
 }
-.services .left-col .card .card-body .button button {
-    width: 100%;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    padding: 10px 0;
-    color: #fff;
-    background: #4949ec;
+.row .col-1 .card .card-info .time p:not(.day) {
+    font-size: 13px;
+    color: #5a1bb7;
+    text-decoration: underline;
+    text-decoration-color: #5a1bb7;
     cursor: pointer;
 }
-.services .right-col {
-    width: 100%;
+.row .col-1 .card .card-info .time p:last-child i {
+    font-size: 14px;
 }
-.services .right-col .card .card-body {
+
+.row .col-2 .banner {
     width: 100%;
-    padding: 25px 7%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 30px 0;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background: linear-gradient(to top, #efefef, #fff);
+}
+.row .col-2 .banner .option {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0px 10px rgba(0,0,0,0.15);
+    gap: 10px;
 }
-.services .right-col .card .card-body .info .col {
-    text-align: center;
-}
-.services .right-col .card .card-body .info .col span {
-    font-size: 13px;
-    color: #777;
-}
-.services .right-col .card .card-body .button {
+.row .col-2 .banner .option .box {
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
-.services .right-col .card .card-body .button button {
-    width: 100%;
-    border: none;
-    outline: none;
+.row .col-2 .banner .option .box p {
+    background: #fff;
     border-radius: 5px;
-    padding: 10px 45px;
-    color: #fff;
-    background: #4949ec;
+    padding: 20px;
     cursor: pointer;
 }
 
 /* ============ Responsive design css =========== */
-@media screen and (max-width: 900px) {
-    .header {
+@media screen and (max-width: 500px) {
+    main {
         margin-top: 25%;
-        padding: 10px;
+        padding: 0 5%;
+    }
+    .title {
+        font-size: 20px;
+    }
+    .row {
+        justify-content: center;
+    }
+    .row .col-1 .section {
         width: auto;
-        aspect-ratio: 1/1;
-    }
-    .header .title {
-        font-size: 30px;
-    }
-    .services {
-        align-items: center;
-    }
-    .services .left-col .card {
-        width: auto;
+        aspect-ratio: 2/1;
     }
 }

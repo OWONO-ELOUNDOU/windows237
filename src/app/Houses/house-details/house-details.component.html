@@ -1,0 +1,81 @@
+<app-header></app-header>
+<div class="small-container">
+    <div class="product-details">
+        <div class="left-col">
+            <div class="box">
+                <div class="box-img"><img src="../../../assets/images/house_img/terrain-vendre.jpg" alt="terrain"></div>
+            </div>
+            <div class="product-name">
+                <h3>{{ offer.characteristic }}</h3>
+            </div>
+        </div>
+        <div class="right-col">
+            <div class="row-1">
+                <div class="header">
+                    <h4>{{ offer.type }}</h4>
+                    <span class="icon"><i class='bx bx-category' ></i></span>
+                </div>
+                <div class="members">
+                    <ul>
+                        <li>
+                            <div class="user"><i class='bx bx-user'></i> <p class="username">Propriétaire : {{ offer.owner }}</p></div>
+                        </li>
+                        <li>
+                            <div class="user"><i class='bx bx-area' ></i> <p class="username">superficie : {{ offer.area }}</p></div>
+                        </li>
+                        <li>
+                            <div class="user"><i class='bx bx-file' ></i> <p class="username">Titre Foncier : {{ offer.details }}</p></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="add">
+                    <button type="button" [routerLink]="['/contact']">Nous contacter</button>
+                </div>
+            </div>
+            <div class="row-2">
+                <div class="header">
+                    <h5>{{ offer.type }}</h5>
+                    <h3>Information de localisation</h3>
+                    <p>Lieu et prix du bien sollicité</p>
+                </div>
+                <div class="periods">
+                    <div class="time">
+                        <div class="hours">
+                            <i class='bx bx-map-pin' ></i>
+                            <p>{{ offer.place }}</p>
+                        </div>
+                    </div>
+                    <div class="date">
+                        <div class="day">
+                            <i class='bx bx-euro' ></i>
+                            <p>{{ offer.price }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="product">
+        <div class="header">
+            <button class="back-btn" [routerLink]="['/house']"><i class='bx bx-arrow-back'></i></button>
+            <img src="../../../assets/images/icon/logo.png" alt="windows237">
+            <span><i class='bx bxs-shopping-bag'></i></span>
+        </div>
+        <div class="body">
+            <div class="product-img">
+                <img [src]="" alt="">
+            </div>
+            <div class="product-details">
+                <h3>{{ offer.characteristic }}</h3>
+                <span>{{ offer.price }}</span>
+                <p class="details">{{ offer.details }}</p>
+                <ul>
+                    <li>Lieu: {{ offer.details }}</li>
+                    <li>Propriétaire: {{ offer.details ? offer.owner : "windows237" }}</li>
+                </ul>
+                <button class="contact-btn" [routerLink]="['/contact']">Nous contacter</button>
+            </div>
+        </div>
+    </div> -->
+</div>
+<app-footer></app-footer>

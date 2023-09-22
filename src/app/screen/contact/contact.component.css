@@ -1,7 +1,7 @@
 @import url(../../../../node_modules/boxicons/css/boxicons.min.css);
 .container{
     width: 100%;
-    padding: 10%;
+    margin-top: 7%;
     height: auto;
 }
 
@@ -137,4 +137,11 @@
 .contact_box .right-col .link .link-text span {
     font-size: 15px;
     color: #777;
+}
+
+@media screen and (maxwidth: 500px) {
+    .contact_box {
+        gap: 50px;
+        padding: 5%;
+    }
 }

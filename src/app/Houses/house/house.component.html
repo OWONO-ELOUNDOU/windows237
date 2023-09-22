@@ -1,39 +1,101 @@
 <app-header></app-header>
 <main>
-    <div class="header">
-        <h1 class="title">Services Immobiliers</h1>      
-    </div>
-    <div class="services">
-        <div class="left-col" *ngIf="houses && houses.length > 0">
-            <div class="card" *ngFor="let house of houses">
-                <div class="card-header">
-                    <img [src]="house.image">
+    <h2 class="title">Annonces Maison et terrains à vendre :<br>Cameroun et France</h2>
+    <span class="counter">{{ numOffer }} annonces</span>
+    <div class="row">
+        <div class="col-1">
+            <div class="houses">
+                <div class="section house"><span>Maisons à vendre</span></div>
+                <div class="card" *ngFor="let house of Houses">
+                    <div class="card-img">
+                        <!-- <img [src]="house.image"> -->
+                    </div>
+                    <div class="card-info" (click)="showDetails(house.id)">
+                        <div class="details">
+                            <p class="price">{{ house.price }}</p>
+                            <p class="product-name">{{ house.characteristic }}</p>
+                            <p class="product-details">{{ house.place }}</p>
+                        </div>
+                        <div class="time">
+                            <p class="day">{{ house.date }}</p>
+                            <p>Voir l'annonce <i class='bx bx-right-arrow-alt'></i></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <div class="card-title">
-                        <h4>{{ house.name }}</h4>
+            </div>
+            <div class="lands">
+                <div class="section land"><span>Terrains à vendre</span></div>
+                <div class="card" *ngFor="let land of Lands">
+                    <div class="card-img">
+                        <img src="../../../assets/images/house_img/terrain-vendre.jpg" alt="terrain">
                     </div>
-                    <div class="info">
-                        <div class="col">
-                            <p>Cameroun</p>
-                            <span>{{house.price ? "FCFA" : "sur devis"}}</span>
+                    <div class="card-info" (click)="showDetails(land.id)">
+                        <div class="details">
+                            <p class="price">{{ land.price }}</p>
+                            <p class="product-name">{{ land.characteristic }}</p>
+                            <p class="product-details">{{ land.place }}</p>
                         </div>
-                        <div class="col">
-                            <p>France</p>
-                            <span>{{ house.price }} {{house.price ? "€" : "sur devis"}}</span>
+                        <div class="time">
+                            <p class="day">{{ land.date }}</p>
+                            <p>Voir l'annonce <i class='bx bx-right-arrow-alt'></i></p>
                         </div>
-                        <div class="col">
-                            <p>Auteur</p>
-                            <span>windows237</span>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <button type="button" (click)="show()" >Voir</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="right-col">
+        <div class="col-2">
+            <div class="banner">
+                <p>Vous souhaitez mettre en vente votre bien ?</p>
+                <div class="option">
+                    <h4>que voulez-vous poster ?</h4>
+                    <div class="box" [routerLink]="['/house/form']">
+                        <p>maison</p>
+                        <p>terrain</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <h1 class="title">Annonces Maison et Terrain à vendre :<br>Toute la France</h1>
+    <span class="total">2 annonces</span>
+    <section class="land">
+        <h1 class="subtitle">Maisons à vendre</h1>
+        <span class="counter">1 annonces</span>
+        <div class="services" *ngIf="Houses && Houses.length > 0">
+            <div class="card" *ngFor="let house of Houses">
+                <div class="card-header">
+                    <img src="../../../assets/images/house_img/immobilier.jpeg" alt="">
+                </div>
+                <div class="card-body">
+                    <span class="price">{{ house.price }}</span>
+                    <h4>{{ house.characteristic }}</h4>
+                    <p>{{ house.place }}</p>
+                    <p>{{ house.area }}</p>
+                    <p>{{ house.owner }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="house">
+        <h1 class="subtitle">Terains à vendre</h1>
+        <span class="counter">1 annonces</span>
+        <div class="services" *ngIf="Lands && Lands.length > 0">
+            <div class="card" *ngFor="let land of Lands">
+                <div class="card-header">
+                    <img src="../../../assets/images/house_img/immobilier.jpeg" alt="">
+                </div>
+                <div class="card-body">
+                    <span class="price">{{ land.price }}</span>
+                    <h4>{{ land.characteristic }}</h4>
+                    <p>{{ land.place }}</p>
+                    <p>{{ land.area }}</p>
+                    <p>{{ land.owner }}</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <div class="services">
+        <!-- <div class="right-col">
             <div class="card">
                 <div class="card-body">
                     <div class="info">
@@ -48,7 +110,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </main>
 <app-footer></app-footer>

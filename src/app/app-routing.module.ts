@@ -21,6 +21,8 @@ import { DohoneComponent } from './dohone/dohone.component';
 import { CvComponent } from './screen/progress/cv/cv.component';
 import { Cv2Component } from './screen/progress/cv2/cv2.component';
 import { AuthGuard } from './services/Guard/auth.guard';
+import { SucceedOfferComponent } from './Houses/succeed-offer/succeed-offer.component';
+import { HouseDetailsComponent } from './Houses/house-details/house-details.component';
 
 /* import { AuthService } from './services/Auth/auth.service'; */
 
@@ -41,8 +43,10 @@ const routes: Routes = [
   { path: 'links', component: LinksComponent, canActivate: [AuthGuard] },
   { path: 'info', component: InfoComponent, canActivate: [AuthGuard] },
   { path: 'shop', component: ShopComponent, canActivate: [AuthGuard] },
-  { path: 'house', component: HouseComponent, canActivate: [AuthGuard] },
+  { path: 'house', component: HouseComponent, /* canActivate: [AuthGuard] */ },
   { path: 'house/form', component: HouseFormComponent, canActivate: [AuthGuard] },
+  { path: 'house/details/:id', component: HouseDetailsComponent, canActivate: [AuthGuard] },
+  { path: 'offer/succeed', component: SucceedOfferComponent, canActivate: [AuthGuard] },
   { path: 'pay/with/dohone', component: DohoneComponent },
   { path: 'form/:id/:Id', component: FormComponent },
   { path: '**', component: HomeComponent }

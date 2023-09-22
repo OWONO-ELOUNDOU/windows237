@@ -45,6 +45,8 @@ import { BlogComponent } from './screen/blog/blog.component';
 import { ProgressStepComponent } from './screen/progress/progress-step/progress-step.component';
 import { ProgressStepDirective } from './screen/progress/directive/progress-step.directive';
 import { ProgressComponent } from './screen/progress/progress/progress.component';
+import { SucceedOfferComponent } from './Houses/succeed-offer/succeed-offer.component';
+import { HouseDetailsComponent } from './Houses/house-details/house-details.component';
 
 
 @NgModule({
@@ -77,6 +79,8 @@ import { ProgressComponent } from './screen/progress/progress/progress.component
     ProgressStepComponent,
     ProgressStepDirective,
     ProgressComponent,
+    SucceedOfferComponent,
+    HouseDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -87,7 +91,7 @@ import { ProgressComponent } from './screen/progress/progress/progress.component
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
-    IvyCarouselModule
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

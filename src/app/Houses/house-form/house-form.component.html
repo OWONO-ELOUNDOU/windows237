@@ -9,25 +9,29 @@
             <form #form="ngForm" id="form" (ngSubmit)="houseService(form.value)">
                 <div class="input-box username">
                     <div class="field">
-                        <label for="username">Caractéristiques de l'immeuble / du site</label>
-                        <input type="text" name="caracteristique" id="caracteristique" ngModel>
+                        <label>Type: terrain/ villa / immeuble</label>
+                        <div class="date">
+                            <input type="text" name="type" placeholder="terrain ou maison" ngModel>
+                        </div>
                     </div>
                     <div class="field">
                         <label for="username">Lieu</label>
-                        <input type="text" name="lieu" id="lieu" ngModel>
+                        <input type="text" name="place" id="place" ngModel>
                     </div>
+                    <!-- <div class="field">
+                        <label for="username">Image</label>
+                        <input type="file" name="image" id="file" (change)="onFileSelected($event)" ngModel>
+                    </div> -->
                 </div>
 
                 <div class="input-box username">
                     <div class="field">
-                        <label>Type: terrain/ villa / immeuble</label>
-                        <div class="date">
-                            <input type="text" name="type" placeholder="" ngModel>
-                        </div>
+                        <label for="username">Caractéristiques de l'immeuble / du site</label>
+                        <input type="text" name="characteristic" id="characteristic" ngModel>
                     </div>
                     <div class="field">
                         <label for="username">Superficie / plan maison - année de construction / travaux à faire</label>
-                        <input type="text" name="superficie" placeholder="" ngModel>
+                        <input type="text" name="area" placeholder="" ngModel>
                     </div>
                 </div>
 
@@ -35,13 +39,13 @@
                     <div class="field">
                         <div class="box">
                             <label for="coordonnees">Propriétaire: vente aux enchères, administrations, société, familiale, personne individuelle</label>
-                            <input type="text" name="proprietaire" id="proprietaire" placeholder="" ngModel>
+                            <input type="text" name="owner" id="owner" placeholder="" ngModel>
                         </div>
                     </div>
                     <div class="field">
                         <div class="box">
-                            <label for="description">Immeuble faisant l'objet d'un T.F (oui / non / en cours)</label>
-                            <input type="text" name="description" id="description" placeholder="" ngModel>
+                            <label for="details">Immeuble faisant l'objet d'un T.F (oui / non / en cours)</label>
+                            <input type="text" name="details" id="details" placeholder="details" ngModel>
                         </div>
                     </div>
                     <div class="field">
