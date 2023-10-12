@@ -1,65 +1,90 @@
 <app-header></app-header>
 <div class="small-container">
-    <div class="top">
-        <h1>Panier</h1>
-        <a [routerLink]="['/list']" class="contact-host">Retour à la liste</a>
+    <div class="header">
+        <div class="logo">
+            <span>Panier</span>
+        </div>
+        <div class="button">
+            <a [routerLink]="['/list']">Continue shopping</a>
+        </div>
     </div>
+
     <table>
-        <tr>
-            <th>Produits</th>
-            <th>Quantité</th>
-            <th>Prix</th>
-        </tr>
-
-        
-        <tr *ngFor="let item of items; let i = index">
-            <td>
-                <div class="cart-info">
-                    <img [src]="item.image" />
-                    <div>
-                        <p>{{ item.name }}</p>
-                        <small>Prix: {{ item.price }}</small>
-                        <br>
-                        <a href="#">Supprimer</a>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <input type="number" class="qty" [value]="item.quantity" (blur)="validateInput($event, i)">
-            </td>
-            <td>{{ item.price * item.quantity | currency : 'EUR' : 'symbol' : '1.2-2' }} / 
-                {{ ( item.price * item.quantity ) * convert }} FCFA
-            </td>
-        </tr>
-    </table>
-    
-
-    <div class="total-price">
-        <table>
+        <thead>
             <tr>
-                <td>Nombre de produits</td>
-                <td>{{ number }}</td>
+                <th>Product</th>
+                <th>Price</th>
+                <th>QTY</th>
+                <th>Total</th>
             </tr>
-            <tr>
-                <td>Total</td>
-                <td>{{ total | currency : 'EUR' : 'symbol' : '1.2-2' }} / {{ cmPrice | currency : 'XAF' : 'symbol' }}</td>
-            </tr>
-            
-            <tr>
-                <td>Valider</td>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let item of items; let i = index">
                 <td>
-                    
-                    <div id="myPaypalButtons"></div>
-                    <!--<a href="https://buy.stripe.com/test_00g7wa5IU9s22qs9AC" class="payBtn stripe" >Stripe</a>-->
-                    <a [routerLink]="['/pay/with/dohone']" class="payBtn dohone" >dohone</a>
-                    <div id="stripe-script"></div>
-                    <div *ngIf="total" style="margin-top: 20px;">
-                        <img src="assets/Images/qr_test.png" />
+                    <div class="product">
+                        <img [src]="item.image" [alt]="item.name">
+                        <div class="product-details">
+                            <p class="product-name">{{ item.name }}</p>
+                            <span class="delete-btn">Supprimer</span>
+                        </div>
                     </div>
-                    
+                </td>
+                <td>
+                    <span id="price">
+                        {{ item.price | currency : 'EUR' : 'symbol' : '1.2-2' }} / 
+                        {{ item.price * convert }} FCFA
+                    </span>
+                </td>
+                <td>
+                    <input type="number" class="qty" [value]="item.quantity" (blur)="validateInput($event, i)">
+                </td>
+                <td>
+                    {{ item.price * item.quantity | currency : 'EUR' : 'symbol' : '1.2-2' }} / 
+                    {{ ( item.price * item.quantity ) * convert }} FCFA
                 </td>
             </tr>
-        </table>
+        </tbody>
+    </table>
+    
+    <div class="total">
+        <div class="col-1">
+            <h3>mode de paiement:</h3>
+            <div class="input_field">
+                <input type="checkbox" id="checkbox" checked>
+                <p>Dohone - <strong>FREE</strong></p>
+            </div>
+            <div class="input_field">
+                <input type="checkbox" id="checkbox">
+                <div class="text">
+                    <p>Carte Bancaire Bientôt disponible</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <ul>
+                <li>
+                    <p>TOTAL: </p>
+                    <span>
+                        <strong>
+                            {{ total | currency : 'EUR' : 'symbol' : '1.2-2' }} / 
+                            {{ total * convert | currency : 'XAF' : 'symbol' }}
+                        </strong>
+                    </span>
+                </li>
+                <li>
+                    <p>Nombre de produits: </p>
+                    <span><strong>{{ number }}</strong></span>
+                </li>
+            </ul>
+            <div class="button" [routerLink]="['/pay/with/dohone']">
+                <p>Dohone</p>
+                <span>
+                    {{ total | currency : 'EUR' : 'symbol' : '1.2-2' }} / 
+                    {{ total * convert | currency : 'XAF' : 'symbol' }}
+                </span>
+            </div>
+        </div>
     </div>
     
 </div>

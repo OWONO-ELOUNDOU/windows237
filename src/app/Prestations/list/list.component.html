@@ -19,11 +19,11 @@
                         <div class="info">
                             <div class="col">
                                 <p>Cameroun</p>
-                                <span>{{ activity.price * 650 }} {{activity.price ? "FCFA" : "sur devis"}}</span>
+                                <span>{{ activity.price }} {{activity.price ? "FCFA" : "sur devis"}}</span>
                             </div>
                             <div class="col">
                                 <p>France</p>
-                                <span>{{ activity.price }} {{activity.price ? "€" : "sur devis"}}</span>
+                                <span>en attente</span>
                             </div>
                             <div class="col">
                                 <p>Auteur</p>
@@ -57,11 +57,11 @@
                         <div class="info">
                             <div class="col">
                                 <p>Cameroun</p>
-                                <span>{{ activity.price * 650 }} {{activity.price ? "FCFA" : "sur devis"}}</span>
+                                <span>{{ activity.price }} {{activity.price ? "FCFA" : "sur devis"}}</span>
                             </div>
                             <div class="col">
                                 <p>France</p>
-                                <span>{{ activity.price }} {{activity.price ? "€" : "sur devis"}}</span>
+                                <span>en attente</span>
                             </div>
                             <div class="col">
                                 <p>Auteur</p>
@@ -77,58 +77,5 @@
         </div>
     </div>
 
-    <div class="service" *ngIf="commercial && commercial.length > 0">
-        <div *ngFor="let com of commercial">
-            <div class="service_info">
-                <h1 class="title">{{ com.name }}</h1>
-                <h2 class="sub-title">{{ com.info }}</h2>
-            </div>
-            <div class="exclusive">
-                <div class="card" *ngFor="let activity of com.activity">
-                    <div class="card-header">
-                        <img [src]="activity.image">
-                    </div>
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h4>{{ activity.name }}</h4>
-                        </div>
-                        <div class="info">
-                            <div class="col">
-                                <p>Cameroun</p>
-                                <span>{{ activity.price * 650 }} {{activity.price ? "FCFA" : "sur devis"}}</span>
-                            </div>
-                            <div class="col">
-                                <p>France</p>
-                                <span>{{ activity.price }} {{activity.price ? "€" : "sur devis"}}</span>
-                            </div>
-                            <div class="col">
-                                <p>Auteur</p>
-                                <span>windows237</span>
-                            </div>
-                        </div>
-                        <div class="button">
-                            <button type="button" [routerLink]="['/form',com.Id,activity.id]">Commander</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- <div class="card" *ngFor="let activity of com.activity">
-                    <div class="card-img">
-                        <img [src]="activity.image">
-                    </div>
-                    <div class="card-body">
-                        <h4>{{ activity.name }}</h4>
-                        <ul>
-                            <li>- Cameroun : {{ activity.price * 650 }} {{activity.price ? "FCFA" : "sur devis"}} </li>
-                            <li>- France : {{ activity.price }} {{activity.price ? "€" : "sur devis"}} </li>
-                        </ul>
-                        <div class="button">
-                            <a [routerLink]="['/form',com.Id,activity.id]">Commander</a>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-    </div>
 </div>
 <app-footer></app-footer>

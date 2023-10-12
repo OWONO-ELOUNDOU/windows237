@@ -15,7 +15,6 @@ export class HomeComponent {
   site = 'https://windows237.net/home';
   adminLink = 'list#admin';
   professionalLink = 'list#professional';
-  marchandLink = 'list#marchand';
   houseServices = [
     {
       name: 'Recherche opportunités d\'affaires',

@@ -1,21 +1,19 @@
 <app-header></app-header>
 <div class="small-container">
     <h1 class="title">Documents Administratifs et Usuels</h1>
-    <!-- <div class="documents">
+    <div class="exclusives">
         <div class="card" *ngFor="let file of allFiles">
-            <div class="card-header">
-                <img src="">
-                <div class="card-name">
-                    <p></p>
-                </div>
+            <div class="card-img">
+                <img [src]="file.image" [alt]="file.nom" loading="lazy">
             </div>
             <div class="card-body">
-                <a href="" download>Télécharger</a>
+                <h4>{{ file.nom }}</h4>
+            </div>
+            <div class="card-button">
+                <a [href]="file.adresse" class="linkBtn" target="_blank" rel="noopener noreferrer" [download]><i class='bx bx-download'></i></a>
             </div>
         </div>
-    </div> -->
-    <div class="exclusives">
-        <div *ngFor="let file of allFiles">
+        <!-- <div *ngFor="let file of allFiles">
             <img [src]="file.image">
             <span>
                 <h4>{{ file.nom }}</h4>
@@ -23,7 +21,7 @@
             <div class="download-btn">
                 <a [href]="file.adresse" download>Télécharger</a>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 <app-footer></app-footer>

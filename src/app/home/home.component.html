@@ -1,6 +1,19 @@
 <app-header></app-header>
 <div class="header-content">
+    <div class="image">
+        <img src="../../assets/images/person.jpg" alt="person">
+    </div>
     <div class="text">
+        <p>
+            Excellente application digtale pour faire effectuer <strong>sans se déplacer</strong>,
+            vos formalités, courses, opérations, missions administratives, privées,
+            familiale au Cameroun et à l'international.
+        </p>
+        <div class="btns">
+            <a href="#prestations" class="cta-btn">Commandez <i class='bx bxs-hand-down'></i></a>
+        </div>
+    </div>
+    <!-- <div class="text">
         <h3>CAMEROUN DIRECT</h3>
         <h1 class="title">RÉDUISEZ VOS TEMPS ET FRAIS DE DÉPLACEMENTS.</h1>
         <p>
@@ -9,14 +22,14 @@
             professionnelles, administratives, fiscales et diverses au Cameroun et en France
         </p>
         <a href="#prestations" class="cta-btn">Voir Services</a>
-    </div>
+    </div> -->
 </div>
 
 <div class="content">
     <section class="section1" id="prestations">
         <div class="section-header">
             <h3>Cameroun & France</h3>
-            <h1 class="title">Nos Prestations</h1>
+            <h1 class="title">Rubrique de prestations payantes</h1>
         </div>
         <div class="section-body">
             <div class="card card-1">
@@ -50,43 +63,44 @@
             <div class="card card-3">
                 <div class="card-header">
                     <p>Commencer</p>
-                    <a [href]="marchandLink"><i class='bx bxs-right-arrow-circle' ></i></a>
+                    <a [routerLink]="['/house']"><i class='bx bxs-right-arrow-circle' ></i></a>
                 </div>
                 <div class="card-footer">
-                    <h4>Services Marchands</h4>
+                    <h4>Services d'achats</h4>
                     <ul>
-                        <li>Achat divers - Récupération - Expédition de divers colis</li>
-                        <li>Accomplissement de toute autre course, acte, mission personnelle ou privée à la demande</li>
+                        <li>Effectuer vos achats / courses diverses, privées et familiales</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card card-4">
+                <div class="card-header">
+                    <p>Commencer</p>
+                    <a [routerLink]="['/house']"><i class='bx bxs-right-arrow-circle' ></i></a>
+                </div>
+                <div class="card-footer">
+                    <h4>Services Immobiliers</h4>
+                    <ul>
+                        <li>Terrains à vendre, Maisons à vendre et Poster vos annonces</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section3">
+
+    <div class="btn-space">
+        <h3>Quelques éléments utiles</h3>
+        <a href="#download">Téléchargement <i class='bx bxs-hand-down'></i></a>
+    </div>
+
+    <section class="section2" id="download">
         <div class="section-header">
-            <h3>Cameroun & France</h3>
-            <h1 class="title">Services Immobiliers</h1>
-        </div>
-        <div class="section-body house">
-            <h3>Offres foncières: Terrains et Maisons à vendre</h3>
-            <div class="button">
-                <button class="house-btn" [routerLink]="['/house']">Démarrer</button>
-            </div>
-        </div>
-    </section>
-    <section class="section2">
-        <div class="section-header">
-            <h3>Quelques éléments utiles</h3>
-            <h1 class="title">Services gratuits</h1>
+            <h1 class="title">Rubriques de prestations gratuites</h1>
         </div>
         <div class="section-body">
             <div class="col-1">
-                <p>
-                    Les services gratuits et informations utiles sont un regroupement de plusieurs
-                    éléments nécessaires à de petites courses, démarches ou certaines activitès. Ils
-                    comprenent aussi les informations pour des besoins de renseignements, organisations
-                    de certaines structures, ou encore les étapes d'une procédures souhaitée.
-                </p>
+                <h3>
+                    Informations pratiques<br>et liens utiles
+                </h3>
             </div>
             <div class="col-2">
                 <div class="expectation">
