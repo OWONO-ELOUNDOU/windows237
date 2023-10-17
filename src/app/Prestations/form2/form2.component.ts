@@ -1,34 +1,28 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { CartService } from 'src/app/Cart/service/cart.service';
-import { PrestationService } from '../service/prestation.service';
-import { jsPDF } from 'jspdf';
 import { Activity, activities } from '../shared/model/activity';
-import { Demand } from '../shared/model/demand';
+import { PrestationService } from '../service/prestation.service';
+import { CartService } from 'src/app/Cart/service/cart.service';
+import { Demand, Mission } from '../shared/model/demand';
 
 @Component({
-  selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  selector: 'app-form2',
+  templateUrl: './form2.component.html',
+  styleUrls: ['./form2.component.css']
 })
-export class FormComponent {
-
+export class Form2Component {
   product: Activity | any;
   productId: any;
   isRegister = false;
-
-  @ViewChild('form', { static: false }) el!: ElementRef;
 
   constructor(
     private prestation: PrestationService,
     private cartService: CartService,
     private route: ActivatedRoute
-  ) {
+  ) { }
 
-  }
-
-  ngOnInit(): void{
+  ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;
     const serviceParams = this.route.snapshot.paramMap;
     const activityIdFromRoute = Number(routeParams.get('id'));
@@ -40,13 +34,12 @@ export class FormComponent {
     console.log(this.productId);
   }
 
-  saveService(demande: Demand) {
-    this.prestation.createDemand(demande);
+  saveService(demande: Mission) {
+    this.prestation.createMission(demande);
     this.isRegister = !this.isRegister;
   }
 
   addToCart(product: Activity) {
     this.cartService.addToCart(product);
   }
-
 }

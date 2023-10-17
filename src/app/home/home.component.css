@@ -117,7 +117,7 @@ section .section-header .title {
     background-size: cover;
 }
 .section1 .section-body .card-3 {
-    background: linear-gradient(to bottom, #7e7d7d, transparent, #5a1bb7), url(../../assets/images/achats.jpg) center no-repeat;
+    background: linear-gradient(to bottom, #7e7d7d, transparent, #5a1bb7), url(../../assets/images/missions.jpg) center no-repeat;
     background-size: cover;
 }
 .section1 .section-body .card-4 {

@@ -22,10 +22,6 @@
                                 <span>{{ activity.price }} {{activity.price ? "FCFA" : "sur devis"}}</span>
                             </div>
                             <div class="col">
-                                <p>France</p>
-                                <span>en attente</span>
-                            </div>
-                            <div class="col">
                                 <p>Auteur</p>
                                 <span>windows237</span>
                             </div>
@@ -60,8 +56,38 @@
                                 <span>{{ activity.price }} {{activity.price ? "FCFA" : "sur devis"}}</span>
                             </div>
                             <div class="col">
-                                <p>France</p>
-                                <span>en attente</span>
+                                <p>Auteur</p>
+                                <span>windows237</span>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <button type="button" [routerLink]="['/form',pro.Id,activity.id]">Commander</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="service" id="courses" *ngIf="courses && courses.length > 0">
+        <div *ngFor="let course of courses">
+            <div class="service_info">
+                <h1 class="title">{{ course.name }}</h1>
+                <h2 class="sub-title">{{ course.info }}</h2>
+            </div>
+            <div class="exclusive">
+                <div class="card" *ngFor="let activity of course.activity">
+                    <div class="card-header">
+                        <img [src]="activity.image">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h4>{{ activity.name }}</h4>
+                        </div>
+                        <div class="info">
+                            <div class="col">
+                                <p>Cameroun</p>
+                                <span>{{ activity.price }} {{activity.price ? "FCFA" : "sur devis"}}</span>
                             </div>
                             <div class="col">
                                 <p>Auteur</p>
@@ -69,7 +95,7 @@
                             </div>
                         </div>
                         <div class="button">
-                            <button type="button" [routerLink]="['/form',pro.Id,activity.id]">Commander</button>
+                            <button type="button" [routerLink]="['/form2',course.Id,activity.id]">Commander</button>
                         </div>
                     </div>
                 </div>

@@ -47,6 +47,7 @@ import { ProgressStepDirective } from './screen/progress/directive/progress-step
 import { ProgressComponent } from './screen/progress/progress/progress.component';
 import { SucceedOfferComponent } from './Houses/succeed-offer/succeed-offer.component';
 import { HouseDetailsComponent } from './Houses/house-details/house-details.component';
+import { Form2Component } from './Prestations/form2/form2.component';
 
 
 @NgModule({
@@ -81,6 +82,7 @@ import { HouseDetailsComponent } from './Houses/house-details/house-details.comp
     ProgressComponent,
     SucceedOfferComponent,
     HouseDetailsComponent,
+    Form2Component,
   ],
   imports: [
     BrowserModule,

@@ -32,16 +32,14 @@
                 </td>
                 <td>
                     <span id="price">
-                        {{ item.price | currency : 'EUR' : 'symbol' : '1.2-2' }} / 
-                        {{ item.price * convert }} FCFA
+                        {{ item.price | currency : 'XAF' : 'symbol' : '1.2-2' }} / 
                     </span>
                 </td>
                 <td>
                     <input type="number" class="qty" [value]="item.quantity" (blur)="validateInput($event, i)">
                 </td>
                 <td>
-                    {{ item.price * item.quantity | currency : 'EUR' : 'symbol' : '1.2-2' }} / 
-                    {{ ( item.price * item.quantity ) * convert }} FCFA
+                    {{ item.price * item.quantity | currency : 'XAF' : 'symbol' : '1.2-2' }} / 
                 </td>
             </tr>
         </tbody>
@@ -67,8 +65,7 @@
                     <p>TOTAL: </p>
                     <span>
                         <strong>
-                            {{ total | currency : 'EUR' : 'symbol' : '1.2-2' }} / 
-                            {{ total * convert | currency : 'XAF' : 'symbol' }}
+                            {{ total | currency : 'XAF' : 'symbol' }}
                         </strong>
                     </span>
                 </li>
@@ -80,8 +77,7 @@
             <div class="button" [routerLink]="['/pay/with/dohone']">
                 <p>Dohone</p>
                 <span>
-                    {{ total | currency : 'EUR' : 'symbol' : '1.2-2' }} / 
-                    {{ total * convert | currency : 'XAF' : 'symbol' }}
+                    {{ total | currency : 'XAF' : 'symbol' }}
                 </span>
             </div>
         </div>

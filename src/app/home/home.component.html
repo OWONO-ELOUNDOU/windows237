@@ -6,8 +6,8 @@
     <div class="text">
         <p>
             Excellente application digtale pour faire effectuer <strong>sans se déplacer</strong>,
-            vos formalités, courses, opérations, missions administratives, privées,
-            familiale au Cameroun et à l'international.
+            formalités, courses, opérations, missions administratives, privées,
+            familiale au Cameroun.
         </p>
         <div class="btns">
             <a href="#prestations" class="cta-btn">Commandez <i class='bx bxs-hand-down'></i></a>
@@ -28,7 +28,7 @@
 <div class="content">
     <section class="section1" id="prestations">
         <div class="section-header">
-            <h3>Cameroun & France</h3>
+            <h3>Cameroun</h3>
             <h1 class="title">Rubrique de prestations payantes</h1>
         </div>
         <div class="section-body">
@@ -57,18 +57,20 @@
                         <li>Représentation administrative ou professionnelle</li>
                         <li>Domiciliation commerciale et administrative</li>
                         <li>pour toutes vos demandes de RDV professionnels, médicales et autres</li>
+                        <li>Achats produits locaux et autres M.P</li>
                     </ul>
                 </div>
             </div>
             <div class="card card-3">
                 <div class="card-header">
                     <p>Commencer</p>
-                    <a [routerLink]="['/house']"><i class='bx bxs-right-arrow-circle' ></i></a>
+                    <a [href]="coursesLink"><i class='bx bxs-right-arrow-circle' ></i></a>
                 </div>
                 <div class="card-footer">
-                    <h4>Services d'achats</h4>
+                    <h4>Courses et missions diverses (personnelles & familiales)</h4>
                     <ul>
-                        <li>Effectuer vos achats / courses diverses, privées et familiales</li>
+                        <li>Visites  et suivi des activités, projets, familles etc</li>
+                        <li>Intermediations et négociations, achats et réceptions divers.</li>
                     </ul>
                 </div>
             </div>
@@ -122,28 +124,20 @@
             </div>
         </div>
     </section>
-</div>
-<!-- <div class="small-container">
 
-    <!--
-    <div class="offre">
-        <h1>Offres foncières disponibles</h1>
-    </div>
-    
-
-    <div class="house-service" id="house_service">
-        <h2 class="title">Services Immobiliers</h2>
-        <div class="row" *ngIf="houseServices && houseServices.length > 0">
-            <div class="card" *ngFor="let house of houseServices">
-                <div class="card-image">
-                    <img [src]="house.image" [title]="house.name">
-                </div>
-                <div class="heading">{{ house.name }}</div>
-                <div class="category"> <button type="button" [routerLink]="['/house']" class="action">Démarrer </button> </div>
-            </div>
+    <section class="feedback">
+        <div class="testimonials">
+            <h2>Retour de nos utilisateurs</h2>
+            
         </div>
-    </div>
-
+        <!-- <div class="feedback-form">
+            <form id="feedback-form">
+                <fieldset>
+                    <legend>Vous avez des suggestions ou des remarques</legend>
+                </fieldset>
+            </form>
+        </div> -->
+    </section>
 </div>
--->
+
 <app-footer></app-footer>
