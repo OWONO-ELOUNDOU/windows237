@@ -117,7 +117,7 @@ section .section-header .title {
     background-size: cover;
 }
 .section1 .section-body .card-3 {
-    background: linear-gradient(to bottom, #7e7d7d, transparent, #5a1bb7), url(../../assets/images/missions.jpg) center no-repeat;
+    background: linear-gradient(to bottom, #7e7d7d, transparent, #5a1bb7), url(../../assets/images/IMG_1.jpg) center no-repeat;
     background-size: cover;
 }
 .section1 .section-body .card-4 {
@@ -186,6 +186,121 @@ section .section-header .title {
 .section2 .section-body .col-2 .expectation a {
     text-decoration: none;
     color: #1f283b;
+}
+
+
+
+/* ========== FEEDBACK SECTION CSS =========== */
+.feedback {
+    padding: 10px 5%;
+}
+.feedback .testimonials h2 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 35px;
+}
+.feedback .feedback-form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.feedback .feedback-form .feedback-text h4 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+#feedback-form,
+.feedback-text {
+    width: 100%;
+    max-width: 600px;
+    min-width: 300px;
+}
+#feedback-form fieldset {
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #ccc;
+}
+#feedback-form fieldset legend{
+    font-size: 12px;
+    color: #7e7d7d;
+}
+#feedback-form fieldset .input-field {
+    margin-bottom: 10px;
+    width: 100%;
+}
+#feedback-form fieldset .input-field input {
+    height: 40px;
+}
+#feedback-form fieldset .input-field input,
+#feedback-form fieldset .input-field textarea {
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+}
+#feedback-form fieldset .submit-btn {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    background: #5a1bb7;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* ========== FEEDBACK CARD CSS SECTION =========== */
+.testimonials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.testimonial-box {
+    width: 600px;
+    height: 300px;
+}
+.testimonial-box .testimonial {
+    display: grid;
+    grid-template-rows: 1.3fr 0.7fr;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    padding: 10px 20px;
+}
+.testimonial-box .testimonial .bx {
+    top: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 25px;
+    color: #222;
+}
+.testimonial-box .testimonial .testimonial-text {
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    padding: 25px 15px;
+    width: 100%;
+}
+.testimonial-box .testimonial .testimonial-user {
+    display: flex;
+    align-items: center;
+}
+.testimonial-box .testimonial .testimonial-user .user-img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+.testimonial-box .testimonial .testimonial-user .user-info {
+    margin: 0 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.testimonial-box .testimonial .testimonial-user .user-info .user-name {
+    font-weight: 800;
 }
 
 /* ========== courses en ligne section css =========== */

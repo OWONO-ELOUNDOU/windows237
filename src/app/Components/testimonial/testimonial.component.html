@@ -1,0 +1,15 @@
+<div class="testimonial-box">
+    <div
+        class="testimonial"
+        *ngFor="let feedback of feedbacks; let i = index"
+        
+    >
+        <i class='bx bxs-quote-right'></i>
+        <span class="testimonial-text">{{ feedback.feedback }}</span>
+        <div class="testimonial-user">
+            <div class="user-info">
+                <span class="user-name">{{ feedback.username }}</span>
+            </div>
+        </div>
+    </div>
+</div>

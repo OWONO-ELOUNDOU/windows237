@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 import { Service } from '../model/home/service';
 import { HomeService } from '../services/Home/home.service';
+import { map } from 'rxjs';
+import { Feedback } from '../model/feedback';
 
 @Component({
   selector: 'app-home',
@@ -29,14 +31,45 @@ export class HomeComponent {
       name: 'Recherche de terrains et autres acitfs immobiliers',
       image: 'assets/images/house_img/terrains_actifs.jpeg'
     }
-  ]
+  ];
+  feedback: Feedback[] = [];
 
   constructor(
     private homeService: HomeService
   ) { }
 
   ngOnInit(): void{
-    
+    this.fecthFeedback();
+    this.userLocationInfo();
+  }
+
+  onSubmit(feedback: {
+    username: string;
+    feedback: string;
+  }) {
+    // console.log(feedback);
+    this.homeService.postFeedback(feedback);
+  }
+
+  private fecthFeedback() {
+    this.homeService.getFeedBack().pipe(map((res) => {
+      const feedback = [];
+      for(const key in res){
+        if(res.hasOwnProperty(key)){
+          feedback.push({...res[key], id: key})
+        }
+      }
+      return feedback;
+    }))
+    .subscribe((feedback) => {
+      console.log(feedback);
+      this.feedback = feedback;
+    });
+    console.log(this.feedback);
+  }
+
+  private userLocationInfo() {
+    this.homeService.getUserInfo()
   }
 
 }

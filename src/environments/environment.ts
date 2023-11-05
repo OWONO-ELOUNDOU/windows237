@@ -10,4 +10,6 @@ export const environment = {
       authDomain: 'windows-237.firebaseapp.com',
       messagingSenderId: '749432239695',
     }
-};  
+};
+
+export const locationApiKey = 'a8aeb858719d49cda123a2e7ceb8c9b0';

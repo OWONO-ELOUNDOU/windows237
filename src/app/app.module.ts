@@ -22,8 +22,8 @@ import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './Auth/signup/signup.component';
 import { LoginComponent } from './Auth/login/login.component';
 import { ForgotPasswordComponent } from './Auth/forgot-password/forgot-password.component';
-import { HeaderComponent } from './screen/header/header.component';
-import { FooterComponent } from './screen/footer/footer.component';
+import { HeaderComponent } from './Components/header/header.component';
+import { FooterComponent } from './Components/footer/footer.component';
 import { ParternshipComponent } from './screen/parternship/parternship.component';
 import { ContactComponent } from './screen/contact/contact.component';
 import { AboutComponent } from './screen/about/about.component';
@@ -35,19 +35,19 @@ import { LinksComponent } from './Free-services/links/links.component';
 import { InfoComponent } from './Free-services/info/info.component';
 import { ShopComponent } from './Free-services/shop/shop.component';
 import { DohoneComponent } from './dohone/dohone.component';
-import { LoadingSpinnerComponent } from './screen/loading-spinner/loading-spinner.component';
-import { CvComponent } from './screen/progress/cv/cv.component';
-import { Cv2Component } from './screen/progress/cv2/cv2.component';
-import { ContentLoaderComponent } from './screen/content-loader/content-loader.component';
+import { LoadingSpinnerComponent } from './Components/loading-spinner/loading-spinner.component';
+import { CvComponent } from './Components/progress/cv/cv.component';
+import { Cv2Component } from './Components/progress/cv2/cv2.component';
 import { HouseComponent } from './Houses/house/house.component';
 import { HouseFormComponent } from './Houses/house-form/house-form.component';
 import { BlogComponent } from './screen/blog/blog.component';
-import { ProgressStepComponent } from './screen/progress/progress-step/progress-step.component';
-import { ProgressStepDirective } from './screen/progress/directive/progress-step.directive';
-import { ProgressComponent } from './screen/progress/progress/progress.component';
+import { ProgressStepComponent } from './Components/progress/progress-step/progress-step.component';
+import { ProgressStepDirective } from './Components/progress/directive/progress-step.directive';
+import { ProgressComponent } from './Components/progress/progress/progress.component';
 import { SucceedOfferComponent } from './Houses/succeed-offer/succeed-offer.component';
 import { HouseDetailsComponent } from './Houses/house-details/house-details.component';
 import { Form2Component } from './Prestations/form2/form2.component';
+import { TestimonialComponent } from './Components/testimonial/testimonial.component';
 
 
 @NgModule({
@@ -73,7 +73,6 @@ import { Form2Component } from './Prestations/form2/form2.component';
     LoadingSpinnerComponent,
     CvComponent,
     Cv2Component,
-    ContentLoaderComponent,
     HouseComponent,
     HouseFormComponent,
     BlogComponent,
@@ -90,6 +89,7 @@ import { Form2Component } from './Prestations/form2/form2.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    TestimonialComponent,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),

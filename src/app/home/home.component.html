@@ -128,15 +128,29 @@
     <section class="feedback">
         <div class="testimonials">
             <h2>Retour de nos utilisateurs</h2>
-            
+            <app-testimonial [feedbacks]="feedback"></app-testimonial>
         </div>
-        <!-- <div class="feedback-form">
-            <form id="feedback-form">
+        <div class="feedback-form">
+            <div class="feedback-text">
+                <h4>Que pensez vous des services offerts par notre plateforme?</h4>
+                <p>
+                    Merci pour l'intérêt que vous portez à notre site,
+                    aussi, nous vous prions de bien vouloir nous faire part de vos avis et suggestions afin de l'améliorer.
+                </p>
+            </div>
+            <form id="feedback-form" #feedbackForm="ngForm" (ngSubmit)="onSubmit(feedbackForm.value)">
                 <fieldset>
                     <legend>Vous avez des suggestions ou des remarques</legend>
+                    <div class="input-field">
+                        <input type="text" name="username" id="username" placeholder="nom complet" [required] ngModel>
+                    </div>
+                    <div class="input-field">
+                        <textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="votre avis" [required] ngModel></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Soumettre <i class='bx bx-paper-plane'></i></button>
                 </fieldset>
             </form>
-        </div> -->
+        </div>
     </section>
 </div>
 
