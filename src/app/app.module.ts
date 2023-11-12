@@ -29,7 +29,6 @@ import { ContactComponent } from './screen/contact/contact.component';
 import { AboutComponent } from './screen/about/about.component';
 import { CartComponent } from './Cart/cart/cart.component';
 import { ListComponent } from './Prestations/list/list.component';
-import { FormComponent } from './Prestations/form/form.component';
 import { DocumentsComponent } from './Free-services/documents/documents.component';
 import { LinksComponent } from './Free-services/links/links.component';
 import { InfoComponent } from './Free-services/info/info.component';
@@ -48,6 +47,7 @@ import { SucceedOfferComponent } from './Houses/succeed-offer/succeed-offer.comp
 import { HouseDetailsComponent } from './Houses/house-details/house-details.component';
 import { Form2Component } from './Prestations/form2/form2.component';
 import { TestimonialComponent } from './Components/testimonial/testimonial.component';
+import { FormComponent } from './Components/form/form.component';
 
 
 @NgModule({
@@ -64,7 +64,6 @@ import { TestimonialComponent } from './Components/testimonial/testimonial.compo
     AboutComponent,
     CartComponent,
     ListComponent,
-    FormComponent,
     DocumentsComponent,
     LinksComponent,
     InfoComponent,
@@ -90,6 +89,7 @@ import { TestimonialComponent } from './Components/testimonial/testimonial.compo
     ReactiveFormsModule,
     HttpClientModule,
     TestimonialComponent,
+    FormComponent,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),

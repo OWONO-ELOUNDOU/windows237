@@ -10,7 +10,6 @@ import { ParternshipComponent } from './screen/parternship/parternship.component
 import { AboutComponent } from './screen/about/about.component';
 import { CartComponent } from './Cart/cart/cart.component';
 import { ListComponent } from './Prestations/list/list.component';
-import { FormComponent } from './Prestations/form/form.component';
 import { Form2Component } from './Prestations/form2/form2.component';
 import { DocumentsComponent } from './Free-services/documents/documents.component';
 import { LinksComponent } from './Free-services/links/links.component';
@@ -49,7 +48,6 @@ const routes: Routes = [
   { path: 'house/details/:id', component: HouseDetailsComponent, canActivate: [AuthGuard] },
   { path: 'offer/succeed', component: SucceedOfferComponent, canActivate: [AuthGuard] },
   { path: 'pay/with/dohone', component: DohoneComponent },
-  { path: 'form/:id/:Id', component: FormComponent },
   { path: 'form2/:id/:Id', component: Form2Component },
   { path: '**', component: HomeComponent }
 ];

@@ -15,15 +15,15 @@ export class TestimonialComponent {
 
   selectedIndex = 0;
 
-  showPrev(i: number) {
-    if (this.selectedIndex > 0){
-      this.selectedIndex = i - 1;
-    }
-  }
+  // showPrev(i: number) {
+  //   if (this.selectedIndex > 0){
+  //     this.selectedIndex = i - 1;
+  //   }
+  // }
 
-  showNext(i: number) {
-    if(this.selectedIndex < this.feedbacks?.length - 1) {
-      this.selectedIndex = i + 1;
-    }
-  }
+  // showNext(i: number) {
+  //   if(this.selectedIndex < this.feedbacks?.length - 1) {
+  //     this.selectedIndex = i + 1;
+  //   }
+  // }
 }
