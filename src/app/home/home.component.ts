@@ -40,7 +40,7 @@ export class HomeComponent {
 
   ngOnInit(): void{
     this.fecthFeedback();
-    this.userLocationInfo();
+    // this.userLocationInfo();
   }
 
   onSubmit(feedback: {

@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  logo = "assets/images/icon/logo.png";
+  icon = "assets/images/icon/logo.png";
+  smallIcon = "assets/images/icon/favicon.png";
   isMenuOpen = false;
 
   constructor() { }
