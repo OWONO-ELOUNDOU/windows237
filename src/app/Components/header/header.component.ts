@@ -11,9 +11,12 @@ export class HeaderComponent {
   smallIcon = "assets/images/icon/favicon.png";
   isMenuOpen = false;
 
+  user = localStorage.getItem('userData')
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.user);
   }
 
   toggleMenu(): void {

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
-import { Service } from '../model/home/service';
 import { HomeService } from '../services/Home/home.service';
 import { map } from 'rxjs';
 import { Feedback } from '../model/feedback';
+import { activities } from '../Prestations/shared/model/activity';
 
 @Component({
   selector: 'app-home',
@@ -33,6 +33,7 @@ export class HomeComponent {
     }
   ];
   feedback: Feedback[] = [];
+  services = activities;
 
   constructor(
     private homeService: HomeService

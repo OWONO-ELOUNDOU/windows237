@@ -32,9 +32,9 @@
             </div>
             <div class="footer-col">
                 <h4>Follow Us</h4>
-                <div class="social-links" *ngFor="let link of links">
-                    <a [href]="link.url"><img [src]="link.image"></a>
-                </div>
+                <ul class="social-links" *ngFor="let link of links">
+                    <li><a [href]="link.url"><i class='{{ link.icon }}'></i></a></li>
+                </ul>
             </div>
         </div>
     </div>

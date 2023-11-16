@@ -2,13 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 // Firebase services + environment module
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { AngularFireStorageModule } from '@angular/fire/compat/storage';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth,getAuth } from '@angular/fire/auth';
@@ -48,6 +43,7 @@ import { HouseDetailsComponent } from './Houses/house-details/house-details.comp
 import { Form2Component } from './Prestations/form2/form2.component';
 import { TestimonialComponent } from './Components/testimonial/testimonial.component';
 import { FormComponent } from './Components/form/form.component';
+import { HomeListComponent } from './home/home-list/home-list.component';
 
 
 @NgModule({
@@ -89,6 +85,7 @@ import { FormComponent } from './Components/form/form.component';
     ReactiveFormsModule,
     HttpClientModule,
     TestimonialComponent,
+    HomeListComponent,
     FormComponent,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),

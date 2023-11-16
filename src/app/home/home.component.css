@@ -52,6 +52,7 @@ section {
 }
 section .section-header {
     margin-bottom: 30px;
+    text-align: center;
 }
 section .section-header h3 {
     font-size: 15px;
@@ -61,20 +62,18 @@ section .section-header .title {
     font-size: 40px;
 }
 /* ========= SECTION-1 CSS ========= */
-.section1,
-.section3 {
-    padding: 75px 5%;
+.section1 {
+    padding: 75px 3%;
     background: #eceaea;
 }
-.section1 .section-body,
-.section3 .section-body {
+.section1 .section-body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 20px;
     flex-wrap: wrap;
 }
-.section1 .section-body .card {
+/* .section1 .section-body .card {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -123,68 +122,43 @@ section .section-header .title {
 .section1 .section-body .card-4 {
     background: linear-gradient(to bottom, #7e7d7d, transparent, #5a1bb7), url(../../assets/images/house_img/immobilier.jpeg) center no-repeat;
     background-size: cover;
-}
-
-/* ========= btn space section css ========== */
-.btn-space {
-    display: grid;
-    place-items: center;
-    margin: 40px 5%;
-    padding: 30px 7%;
-    border: 1px solid #eceaea;
-    border-radius: 10px;
-}
-.btn-space h3 {
-    font-size: 25px;
-    color: #7e7d7d;
-    text-align: center;
-    margin-bottom: 10px;
-}
-.btn-space a {
-    text-decoration: none;
-    font-size: 17px;
-    border: 1px solid #5a1bb7;
-    border-radius: 30px;
-    padding: 10px 30px;
-}
+} */
 
 /* ========= SECTION-2 CSS ========= */
 .section2 {
     margin: 75px;
     padding: 35px 3%;
-    background: #eceaea;
+    /* background: #eceaea; */
     border-radius: 10px;
 }
-.section2 .section-body{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-.section2 .section-body .col-1,
-.section2 .section-body .col-2 {
-    max-width: 500px;
-}
-.section2 .section-body .col-1 h3 {
-    font-size: 40px;
-    color: #7e7d7d;
-}
-.section2 .section-body .col-2 .expectation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.section2 .section-body .col {
     width: 100%;
-    padding: 10px 25px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    background: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
-.section2 .section-body .col-2 .expectation span i {
+.section2 .section-body .col .expectation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: 1px solid #eceaea;
+    background: #fff;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.section2 .section-body .col .expectation:hover  {
+    transform: scale(1.08);
+    box-shadow: rgba(69, 117, 188, 0.2) 0px 1;
+}
+.section2 .section-body .col .expectation span i {
     font-size: 25px;
 }
-.section2 .section-body .col-2 .expectation a {
+.section2 .section-body .col .expectation a {
     text-decoration: none;
+    text-align: center;
     color: #1f283b;
 }
 
@@ -249,62 +223,6 @@ section .section-header .title {
     cursor: pointer;
 }
 
-/* ========== FEEDBACK CARD CSS SECTION =========== */
-.testimonials {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 15px;
-}
-.testimonial-box {
-    width: 600px;
-    height: 300px;
-}
-.testimonial-box .testimonial {
-    display: grid;
-    grid-template-rows: 1.3fr 0.7fr;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-    padding: 10px 20px;
-}
-.testimonial-box .testimonial .bx {
-    top: 0;
-    right: 0;
-    padding: 10px;
-    font-size: 25px;
-    color: #222;
-}
-.testimonial-box .testimonial .testimonial-text {
-    font-size: 16px;
-    line-height: 25px;
-    text-align: center;
-    padding: 25px 15px;
-    width: 100%;
-}
-.testimonial-box .testimonial .testimonial-user {
-    display: flex;
-    align-items: center;
-}
-.testimonial-box .testimonial .testimonial-user .user-img {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-  }
-.testimonial-box .testimonial .testimonial-user .user-info {
-    margin: 0 20px;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-}
-.testimonial-box .testimonial .testimonial-user .user-info .user-name {
-    font-weight: 800;
-}
-
-/* ========== courses en ligne section css =========== */
-
 
 
 @media screen and (max-width: 900px) {
@@ -324,18 +242,8 @@ section .section-header .title {
     .header-content .image img {
         width: 100%;
     }
+    .section1,
     .section2 {
-        margin: 25px;
-    }
-    .section4 {
-        margin: 25px;
-        width: auto;
-        aspect-ratio: 1/1;
-    }
-
-    .section3 .section-body {
-        width: auto;
-        aspect-ratio: 1/1;
-        z-index: 1;
+        margin: auto;
     }
 }

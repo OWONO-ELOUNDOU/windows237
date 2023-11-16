@@ -4,6 +4,7 @@ export interface Activity {
     info: string;
     image: string;
     price: number;
+    url?: string;
     quantity: number;
     activity: any;
 }
@@ -150,7 +151,8 @@ export const activities = [
         Id: 1,
         name: "services auprès des administrations publiques / privées / domestiques",
         info: "Effectuez vos courses, formalités, démarches auprès des administrations publiques et privées  sans vous déplacer",
-        image: "../../../assets/images/icon/users.svg",
+        image: "../../../assets/images/activity_images/administration.jpeg",
+        url: "list",
         activity: [
             {
                 id: 1,
@@ -182,7 +184,8 @@ export const activities = [
         Id: 2,
         name: "Services professionnels",
         info: "Faites effectuer vos courses professionnels et/ou privés sans vous déplacer au Cameroun et en France",
-        image: "../../../assets/images/icon/shopify.svg",
+        image: "../../../assets/images/activity_images/professionnel.jpeg",
+        url: "url",
         activity: [
             {
                 id: 1,
@@ -221,7 +224,8 @@ export const activities = [
         Id: 3,
         name: "Courses et missions diverses (personnelles & familiales)",
         info: "",
-        image: "../../../assets/images/icon/plus-circle.svg",
+        image: "../../../assets/images/IMG_1.jpg",
+        url: "list",
         activity: [
             {
                 id: 1,
@@ -241,9 +245,10 @@ export const activities = [
     },
     {
         Id: 4,
-        image: '',
         name: 'Investissements immobiliers',
         info:'',
+        image: '../../../assets/images/house_img/immobilier.jpeg',
+        url: "list",
         activity: [
             {
                 id: 1,

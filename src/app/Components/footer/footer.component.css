@@ -1,6 +1,6 @@
 .footer{
     margin-top: 15%;
-    background-color: #24262b;
+    background-color: #ddd;
     padding: 70px 0;
 }
 .container-footer{
@@ -20,20 +20,10 @@ ul{
 }
 .footer-col h4{
     font-size: 22px;
-    color: #fff;
+    color: #555;
     text-transform: capitalize;
     margin-bottom: 35px;
     font-weight: 500;
-    position: relative;
-}
-.footer-col h4::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    background: #e91e63;
-    height: 2px;
-    width: 50px;
 }
 .footer-col ul li:not(last-child) {
     margin-bottom: 10px;
@@ -42,21 +32,22 @@ ul{
     font-size: 18px;
     text-transform: capitalize;
     text-decoration: none;
-    color: #fff;
+    color: #444;
     font-weight: 300;
-    color: #bbb;
     display: block;
     transition: all 0.3s ease;
 }
 .footer-col ul li a:hover{
-    color: #fff;
+    color: #ff4141;
+    font-weight: 600;
     padding-left: 10px;
 }
-.footer-col .social-links a{
-    display: inline-block;
+.footer-col .social-links li {
+    list-style: none;
     height: 40px;
     width: 40px;
     padding: 5px;
+    color: #444;
     background-color: rgba(255, 255, 255, 1);
     margin: 0 10px 10px 0;
     text-align: center;
@@ -64,8 +55,11 @@ ul{
     border-radius: 50%;
     transition: all 0.5s ease;
 }
-.footer-col .social-links a:hover{
-    background-color: #24262b;
+.footer-col .social-links a i {
+    font-size: 30px;
+}
+.footer-col .social-links a:hover i {
+    color: #ff4141;
 }
 
 /* responsive */
