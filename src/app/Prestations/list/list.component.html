@@ -4,30 +4,20 @@
         <div *ngFor="let admin of administrative">
             <div class="service_info">
                 <h1 class="title">{{ admin.name }}</h1>
-                <h2 class="sub-title">{{ admin.info }}</h2>
+                <h3 class="sub-title">{{ admin.info }}</h3>
             </div>
 
             <div class="exclusive">
-                <div class="card" *ngFor="let activity of admin.activity">
+                <div class="card" *ngFor="let activity of admin.activity" [routerLink]="['/form2',admin.Id,activity.id]">
                     <div class="card-header">
-                        <img [src]="activity.image">
+                        <img [src]="activity.image" [alt]="activity.name">
                     </div>
                     <div class="card-body">
-                        <div class="card-title">
-                            <h4>{{ activity.name }}</h4>
-                        </div>
+                        <h5>{{ activity.name }}</h5>
                         <div class="info">
-                            <div class="col">
-                                <p>Cameroun</p>
-                                <span>{{ activity.price }} {{activity.price ? "FCFA" : "sur devis"}}</span>
-                            </div>
-                            <div class="col">
-                                <p>Auteur</p>
-                                <span>windows237</span>
-                            </div>
-                        </div>
-                        <div class="button">
-                            <button type="button" [routerLink]="['/form2',admin.Id,activity.id]">Commander</button>
+                            <p>Auteur: windows237</p>
+                            <p>À partir de: </p>
+                            <span>{{ activity.price }} {{activity.price ? "FCFA" : "sur devis"}}</span>
                         </div>
                     </div>
                 </div>
@@ -42,26 +32,16 @@
                 <h2 class="sub-title">{{ pro.info }}</h2>
             </div>
             <div class="exclusive">
-                <div class="card" *ngFor="let activity of pro.activity">
+                <div class="card" *ngFor="let activity of pro.activity" [routerLink]="['/form2',pro.Id,activity.id]">
                     <div class="card-header">
-                        <img [src]="activity.image">
+                        <img [src]="activity.image" [alt]="activity.name">
                     </div>
                     <div class="card-body">
-                        <div class="card-title">
-                            <h4>{{ activity.name }}</h4>
-                        </div>
+                        <h5>{{ activity.name }}</h5>
                         <div class="info">
-                            <div class="col">
-                                <p>Cameroun</p>
-                                <span>{{ activity.price }} {{activity.price ? "FCFA" : "sur devis"}}</span>
-                            </div>
-                            <div class="col">
-                                <p>Auteur</p>
-                                <span>windows237</span>
-                            </div>
-                        </div>
-                        <div class="button">
-                            <button type="button" [routerLink]="['/form2',pro.Id,activity.id]">Commander</button>
+                            <p>Auteur: windows237</p>
+                            <p>À partir de:</p>
+                            <span>{{ activity.price }} {{activity.price ? "FCFA" : "sur devis"}}</span>
                         </div>
                     </div>
                 </div>
@@ -76,26 +56,18 @@
                 <h2 class="sub-title">{{ course.info }}</h2>
             </div>
             <div class="exclusive">
-                <div class="card" *ngFor="let activity of course.activity">
+                <div class="card" *ngFor="let activity of course.activity" [routerLink]="['/form2',course.Id,activity.id]">
                     <div class="card-header">
-                        <img [src]="activity.image">
+                        <img [src]="activity.image" [alt]="activity.name">
                     </div>
                     <div class="card-body">
                         <div class="card-title">
-                            <h4>{{ activity.name }}</h4>
+                            <h5>{{ activity.name }}</h5>
                         </div>
                         <div class="info">
-                            <div class="col">
-                                <p>Cameroun</p>
-                                <span>{{ activity.price }} {{activity.price ? "FCFA" : "sur devis"}}</span>
-                            </div>
-                            <div class="col">
-                                <p>Auteur</p>
-                                <span>windows237</span>
-                            </div>
-                        </div>
-                        <div class="button">
-                            <button type="button" [routerLink]="['/form2',course.Id,activity.id]">Commander</button>
+                            <p>Auteur: windows237</p>
+                            <p>À partir de:</p>
+                            <span>{{ activity.price }} {{activity.price ? "FCFA" : "sur devis"}}</span>
                         </div>
                     </div>
                 </div>

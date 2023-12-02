@@ -5,38 +5,38 @@
     </div>
     <div class="row-2">
         <div class="left-col">
-            <form #form="ngForm" id="form" (ngSubmit)="saveService(form.value)">
+            <form [formGroup]="serviceForm" (ngSubmit)="onSubmit()">
                 <div class="input-box username">
                     <div class="field">
-                        <label for="username">Nom</label>
-                        <input type="text" name="nom" id="username" ngModel>
+                        <label for="first-name">Nom</label>
+                        <input type="text" id="first-name" formControlName="firstName">
                     </div>
                     <div class="field">
-                        <label for="username">Prénom</label>
-                        <input type="text" name="prenom" id="username" ngModel>
+                        <label for="last-name">Prénom</label>
+                        <input type="text" id="last-name" formControlName="lastName">
                     </div>
                 </div>
                 <div class="input-box username">
                     <div class="field">
-                        <label>Nature du service</label>
-                        <input type="text" name="type" placeholder="{{ product.name}}" ngModel>
+                        <label for="type">Nature du service</label>
+                        <input type="text" id="type" placeholder="{{ product.name}}" formControlName="type" required>
                     </div>
                     <div class="field">
-                        <label for="username">Lieu du service au Cameroun: </label>
-                        <input type="text" name="lieu" placeholder="" ngModel>
+                        <label for="location">Lieu du service au Cameroun: </label>
+                        <input type="text" id="location" formControlName="location">
                     </div>
                 </div>
                 <div class="input-box localisation">
                     <div class="field">
                         <div class="box">
-                            <label for="coordonnees">Coordonnées complète des personnes, famille ou projets à contacter ou à suivre</label>
-                            <input type="text" name="coordonnees" id="coordonnees" placeholder="coordonnées" ngModel>
+                            <label for="contact-details">Coordonnées complète des personnes, famille ou projets à contacter ou à suivre</label>
+                            <input type="text" id="contact-details" formControlName="contactDetails">
                         </div>
                     </div>
                     <div class="field">
                         <div class="box">
                             <label for="description">Description exacte du service sollicité</label>
-                            <textarea rows="5" name="description" id="description" ngModel></textarea>
+                            <textarea rows="5" id="description" formControlName="description"></textarea>
                         </div>
                     </div>
                     <!-- <div class="field">
@@ -47,8 +47,8 @@
                     </div> -->
                 </div>
                 <div class="buttons">
-                    <button type="submit" class="btn-next">Enregistrer le service</button>
-                    <button type="submit" class="btn-next" *ngIf="isRegister" [routerLink]="['/cart']" (click)="addToCart(productId)">Ajouter au panier</button>
+                    <button type="submit" [disabled]="!serviceForm.valid" class="btn-next">Enregistrer le service</button>
+                    <button type="submit" *ngIf="!isRegister" class="btn-next" [routerLink]="['/cart']" (click)="addToCart(productId)">Ajouter au panier</button>
                 </div>
             </form>
         </div>

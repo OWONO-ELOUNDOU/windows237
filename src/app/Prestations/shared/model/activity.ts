@@ -158,7 +158,7 @@ export const activities = [
                 id: 1,
                 image: "assets/images/activity_images/recherche ou verification.jpeg",
                 name: "Recherche, vérification ou suivi d’information ou de dossier administratif, professionnel ou privé",
-                price: 20,
+                price: 15000,
                 info: "",
                 quantity: 1
             },
@@ -248,7 +248,7 @@ export const activities = [
         name: 'Investissements immobiliers',
         info:'',
         image: '../../../assets/images/house_img/immobilier.jpeg',
-        url: "list",
+        url: "house",
         activity: [
             {
                 id: 1,

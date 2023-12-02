@@ -42,7 +42,7 @@ export class DohoneComponent implements OnInit {
     rT: '',
     rI: '',
     cmd: 'start',
-    rDvs: 'EUR',
+    rDvs: 'XAF',
     rH: this.dohone_rH,
     rMt: this.price,
     rLocale: 'fr',

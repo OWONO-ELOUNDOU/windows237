@@ -16,7 +16,7 @@ export class HeaderComponent {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.user);
+    
   }
 
   toggleMenu(): void {

@@ -47,7 +47,7 @@ export class CartComponent {
     this.items[i].quantity = qty;
 
     this.getTotal(this.items);
-    this.getCmrPrice(this.items);
+    // this.getCmrPrice(this.items);
   };
 
   getTotal(data: any) {
@@ -62,20 +62,20 @@ export class CartComponent {
     return subs;
   };
 
-  getCmrPrice(data: any) {
-    let subs = 0;
-    let cmrPrice = 0;
+  // getCmrPrice(data: any) {
+  //   let subs = 0;
+  //   let cmrPrice = 0;
 
-    for(const item of data) {
-      subs += item.price * item.quantity;
+  //   for(const item of data) {
+  //     subs += item.price * item.quantity;
 
-      cmrPrice = subs * this.convert;
-      this.cmPrice = cmrPrice;
-      localStorage.setItem('cmrprice', JSON.stringify(cmrPrice))
-    }
+  //     cmrPrice = subs * this.convert;
+  //     this.cmPrice = cmrPrice;
+  //     localStorage.setItem('cmrprice', JSON.stringify(cmrPrice))
+  //   }
 
-    return cmrPrice;
-  }
+  //   return cmrPrice;
+  // }
 
   pay(amount: any) {    
  

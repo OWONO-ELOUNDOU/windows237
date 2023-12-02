@@ -1,79 +1,43 @@
 <app-header></app-header>
 <div class="small-container">
-    <div class="container-form">
-
-        
-        <div>
-            <h1 class="title">informations et procedures pratiques</h1>
-            <h2 class="sub-title">pièces à fournir pour légalisation de documents au MINREX</h2>
-            <div class="exclusives" *ngIf="procedures && procedures.length > 0">
-                <div *ngFor="let procedure of procedures">
-                    <h4>{{ procedure.name }}</h4>
-                    <ul>
-                        <li>{{ procedure.description }}</li>
-                    </ul>
-                </div>
+    <div>
+        <h1 class="title">informations et procedures pratiques</h1>
+        <h2 class="sub-title">pièces à fournir pour légalisation de documents au MINREX</h2>
+        <div class="exclusives" *ngIf="procedures && procedures.length > 0">
+            <div *ngFor="let procedure of procedures">
+                <h4>{{ procedure.name }}</h4>
+                <p>{{ procedure.description }}</p>
             </div>
         </div>
+    </div>
 
-        <div class="hotel-links link-1">
-            <h1 class="title">Renseignements pour un deplacement inter-urbain</h1>
-            <div class="info">
-                <ul>
-                    <li>
-                        <div>
-                            <a href="#">Horaires arrivées et départs<br>des vols aéroports Yaounde et D’la</a>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#">
-                                Horaires arrivées et départs des trains gares Yde, Dla, Ndre, Belabo
-                                <br>Dla, Bafoussam, Bamenda, Bertoua, Ngaoundere, Garoua. Des agences
-                            </a>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#">Horaires et réservations des agences<br>de voyages de transport inter urbain Yde</a>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#">Horaires des vols arrivés et départ<br>des aéroports Yaoundé et Douala</a>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#">
-                                Horaires départ et arrivée des trains voyageurs des gares
-                                <br>Yaoundé et Douala Vaccinations obligatoires au Cameroun
-                            </a>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#">Météo des villes Yaoundé et Douala</a>
-                        <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#">
-                                MAIRIE ARRONDISSEMENTS DE YAOUNDÉ ET DOUALA LIEU ET COORDONNÉES
-                            </a>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+    <div class="link-1">
+        <h1 class="title">Renseignements pour un deplacement inter-urbain</h1>
+        <div class="info">
+            <ul>
+                <li>
+                    Horaires arrivées et départs des vols aéroports Yaounde et Douala
+                </li>
+                <li>
+                    Horaires arrivées et départs des trains gares Yde, Dla, Ndre, Belabo Dla, Bafoussam, Bamenda, Bertoua, Ngaoundere, Garoua. Des agences
+                </li>
+                <li>
+                    Horaires et réservations des agences de voyages de transport inter urbain Yde
+                </li>
+                <li>
+                    Horaires des vols arrivés et départ des aéroports Yaoundé et Douala
+                </li>
+                <li>
+                    Horaires départ et arrivée des trains voyageurs des gares Yaoundé et Douala Vaccinations obligatoires au Cameroun
+                </li>
+                <li>
+                    Météo des villes Yaoundé et Douala
+                </li>
+                <li>
+                    Mairies Arrondissements de Yaoundé et Douala lieu et coordonnées
+                </li>
+            </ul>
         </div>
-
     </div>
 </div>
 <app-footer></app-footer>

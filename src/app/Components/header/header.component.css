@@ -10,8 +10,10 @@ header {
     background: #fff;
     border-bottom: 1px solid #efefef;
 }
-.logo img {
-    width: 60px;
+.logo span {
+    font-size: 35px;
+    font-weight: 600;
+    color: #181488c7;
 }
 nav {
     display: flex;
@@ -37,11 +39,13 @@ nav {
 .navlinks li a:hover:not(.login-btn) {
     border-radius: 30px;
     padding: 10px 25px;
-    background-color: #efefef;
+    color: #7952b3;
+    border: 1px solid #7952b3;
 }
 .navlinks li .login-btn {
    padding: 10px 25px;
-   background: #777;
+   background: #7952b3;
+   border-radius: 5px;
    color: #fff;
 }
 

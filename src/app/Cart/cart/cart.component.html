@@ -4,48 +4,73 @@
         <div class="logo">
             <span>Panier</span>
         </div>
-        <div class="button">
-            <a [routerLink]="['/list']">Continue shopping</a>
+        <div class="button" [routerLink]="['/list']">
+            <p>Retour à la liste</p>
+            <i class='bx bx-left-arrow-alt'></i>
         </div>
     </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Product</th>
-                <th>Price</th>
-                <th>QTY</th>
-                <th>Total</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr *ngFor="let item of items; let i = index">
-                <td>
-                    <div class="product">
-                        <img [src]="item.image" [alt]="item.name">
-                        <div class="product-details">
-                            <p class="product-name">{{ item.name }}</p>
-                            <span class="delete-btn">Supprimer</span>
+    <div class="cart">
+        <div class="cart-products">
+            <div class="product" *ngFor="let item of items; let i = index">
+                <img [src]="item.image" [alt]="item.name" width="180px" height="140px">
+                <div class="details">
+                    <div class="product-info">
+                        <p>{{item.name}}</p>
+                        <div id="price">
+                            <span>{{ item.price }}</span>
+                            <input type="number" class="qty" [value]="item.quantity" (blur)="validateInput($event, i)">
+                            <span>{{ item.price * item.quantity | currency : 'XAF' : 'symbol' : '1.2-2' }}</span>
                         </div>
                     </div>
-                </td>
-                <td>
-                    <span id="price">
-                        {{ item.price | currency : 'XAF' : 'symbol' : '1.2-2' }} / 
+                    <div class="delete-btn">
+                        <i class='bx bx-trash' ></i>
+                        <p>Supprimer produit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-total">
+            <div class="col-1">
+                <h3>mode de paiement:</h3>
+                <div class="input_field">
+                    <input type="checkbox" id="checkbox" checked>
+                    <p>Dohone - <strong>FREE</strong></p>
+                </div>
+                <div class="input_field">
+                    <input type="checkbox" id="checkbox">
+                    <div class="text">
+                        <p>Carte Bancaire Bientôt disponible</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <ul>
+                    <li>
+                        <p>TOTAL: </p>
+                        <span>
+                            <strong>
+                                {{ total | currency : 'XAF' : 'symbol' }}
+                            </strong>
+                        </span>
+                    </li>
+                    <li>
+                        <p>Nombre de produits: </p>
+                        <span><strong>{{ number }}</strong></span>
+                    </li>
+                </ul>
+                <div class="button" [routerLink]="['/pay/with/dohone']">
+                    <p>Dohone</p>
+                    <span>
+                        {{ total | currency : 'XAF' : 'symbol' }}
                     </span>
-                </td>
-                <td>
-                    <input type="number" class="qty" [value]="item.quantity" (blur)="validateInput($event, i)">
-                </td>
-                <td>
-                    {{ item.price * item.quantity | currency : 'XAF' : 'symbol' : '1.2-2' }} / 
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                </div>
+            </div>
+        </div>
+    </div>
     
-    <div class="total">
+    <!-- <div class="total">
         <div class="col-1">
             <h3>mode de paiement:</h3>
             <div class="input_field">
@@ -81,7 +106,7 @@
                 </span>
             </div>
         </div>
-    </div>
+    </div> -->
     
 </div>
 <app-footer></app-footer>
