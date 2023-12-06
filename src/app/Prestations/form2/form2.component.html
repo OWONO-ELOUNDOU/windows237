@@ -48,7 +48,7 @@
                 </div>
                 <div class="buttons">
                     <button type="submit" [disabled]="!serviceForm.valid" class="btn-next">Enregistrer le service</button>
-                    <button type="submit" *ngIf="!isRegister" class="btn-next" [routerLink]="['/cart']" (click)="addToCart(productId)">Ajouter au panier</button>
+                    <button type="submit" *ngIf="isRegister" class="btn-next" [routerLink]="['/cart']" (click)="addToCart(productId)">Ajouter au panier</button>
                 </div>
             </form>
         </div>

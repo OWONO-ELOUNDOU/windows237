@@ -41,7 +41,7 @@ const routes: Routes = [
   { path: 'list', component: ListComponent, canActivate: [AuthGuard] },
   { path: 'docs', component: DocumentsComponent, canActivate: [AuthGuard] },
   { path: 'links', component: LinksComponent, canActivate: [AuthGuard] },
-  { path: 'info', component: InfoComponent, /* canActivate: [AuthGuard] */ },
+  { path: 'info', component: InfoComponent },
   { path: 'shop', component: ShopComponent, canActivate: [AuthGuard] },
   { path: 'house', component: HouseComponent, canActivate: [AuthGuard] },
   { path: 'house/form', component: HouseFormComponent, canActivate: [AuthGuard] },

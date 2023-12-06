@@ -23,6 +23,11 @@ export class CartService {
     console.log(this.items);
   };
 
+  removeFormCart(activity: Activity) {
+    this.items.pop()
+    localStorage.setItem('cart', JSON.stringify(this.items));
+  }
+
   getItems() {
     //JSON.parse(sessionStorage.getItem('cart'))
     return this.cart = JSON.parse(localStorage.getItem('cart') || '{}');

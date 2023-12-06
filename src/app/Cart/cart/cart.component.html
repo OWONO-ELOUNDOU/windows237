@@ -23,7 +23,7 @@
                             <span>{{ item.price * item.quantity | currency : 'XAF' : 'symbol' : '1.2-2' }}</span>
                         </div>
                     </div>
-                    <div class="delete-btn">
+                    <div class="delete-btn" (click)="deleteCartItem(item)">
                         <i class='bx bx-trash' ></i>
                         <p>Supprimer produit</p>
                     </div>

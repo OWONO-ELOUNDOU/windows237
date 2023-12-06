@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { CartService } from '../service/cart.service';
 import { Payment } from '../shared/model/payment';
+import { Activity } from 'src/app/Prestations/shared/model/activity';
 
 @Component({
   selector: 'app-cart',
@@ -62,6 +63,11 @@ export class CartComponent {
     return subs;
   };
 
+  deleteCartItem(item: Activity) {
+    console.log(item);
+    // this.cartService.removeFormCart(item);
+  }
+
   // getCmrPrice(data: any) {
   //   let subs = 0;
   //   let cmrPrice = 0;
@@ -77,50 +83,50 @@ export class CartComponent {
   //   return cmrPrice;
   // }
 
-  pay(amount: any) {    
+  // pay(amount: any) {    
  
-    var handler = (<any>window).StripeCheckout.configure({
-      key: 'pk_test_51MDA9KGsQevxDi0b92NKzE5EmVQ7nkHcVSCwjLsB8sEQlyHwftyUcphioj8Ka5YvLdcKf6BtFiUVGl5Z2hgCC1HY00jdAwv7Mc',
-      locale: 'auto',
-      token: function (token: any) {
-        // You can access the token ID with `token.id`.
-        // Get the token ID to your server-side code for use.
-        console.log(token)
-        alert('Token Created!!');
-      }
-    });
+  //   var handler = (<any>window).StripeCheckout.configure({
+  //     key: 'pk_test_51MDA9KGsQevxDi0b92NKzE5EmVQ7nkHcVSCwjLsB8sEQlyHwftyUcphioj8Ka5YvLdcKf6BtFiUVGl5Z2hgCC1HY00jdAwv7Mc',
+  //     locale: 'auto',
+  //     token: function (token: any) {
+  //       // You can access the token ID with `token.id`.
+  //       // Get the token ID to your server-side code for use.
+  //       console.log(token)
+  //       alert('Token Created!!');
+  //     }
+  //   });
  
-    handler.open({
-      name: 'Windows237',
-      description: this.cartService.itemsCount()+'produits',
-      amount: amount * 100
-    });
+  //   handler.open({
+  //     name: 'Windows237',
+  //     description: this.cartService.itemsCount()+'produits',
+  //     amount: amount * 100
+  //   });
  
-  };
+  // };
 
-  loadStripe() {
+  // loadStripe() {
      
-    if(!window.document.getElementById('stripe-script')) {
-      var s = window.document.createElement("script");
-      s.id = "stripe-script";
-      s.type = "text/javascript";
-      s.src = "https://checkout.stripe.com/checkout.js";
-      s.onload = () => {
-        this.handler = (<any>window).StripeCheckout.configure({
-          key: 'pk_test_51MDA9KGsQevxDi0b92NKzE5EmVQ7nkHcVSCwjLsB8sEQlyHwftyUcphioj8Ka5YvLdcKf6BtFiUVGl5Z2hgCC1HY00jdAwv7Mc',
-          locale: 'auto',
-          token: function (token: any) {
-            // You can access the token ID with `token.id`.
-            // Get the token ID to your server-side code for use.
-            console.log(token)
-            alert('Payment Success!!');
-          }
-        });
-      }
+  //   if(!window.document.getElementById('stripe-script')) {
+  //     var s = window.document.createElement("script");
+  //     s.id = "stripe-script";
+  //     s.type = "text/javascript";
+  //     s.src = "https://checkout.stripe.com/checkout.js";
+  //     s.onload = () => {
+  //       this.handler = (<any>window).StripeCheckout.configure({
+  //         key: 'pk_test_51MDA9KGsQevxDi0b92NKzE5EmVQ7nkHcVSCwjLsB8sEQlyHwftyUcphioj8Ka5YvLdcKf6BtFiUVGl5Z2hgCC1HY00jdAwv7Mc',
+  //         locale: 'auto',
+  //         token: function (token: any) {
+  //           // You can access the token ID with `token.id`.
+  //           // Get the token ID to your server-side code for use.
+  //           console.log(token)
+  //           alert('Payment Success!!');
+  //         }
+  //       });
+  //     }
        
-      window.document.body.appendChild(s);
-    }
-  };
+  //     window.document.body.appendChild(s);
+  //   }
+  // };
 
   dohonePay(paiement: Payment) {
     this.cartService.createPayment(paiement);
