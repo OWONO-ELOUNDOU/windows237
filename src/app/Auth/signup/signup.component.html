@@ -4,15 +4,19 @@
             <h3 class="subtitle">START FOR FREE</h3>
             <h1 class="title">Create new account<span>.</span></h1>
             <p>Déja membre ? <a [routerLink]="['/login']">Connexion</a></p>
-            <div>
-                <div *ngIf="errormsg" role="alert">
-                    {{ errormsg }}
-                    <button type="button" data-bs-dismiss="alert" aria-label="close"></button>
-                </div>
-
-                <div *ngIf="successmsg" role="alert">
-                    {{ successmsg }}
-                    <button type="button" data-bs-dismiss="alert" aria-label="close"></button>
+            <div class="alert-msg">
+                <div
+                    class="alert error-msg"
+                    role="alert"
+                    *ngIf="hasError"
+                >
+                    <p>{{ errormsg }}</p>
+                    <i
+                        class='bx bx-cross'
+                        data-bs-dismiss="alert"
+                        aria-label="close"
+                        (click)="closeMsg()"
+                    ></i>
                 </div>
             </div>
         </div>

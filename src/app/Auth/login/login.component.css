@@ -1,9 +1,12 @@
 /* Variables declaration */
-:root {
+:host {
     --white-color: #fff;
     --black-color: #000;
-    --dark-blue: #5a1bb7;
     --text-color: #999;
+    --bg-color: #f7f7fc;
+    --btn-bg-color: #7952b3;
+    --error-bg-color: #ffe0e2;
+    --error-text-color: #ff5361;
 
     --text-spacing: 20px;
     --box-spacing: 30px;
@@ -11,16 +14,18 @@
 /* Global CSS properties start */
 a {
     text-decoration: none;
-    color: #fff;
 }
 .container {
     width: 100%;
     height: 100vh;
-    display: grid;
-    place-items: center;
-    background: linear-gradient(#5a1bb7, #8e65cd);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--bg-color);
 }
-/* Global CSS properties start */
+/* Global CSS properties end */
 
 .form-box {
     display: flex;
@@ -28,83 +33,96 @@ a {
     justify-content: center;
     flex-direction: column;
     gap: 30px;
-    width: 900px;
-    aspect-ratio: 16/9;
-    background: url(../../../assets/images/backgrounds/bg2.png) center no-repeat;
-    background-size: cover;
-    border-radius: 10px;
+    width: 500px;
+    padding: 30px;
+    background-color: var(--white-color);
 }
 .form-box .title{
     font-size: 50px;
     font-weight: 700;
-    color: #fff;
+    color: var(--black-color);
 }
 .form-box p:not(form .text p) {
     font-size: 10px;
-    color: #fff;
+    color: var(--text-color);
     text-transform: uppercase;
     text-decoration: underline;
     cursor: pointer;
 }
 
 form {
-    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-    padding: 10px 15px;
-    width: 300px;
-    aspect-ratio: 16/9;
-    background: rgba(255, 255, 255, 0.2);
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
+    width: 100%;
 }
 form input {
     width: 100%;
-    height: 35px;
-    background: inherit;
-    border: none;
-    border-radius: 5px;
+    height: 45px;
+    padding-left: 20px;
+    margin-bottom: 10px;
     outline: none;
-    padding-left: 10px;
-    color: #fff;
+    background: inherit;
+    color: var(--black-color);
+    border: 1px solid var(--text-color);
 }
 form input::placeholder {
-    color: #ddd;
+    color: var(--text-color);
     font-size: 15px;
 }
 
 form button {
+    width: 100%;
     border: none;
     outline: none;
-    border-radius: 30px;
+    border-radius: 7px;
     padding: 10px 25px;
+    color: var(--white-color);
+    background-color: var(--btn-bg-color);
     cursor: pointer;
 }
 form .text p {
     font-size: 13px;
-    color: #999;
-    font-weight: lighter;
+    color: var(--black-color);
+}
+form .text p a {
+    text-decoration: underline;
+    font-size: 13px;
+    color: var(--btn-bg-color);
 }
 
-.form-box .row {
+/* ================= MESSAGE BOX CSS SECTION ================ */
+.alert-msg {
+    width: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    flex-direction: column;
+    gap: 20px;
+}
+.alert-msg .alert {
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.alert-msg .alert.error-msg {
+    color: var(--error-text-color);
+    background-color: var(--error-bg-color);
+}
+.alert-msg .alert.error-msg i {
+    font-size: 19px;
+    transform: rotate(45deg);
+    cursor: pointer;
 }
 
-
-
 /* ================= Responsive design ==================  */
-@media screen and (max-width: 950px) {
-    .container .form-box {
+@media screen and (max-width: 500px) {
+    .container .form-box,
+    .alert-msg {
         width: 100%;
-        height: 100%;
-    }
-    .container .form-box form{
-        width: auto;
     }
 }

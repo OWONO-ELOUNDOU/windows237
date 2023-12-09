@@ -1,22 +1,24 @@
 <div class="container">
-    <div class="form-box" data-aos="fade-up">
-        <div class="row">
-            <div>
-                <div role="alert">
-                    {{ errorMsg }}
-                    <button type="button" data-bs-dismiss="alert" aria-label="close"></button>
-                </div>
-
-                <div role="alert">
-                    {{ successMsg }}
-                    <button type="button" data-bs-dismiss="alert" aria-label="close"></button>
-                </div>
-            </div>
+    <div class="alert-msg">
+        <div
+            role="alert"
+            class="alert error-msg"
+            *ngIf="hasError"
+        >
+            <p>{{ errorMsg }}</p>
+            <i
+                class='bx bx-cross'
+                data-bs-dismiss="alert"
+                aria-label="close"
+                (click)="closeMsg()"
+            ></i>
         </div>
+    </div>
+    <div class="form-box">
         <h1 class="title">Connexion</h1>
         <form  #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
-            <input type="email" name="email" placeholder="Adresse mail" ngModel>
-            <input type="password" name="password" placeholder="mot de passe" ngModel>
+            <input type="email" name="email" placeholder="Adresse mail" required ngModel>
+            <input type="password" name="password" placeholder="mot de passe" minlength="8" required ngModel>
             <button type="submit">Connexion</button>
             <div class="text">
                 <p>pas encore inscrit ? <a [routerLink]="['/signup']">Inscription</a></p>

@@ -18,20 +18,6 @@ export class HomeComponent {
   adminLink = 'list#admin';
   professionalLink = 'list#professional';
   coursesLink = 'list#courses';
-  houseServices = [
-    {
-      name: 'Recherche opportunités d\'affaires',
-      image: 'assets/images/house_img/opportunité.jpg'
-    },
-    {
-      name: 'Construction réhabilitation, et innovation immobilière',
-      image: 'assets/images/house_img/construction.jpg'
-    },
-    {
-      name: 'Recherche de terrains et autres acitfs immobiliers',
-      image: 'assets/images/house_img/terrains_actifs.jpeg'
-    }
-  ];
   feedback: Feedback[] = [];
   services = activities;
 

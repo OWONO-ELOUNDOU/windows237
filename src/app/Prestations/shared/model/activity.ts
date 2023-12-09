@@ -151,7 +151,7 @@ export const activities = [
         Id: 1,
         name: "services auprès des administrations publiques / privées / domestiques",
         info: "Effectuez vos courses, formalités, démarches auprès des administrations publiques et privées  sans vous déplacer",
-        image: "../../../assets/images/activity_images/administration.jpeg",
+        image: "../../../assets/images/activity_images/administration.webp",
         url: "list",
         activity: [
             {
@@ -166,7 +166,7 @@ export const activities = [
                 id: 2,
                 image: "assets/images/activity_images/legalisation.jpeg",
                 name: "Legalisation - Authentification - Duplicata des divers documents administratifs",
-                price: 7.65,
+                price: 15000,
                 info: "",
                 quantity: 1
             },
@@ -174,7 +174,7 @@ export const activities = [
                 id: 3,
                 image: "assets/images/activity_images/document.jpeg",
                 name: "Retrait / dépôt de document auprès de toute administration publique ou privée",
-                price: 7.65,
+                price: 15000,
                 info: "",
                 quantity: 1
             }
@@ -184,7 +184,7 @@ export const activities = [
         Id: 2,
         name: "Services professionnels",
         info: "Faites effectuer vos courses professionnels et/ou privés sans vous déplacer au Cameroun et en France",
-        image: "../../../assets/images/activity_images/professionnel.jpeg",
+        image: "../../../assets/images/activity_images/professionnel.webp",
         url: "url",
         activity: [
             {
@@ -224,12 +224,12 @@ export const activities = [
         Id: 3,
         name: "Courses et missions diverses (personnelles & familiales)",
         info: "",
-        image: "../../../assets/images/IMG_1.jpg",
+        image: "../../../assets/images/IMG_1.webp",
         url: "list",
         activity: [
             {
                 id: 1,
-                image: "assets/images/activity_images/visite.jpg",
+                image: "assets/images/activity_images/visite.webp",
                 name: "Visites  et suivi des activités, projets, familles etc",
                 info: "sur devis",
                 quantity: 1

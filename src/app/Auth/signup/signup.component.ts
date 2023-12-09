@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { User } from '../shared/model/user';
 import { AuthService } from 'src/app/services/Auth/auth.service';
 import { Router } from '@angular/router';
 
@@ -12,28 +10,21 @@ import { Router } from '@angular/router';
 })
 export class SignupComponent {
 
-  public errormsg = '' ;
-  public successmsg = '';
+  errormsg = '' ;
   isLoading = false;
-  userForm: FormGroup
+  hasError = false;
+  minPasswordLength = 6;
 
   constructor(
     private authService: AuthService,
-    private formBuilder: FormBuilder,
     private route: Router,
   ) { }
 
   ngOnInit(): void{
-    this.userForm = this.formBuilder.group({
-      fname: ['', Validators.required],
-      lname: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(7)]],
-      phone: ['', Validators.required],
-      rue: ['', Validators.required],
-      ville: ['', Validators.required],
-      pays: ['', Validators.required],
-    }) 
+  }
+
+  closeMsg() {
+    this.hasError = !this.hasError;
   }
 
   onSubmit(userForm: {
@@ -46,19 +37,37 @@ export class SignupComponent {
     town: string,
     country: string
   }) {
-    this.isLoading = true;
-    this.authService.signUp(userForm.email, userForm.password).subscribe((res) => {
-      console.log(res);
-      this.isLoading = true;
-      alert('Inscription Réussie!');
-      this.route.navigate(['/login']);
-    }, (errorMessage) => {
-      console.log(errorMessage);
-      this.isLoading = false;
-      this.errormsg = errorMessage;
-    });
-    this.authService.createUser(userForm);
-    
+    if (
+      userForm.fname !== "" &&
+      userForm.lname !== "" &&
+      userForm.email !== "" &&
+      userForm.phone !== "" &&
+      userForm.password !== "" &&
+      userForm.street !== "" &&
+      userForm.town !== "" &&
+      userForm.country !== ""
+    ) {
+      
+      if (userForm.password.length >= this.minPasswordLength) {
+        this.isLoading = true;
+        this.authService.signUp(userForm.email, userForm.password)
+        .subscribe((res) => {
+          this.isLoading = true;
+          this.route.navigate(['/login']);
+        }, (errorMessage) => {
+          this.isLoading = false;
+          this.errormsg = errorMessage;
+        });
+        this.authService.createUser(userForm);
+      } else {
+        this.hasError = !this.hasError;
+        this.errormsg = `Mot de passe court au moins ${this.minPasswordLength} caractères.` ;
+      }
+
+    } else {
+      this.hasError = !this.hasError;
+      this.errormsg = 'Veuillez remplir tous les champs';
+    }
   }
 
 }
